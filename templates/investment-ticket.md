@@ -4,8 +4,9 @@
 - **Business:** <slug>
 - **Amount requested:** USD ___  (Tier 1 / 2)
 - **Raised:** YYYY-MM-DD by <team>
-- **Funding source:** reinvestment pool USD ___ + ceiling USD ___
-- **Reinvestment pool balance before this:** USD ___
+- **Blocks:** <what cannot proceed until this is funded>
+- **Funding source:** reinvestment pool USD ___ + ceiling USD ___  (pool first, always)
+- **Reinvestment pool balance before this:** USD ___  (from `python tools/ledger.py report`)
 - **Released so far against the USD 1,000 ceiling:** USD ___
 - **Why the zero-capital path is not enough:** one sentence
 
@@ -31,7 +32,10 @@
 2. Write the amount and date below.
 
 ## After funding
-Agent's next actions, automatically.
+The agent records the release (`python tools/ledger.py release --ticket <id>
+--business <slug> --amount <USD>`), then each spend against it
+(`python tools/ledger.py add ... --source ceiling|pool --ticket <id>`), then
+the next actions, automatically.
 
 ---
 **Owner decision:** APPROVED USD ___ / REJECTED — date — note
