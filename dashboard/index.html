@@ -83,33 +83,34 @@ tr:last-child td{border-bottom:0}
 </div>
 
 <div class="stack">
+  <section class="panel" id="todo">
+    <h2>What you need to do now</h2>
+    <div class="note" style="margin:0 0 10px">Each card is one task the agents cannot do for you. Do the steps, then write APPROVED, REJECTED or DONE with the date at the bottom of the ticket file named on the card, and move the file to pipeline/30-tickets/closed/. Everything else runs by itself.</div>
+    <div class="queue" id="queue"></div>
+    <div class="empty" id="queue-empty">Nothing waiting for you right now. The studio is working; check back after the next run.</div>
+  </section>
+
   <section class="tiles" id="tiles">
-    <div class="tile"><div class="l">Released by you</div><div class="v" id="t-rel">—</div><div class="s" id="t-ceil">of USD 1,000 ceiling</div></div>
-    <div class="tile"><div class="l">Spent</div><div class="v" id="t-spent">—</div><div class="s" id="t-unspent">unspent of released —</div></div>
-    <div class="tile accent"><div class="l">Revenue</div><div class="v" id="t-rev">—</div><div class="s" id="t-net">net —</div></div>
-    <div class="tile"><div class="l">Reinvestment pool</div><div class="v" id="t-pool">—</div><div class="s">earnings available to fund the next business</div></div>
+    <div class="tile"><div class="l">Money you have released</div><div class="v" id="t-rel">—</div><div class="s" id="t-ceil">of USD 1,000 ceiling</div></div>
+    <div class="tile"><div class="l">Money spent</div><div class="v" id="t-spent">—</div><div class="s" id="t-unspent">unspent of released —</div></div>
+    <div class="tile accent"><div class="l">Money earned</div><div class="v" id="t-rev">—</div><div class="s" id="t-net">net —</div></div>
+    <div class="tile"><div class="l">Earnings kept for the next business</div><div class="v" id="t-pool">—</div><div class="s">earnings available to fund the next business</div></div>
     <div class="tile"><div class="l">Businesses live</div><div class="v" id="t-live">—</div><div class="s" id="t-biz">paused — · stopped —</div></div>
-    <div class="tile"><div class="l">Needs you</div><div class="v" id="t-tix">—</div><div class="s">open tickets</div></div>
+    <div class="tile"><div class="l">Tasks waiting for you</div><div class="v" id="t-tix">—</div><div class="s">open tickets</div></div>
   </section>
 
   <section class="panel">
-    <h2>Teams</h2>
+    <h2>The five agent teams (ok = last run fine · warn = blocked or partial · bad = failed · idle = not run yet)</h2>
     <div class="teams" id="teams"></div>
   </section>
 
   <section class="panel">
-    <h2>Businesses</h2>
+    <h2>Businesses (green = on track · amber = watch · red = act)</h2>
     <div class="tablewrap"><table id="biz-table" hidden>
       <thead><tr><th>Business</th><th>Status</th><th class="num">Days</th><th class="num">Spent</th><th class="num">Revenue</th><th>Metrics vs kill / scale</th><th>Last run</th></tr></thead>
       <tbody id="biz-body"></tbody>
     </table></div>
     <div class="empty" id="biz-empty">No business launched yet. Preparation adds one here when its readiness checklist is complete.</div>
-  </section>
-
-  <section class="panel">
-    <h2>Your queue: what the studio needs from you</h2>
-    <div class="queue" id="queue"></div>
-    <div class="empty" id="queue-empty">Nothing waiting for you. Tickets appear here when a team needs an account, an approval, or money.</div>
   </section>
 
   <section class="panel">
@@ -120,12 +121,12 @@ tr:last-child td{border-bottom:0}
   </section>
 
   <section class="panel">
-    <h2>Pipeline</h2>
+    <h2>Ideas in the pipeline (inbox → scored → validated → planned → launched)</h2>
     <div class="tiles" id="pipe"></div>
   </section>
 
   <section class="panel">
-    <h2>Recent activity</h2>
+    <h2>What the agents did recently</h2>
     <div class="feed" id="feed"></div>
     <div class="empty" id="feed-empty">Each team posts a line here when it finishes a run.</div>
     <div class="note">Data is written by the Management team's scheduled refresh. Reads are live; nothing on this page edits the studio.</div>
