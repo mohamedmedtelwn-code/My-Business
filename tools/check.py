@@ -200,14 +200,32 @@ def read_tickets(root: Path, folder_key: str) -> list[dict]:
         text = _read(p)
         f = studio.parse_fields(text)
         raised = f.get("raised", "")
+        steps_body = studio.section(text, "What we need you to do") or ""
+        steps = [re.sub(r"^\d+\.\s*", "", l.strip()) for l in steps_body.splitlines() if re.match(r"^\d+\.", l.strip())]
         out.append({
             "path": p, "id": f.get("ticket") or p.stem, "business": (f.get("business") or "").strip().strip("<>"),
+            "steps": steps,
             "raised": studio.first_date(raised), "by": raised.split(" by ")[-1].strip().lower() if " by " in raised else "",
             "blocks": (f.get("blocks") or "").strip(), "decision": studio.owner_decision(text),
             "type": "investment" if "investment ticket" in text.lower()[:200] else "approval",
-            "amount": f.get("amount requested", ""), "title": next((l[2:].strip() for l in text.splitlines() if l.startswith("# ")), p.stem),
+            "amount": f.get("amount requested", ""), "title": _ticket_title(text, steps, f, p.stem),
         })
     return out
+
+
+def _ticket_title(text: str, steps: list, f: dict, stem: str) -> str:
+    """The H1 when it is specific; otherwise a line the owner can act on from the card."""
+    h1 = next((l[2:].strip() for l in text.splitlines() if l.startswith("# ")), "")
+    if h1 and h1.lower() not in ("approval ticket", "investment ticket"):
+        return h1
+    kind = (f.get("type") or "").strip()
+    biz = (f.get("business") or "").strip()
+    lead = steps[0] if steps else (f.get("blocks") or stem)
+    lead = re.sub(r"\s+", " ", lead)
+    if len(lead) > 90:
+        lead = lead[:87].rstrip() + "..."
+    prefix = f"{kind.capitalize()} for {biz}: " if kind and biz else ""
+    return prefix + lead
 
 
 def check_tickets(root: Path, rep: Report, cfg: dict, live: dict) -> dict:

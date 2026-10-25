@@ -6,7 +6,26 @@ approve tickets, open accounts, and sign decisions; the teams do the rest.
 Everything the teams know is in this folder. The rules are in `CLAUDE.md`;
 the evidence behind them is in `research/STUDIO-RESEARCH.md`.
 
-## 1. Laptop setup (one-time, about an hour)
+## 0. How it runs today
+
+Since 2026-10-25 the studio runs in **cloud mode**: scheduled tasks on your
+Claude account start a fresh cloud session for each team run, clone this
+repository, do the run, and push the result back (see `SCHEDULE.md`, "Cloud
+mode"). Nothing has to be installed on a laptop for the teams to run. You
+need a laptop or phone only to read the dashboard and act on tickets.
+
+- Live dashboard: the URL in `management/dashboard-url.txt` (your private
+  artifact). The "Your queue" panel lists every ticket with its steps.
+- Tickets: `pipeline/30-tickets/open/` in this repository. Edit the file on
+  GitHub or on a laptop clone, write `APPROVED`, `REJECTED` or `DONE` with the
+  date at the bottom, move it to `closed/`, commit. The next run picks it up.
+- Validation evidence (replies, screenshots, sign-up counts) goes into
+  `pipeline/15-validating/output/<id>/` the same way.
+
+The laptop setup below is optional: use it if you prefer local scheduled
+tasks in the Claude desktop app, or want a local clone to edit tickets.
+
+## 1. Laptop setup (optional, about an hour)
 
 1. Create a fresh Windows user account for the studio. Auto-login, never
    lock, never sleep on AC power (Settings > System > Power).

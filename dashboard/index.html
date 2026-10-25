@@ -60,6 +60,8 @@ tr:last-child td{border-bottom:0}
 .ticket .t{font-weight:600}
 .ticket .d{font-size:.82rem;color:var(--muted)}
 .ticket .amt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ticket .steps{margin:6px 0 0;padding-left:18px;font-size:.84rem;color:var(--fg);display:grid;gap:3px}
+.ticket .blk{font-size:.78rem;color:var(--warn);margin-top:4px}
 .chart{width:100%;height:auto;display:block}
 .chart text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
 .legend{display:flex;gap:16px;font-size:.78rem;color:var(--muted);margin-top:6px;flex-wrap:wrap}
@@ -105,7 +107,7 @@ tr:last-child td{border-bottom:0}
   </section>
 
   <section class="panel">
-    <h2>Your queue</h2>
+    <h2>Your queue: what the studio needs from you</h2>
     <div class="queue" id="queue"></div>
     <div class="empty" id="queue-empty">Nothing waiting for you. Tickets appear here when a team needs an account, an approval, or money.</div>
   </section>
@@ -170,7 +172,9 @@ tr:last-child td{border-bottom:0}
   function renderQueue(docs){
     const rows=docs.map(x=>({id:x.id,...x.data()})).filter(r=>safe(r.status||'open').toLowerCase()==='open');
     $('queue-empty').hidden=!!rows.length;
-    $('queue').innerHTML=rows.map(r=>`<div class="ticket ${r.type==='investment'?'invest':''}"><div><div class="t">${esc(r.title||r.id)}</div><div class="d">${esc(r.business||'')}${r.business?' · ':''}${esc(r.type||'approval')} · raised ${esc(r.raised||'—')}</div></div><div class="amt">${r.amount?usd(r.amount):''}</div></div>`).join('');
+    rows.sort((a,b)=>safe(a.raised).localeCompare(safe(b.raised)));
+    $('queue').innerHTML=rows.map(r=>{const steps=(r.steps||[]).map(s=>`<li>${esc(s)}</li>`).join('');
+      return `<div class="ticket ${r.type==='investment'?'invest':''}"><div><div class="t">${esc(r.title||r.id)}</div><div class="d">${esc(r.business||'')}${r.business?' · ':''}${esc(r.type||'approval')} · raised ${esc(r.raised||'—')} · ${esc(r.id)}</div>${steps?`<ol class="steps">${steps}</ol>`:''}${r.blocks?`<div class="blk">Blocks: ${esc(r.blocks)}</div>`:''}<div class="d">Done? Write APPROVED, REJECTED or DONE with the date at the bottom of pipeline/30-tickets/open/${esc(r.id)}.md and move it to closed/.</div></div><div class="amt">${r.amount?usd(r.amount):''}</div></div>`}).join('');
   }
   function renderFeed(docs){
     const rows=docs.map(x=>x.data()).sort((a,b)=>safe(b.ts).localeCompare(safe(a.ts))).slice(0,25);

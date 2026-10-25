@@ -1,5 +1,58 @@
 # Scheduled tasks
 
+## Cloud mode (active since 2026-10-25)
+
+The studio runs in the cloud on the owner's Claude account: each scheduled
+task starts a fresh cloud session that clones the GitHub repository
+`mohamedmedtelwn-code/My-Business`, runs one team, commits and pushes. The
+laptop is not needed for the teams to run; it is needed only for what the
+owner does (tickets). The schedule below is in Qatar time (UTC+3), with a
+few minutes of jitter so no two tasks start together.
+
+| Task | Qatar time | Cron (stored) |
+|------|------------|---------------|
+| Research cycle | Mon and Thu 05:46 | `CRON_TZ=Asia/Qatar 46 5 * * 1,4` |
+| Planning pass | daily 06:47 | `CRON_TZ=Asia/Qatar 47 6 * * *` |
+| Preparation pass | daily 08:14 | `CRON_TZ=Asia/Qatar 14 8 * * *` |
+| Work: <slug> | per plan, 09:00-12:00, one per hour | created when a business launches |
+| Management nightly | daily 21:42 | `CRON_TZ=Asia/Qatar 42 21 * * *` |
+| Management weekly | Fri 17:43 | `CRON_TZ=Asia/Qatar 43 17 * * 5` |
+
+Cloud-mode rules that differ from the laptop mode below:
+- Every run begins with `git pull --rebase origin main` (fresh clone) and ends
+  with `git pull --rebase origin main && git push origin main`. The run log and
+  the research lists merge by union (`.gitattributes`), so two runs that touch
+  them never conflict. If a rebase conflict appears anywhere else, the run
+  aborts the rebase, resets to `origin/main`, redoes its own work and pushes.
+- Team locks (`management/.lock-*`) are not shared between cloud sessions;
+  the staggered schedule is what keeps runs apart. The crash sweep and the
+  circuit breaker still work because `management/runs.jsonl` is committed.
+- Each prompt is self-contained (a fresh session knows nothing). The prompt
+  text is the one stored in the scheduled task; the versions below are kept in
+  sync with it.
+- Usage: all cloud runs draw on the owner's subscription. The cut order at the
+  end of this file applies; the first lever is the Research cadence.
+
+### Cloud prompt skeleton (prepended to every team prompt)
+```
+You are the <team> team of an AI venture studio. The studio is the GitHub
+repository https://github.com/mohamedmedtelwn-code/My-Business.git. Get it:
+if a folder containing CLAUDE.md and tools/check.py exists under your working
+directory, cd into it and run `git pull --rebase origin main`; otherwise run
+`git clone https://github.com/mohamedmedtelwn-code/My-Business.git venture-studio`
+and cd into it. Then read CLAUDE.md and skills/<team>/SKILL.md and do exactly
+what they say for one run, with python tools/check.py and python tools/runlog.py
+at the start and the end (runlog end with --commit). Finish with
+`git pull --rebase origin main && git push origin main`; if the push is
+rejected, wait 10 seconds and repeat the pull and push once. Do not ask
+questions: if something only the owner can do blocks you, write a ticket in
+pipeline/30-tickets/open/ and end the run with --outcome warn. Never open
+accounts, accept terms, enter credentials, send messages on anyone's behalf,
+or move money. Stop after 60 minutes of work even if unfinished.
+```
+
+## Laptop mode (optional)
+
 Create these in the Claude desktop app as scheduled tasks that **require this
 computer** (they read and write `Documents\venture-studio`). The laptop must be
 awake and the app open when a task is due: local tasks fire only then, and a

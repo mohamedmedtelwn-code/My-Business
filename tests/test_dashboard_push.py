@@ -53,7 +53,7 @@ def make_studio(tmp: Path) -> Path:
           f"| {d(-3)} | 0 | 40 | 1 | gumroad export | |\n| {d(-1)} | 2 | 120 | 5 | gumroad export | |\n")
     # tickets
     write(tmp, "pipeline/30-tickets/open/20261101-abc-2.md",
-          f"# Approval Ticket\n\n- **Ticket:** 20261101-abc-2\n- **Business:** abc\n- **Type:** publish\n- **Raised:** {d(-1)} by work\n- **Blocks:** publish\n\n---\n**Owner decision:** APPROVED / REJECTED / DONE — date — note\n")
+          f"# Approval Ticket\n\n- **Ticket:** 20261101-abc-2\n- **Business:** abc\n- **Type:** publish\n- **Raised:** {d(-1)} by work\n- **Blocks:** publish\n\n## What we need you to do\n1. Open Gumroad\n2. Press publish\n\n---\n**Owner decision:** APPROVED / REJECTED / DONE — date — note\n")
     write(tmp, "pipeline/30-tickets/closed/20261101-abc-1.md",
           f"# Investment Ticket\n\n- **Ticket:** 20261101-abc-1\n- **Business:** abc\n- **Amount requested:** USD 40  (Tier 0)\n- **Raised:** {d(-6)} by preparation\n\n---\n**Owner decision:** APPROVED USD 40 — {d(-5)} — ok\n")
     # ledger
@@ -146,6 +146,8 @@ class Payload(unittest.TestCase):
         self.assertEqual(o["type"], "approval")
         self.assertEqual(o["business"], "abc")
         self.assertEqual(o["raised"], d(-1))
+        self.assertEqual(o["steps"], ["Open Gumroad", "Press publish"])
+        self.assertEqual(o["blocks"], "publish")
         c = self.doc("tickets", "20261101-abc-1")["data"]
         self.assertEqual(c["status"], "closed")
         self.assertEqual(c["type"], "investment")
@@ -178,6 +180,19 @@ class Payload(unittest.TestCase):
         self.assertEqual(s["if_version"], 7)
         t = next(w for w in writes if w["collection"] == "teams")
         self.assertNotIn("if_version", t)
+
+    def test_versions_sidecar_is_used_when_files_hold_only_data(self):
+        write(self.root, "management/.dashboard-state/teams/research.json", json.dumps({"status": "idle"}))
+        write(self.root, "management/.dashboard-state/versions.json", json.dumps({"teams/research": 4, "studio/summary": 2}))
+        payload = dp.build(self.root, versions_dir=self.root / "management" / ".dashboard-state")
+        writes = [w for b in payload["batches"] for w in b["writes"]]
+        self.assertEqual(next(w for w in writes if w["doc_id"] == "research")["if_version"], 4)
+        self.assertEqual(next(w for w in writes if w["doc_id"] == "summary")["if_version"], 2)
+        self.assertNotIn("if_version", next(w for w in writes if w["doc_id"] == "planning"))
+
+    def test_ticket_title_is_actionable_when_heading_is_generic(self):
+        o = self.doc("tickets", "20261101-abc-2")["data"]
+        self.assertEqual(o["title"], "Publish for abc: Open Gumroad")
 
     def test_versions_dir_prunes_activity_beyond_200(self):
         for i in range(205):

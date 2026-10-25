@@ -12,6 +12,10 @@ the ledger, the run log and the business folders, so a run only has to send them
    for each of `studio`, `teams`, `businesses`, `tickets`, `ledger`, `activity`
    call `ArtifactData` with `action: "list"`, that `collection`, the artifact
    `url`, `query: {"limit": 1000}` and `out_dir: "management/.dashboard-state"`.
+   The saved files hold the documents' data only, so also write the version
+   numbers the list results print into
+   `management/.dashboard-state/versions.json` as
+   `{"studio/summary": 3, "teams/research": 1, ...}` (one entry per existing document).
 2. Build the payload:
    `python tools/dashboard_push.py --versions-dir management/.dashboard-state > management/.dashboard-state/payload.json`
 3. Send each entry of `batches` as one `ArtifactData` call with

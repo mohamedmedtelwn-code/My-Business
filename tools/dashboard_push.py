@@ -67,11 +67,29 @@ def read_url(root: Path) -> str | None:
 
 # -- versions ------------------------------------------------------------------
 def load_versions(versions_dir: Path | None) -> dict:
-    """{(collection, doc_id): version} from <versions_dir>/<collection>/<doc_id>.json files."""
+    """{(collection, doc_id): version}.
+
+    Two sources, both under <versions_dir>:
+      * <collection>/<doc_id>.json files saved by ArtifactData list ... out_dir (the file holds the
+        document; when it also carries a top-level "version" it is used);
+      * versions.json, a mapping {"collection/doc_id": version} that Management writes from the
+        version numbers the list results print (the saved files usually hold data only).
+    """
     out = {}
     if not versions_dir or not Path(versions_dir).is_dir():
         return out
+    side = Path(versions_dir) / "versions.json"
+    if side.exists():
+        try:
+            for key, v in json.loads(studio.read_text(side)).items():
+                col, _, doc = key.rpartition("/")
+                if col and doc and isinstance(v, int):
+                    out[(col, doc)] = v
+        except Exception:
+            pass
     for p in Path(versions_dir).rglob("*.json"):
+        if p == side or p.name in ("payload.json", "writes.json"):
+            continue
         try:
             data = json.loads(studio.read_text(p))
         except Exception:
@@ -82,7 +100,10 @@ def load_versions(versions_dir: Path | None) -> dict:
         collection = "/".join(rel.parts[:-1])
         doc_id = rel.stem
         v = data.get("version") if isinstance(data, dict) else None
-        out[(collection, doc_id)] = v if isinstance(v, int) else 0
+        if isinstance(v, int):
+            out[(collection, doc_id)] = v
+        else:
+            out.setdefault((collection, doc_id), 0)  # exists, version unknown
     return out
 
 
@@ -184,7 +205,8 @@ def ticket_docs(root: Path) -> list[tuple[str, dict]]:
         for t in check.read_tickets(root, key):
             amount = _num(t.get("amount")) or 0
             out.append((t["id"], {"title": t["title"], "business": t["business"], "type": t["type"],
-                                  "amount": amount, "raised": t["raised"] or "", "status": status}))
+                                  "amount": amount, "raised": t["raised"] or "", "status": status,
+                                  "blocks": t.get("blocks", ""), "steps": t.get("steps", [])[:8]}))
     return out
 
 
