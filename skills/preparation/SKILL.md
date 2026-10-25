@@ -14,6 +14,13 @@ no missing tool, account or decision, and every USD is in the ledger.
 - End: `python tools/check.py`, then
   `python tools/runlog.py end --id <RUN_ID> --outcome ok|warn|bad --summary "<plans processed, tickets raised, businesses launched>" --commit`.
 
+## Owner answers first
+Before the procedure, apply the owner's answers from the dashboard cards:
+the "Owner answers" steps in `skills/management/DASHBOARD.md` (list the
+`replies` collection, run `python tools/replies_apply.py ...`, delete the applied
+documents). Skip when the ArtifactData tool is not available in this run
+(laptop mode): the owner then writes the decision line in the ticket file.
+
 ## Rules
 - Follow CLAUDE.md hard rules. Task-only context.
 - The owner does: account creation, accepting terms, passwords, payment

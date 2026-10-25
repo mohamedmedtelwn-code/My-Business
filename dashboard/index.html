@@ -62,6 +62,20 @@ tr:last-child td{border-bottom:0}
 .ticket .amt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
 .ticket .steps{margin:6px 0 0;padding-left:18px;font-size:.84rem;color:var(--fg);display:grid;gap:3px}
 .ticket .blk{font-size:.78rem;color:var(--warn);margin-top:4px}
+.ticket .why{font-size:.84rem;color:var(--muted);margin-top:6px}
+.ticket details{margin-top:8px;border:1px solid var(--line);border-radius:6px;padding:6px 10px;background:var(--panel-2,transparent)}
+.ticket summary{cursor:pointer;font-size:.84rem;font-weight:600}
+.ticket pre{white-space:pre-wrap;word-break:break-word;font-size:.8rem;line-height:1.45;margin:8px 0 6px;max-height:320px;overflow:auto;font-family:inherit}
+.ticket .copy{font-size:.78rem;padding:4px 10px;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--fg);cursor:pointer}
+.ticket .answer{grid-column:1/-1;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);display:grid;gap:6px}
+.ticket .answer label{font-size:.82rem;font-weight:600}
+.ticket .answer .row2{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ticket .answer select,.ticket .answer textarea{font:inherit;font-size:.86rem;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 8px}
+.ticket .answer textarea{width:100%;min-height:64px;resize:vertical;box-sizing:border-box}
+.ticket .answer button.send{font:inherit;font-size:.86rem;font-weight:600;padding:7px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+.ticket .answer button.send[disabled]{opacity:.5;cursor:default}
+.ticket .answer .st{font-size:.8rem;color:var(--muted)}
+.ticket .pending{grid-column:1/-1;margin-top:8px;font-size:.84rem;color:var(--good);font-weight:600}
 .chart{width:100%;height:auto;display:block}
 .chart text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
 .legend{display:flex;gap:16px;font-size:.78rem;color:var(--muted);margin-top:6px;flex-wrap:wrap}
@@ -85,7 +99,7 @@ tr:last-child td{border-bottom:0}
 <div class="stack">
   <section class="panel" id="todo">
     <h2>What you need to do now</h2>
-    <div class="note" style="margin:0 0 10px">Each card is one task the agents cannot do for you. Do the steps, then write APPROVED, REJECTED or DONE with the date at the bottom of the ticket file named on the card, and move the file to pipeline/30-tickets/closed/. Everything else runs by itself.</div>
+    <div class="note" style="margin:0 0 10px">Each card is one task the agents cannot do for you (sending messages, opening accounts, deciding about money). Do the steps, copy any text from the card, then answer at the bottom of the card: write what happened, choose Done, Approved or Rejected, and press Send. The studio reads your answer at its next run. Everything else runs by itself.</div>
     <div class="queue" id="queue"></div>
     <div class="empty" id="queue-empty">Nothing waiting for you right now. The studio is working; check back after the next run.</div>
   </section>
@@ -129,7 +143,7 @@ tr:last-child td{border-bottom:0}
     <h2>What the agents did recently</h2>
     <div class="feed" id="feed"></div>
     <div class="empty" id="feed-empty">Each team posts a line here when it finishes a run.</div>
-    <div class="note">Data is written by the Management team's scheduled refresh. Reads are live; nothing on this page edits the studio.</div>
+    <div class="note">Data is written by the Management team's scheduled refresh. Your answers on the cards above are the only thing this page writes; the agents apply them at their next run.</div>
   </section>
 </div>
 
@@ -170,12 +184,33 @@ tr:last-child td{border-bottom:0}
       const ms=(r.metrics||[]).map(m=>`<div class="metric">${esc(m.name)}: <b>${esc(m.value)}</b> / ${esc(m.kill)} · ${esc(m.scale)}</div>`).join('');
       return `<tr><td><span class="stripe ${rag}"></span>${esc(r.name||r.id)}${r.flag?` <span class="pill bad">flag</span>`:''}<div class="metric">${esc(r.category||'')}</div></td><td><span class="pill ${esc(st)}">${esc(st)}</span></td><td class="num">${r.days_live==null?'—':r.days_live}</td><td class="num">${usd(r.spent)}</td><td class="num">${usd(r.revenue)}</td><td>${ms||'<span class="metric">no metrics yet</span>'}</td><td class="metric">${esc(r.last_run||'—')}</td></tr>`}).join('');
   }
+  const DRAFTS={}; let REPLIES=[]; let DBREF=null; let CAN_WRITE=true;
   function renderQueue(docs){
     const rows=docs.map(x=>({id:x.id,...x.data()})).filter(r=>safe(r.status||'open').toLowerCase()==='open');
     $('queue-empty').hidden=!!rows.length;
     rows.sort((a,b)=>safe(a.raised).localeCompare(safe(b.raised)));
-    $('queue').innerHTML=rows.map(r=>{const steps=(r.steps||[]).map(s=>`<li>${esc(s)}</li>`).join('');
-      return `<div class="ticket ${r.type==='investment'?'invest':''}"><div><div class="t">${esc(r.title||r.id)}</div><div class="d">${esc(r.business||'')}${r.business?' · ':''}${esc(r.type||'approval')} · raised ${esc(r.raised||'—')} · ${esc(r.id)}</div>${steps?`<ol class="steps">${steps}</ol>`:''}${r.blocks?`<div class="blk">Blocks: ${esc(r.blocks)}</div>`:''}<div class="d">Done? Write APPROVED, REJECTED or DONE with the date at the bottom of pipeline/30-tickets/open/${esc(r.id)}.md and move it to closed/.</div></div><div class="amt">${r.amount?usd(r.amount):''}</div></div>`}).join('');
+    $('queue').innerHTML=rows.map(r=>{
+      const steps=(r.steps||[]).map(s=>`<li>${esc(s)}</li>`).join('');
+      const att=(r.attachments||[]).map((a,i)=>`<details><summary>${esc(a.name)} (open, then copy)</summary><pre id="att-${esc(r.id)}-${i}">${esc(a.text)}</pre><button class="copy" data-copy="att-${esc(r.id)}-${i}">Copy text</button></details>`).join('');
+      const pend=REPLIES.filter(x=>x.ticket===r.id).sort((a,b)=>safe(b.at).localeCompare(safe(a.at)));
+      const decided=pend.find(x=>x.decision!=='note');
+      const pendHtml=pend.length?`<div class="pending">${decided?`You answered ${esc(decided.decision.toUpperCase())} on ${esc(safe(decided.at).slice(0,10))}. The studio closes this card at its next run (within a day).`:`Your note from ${esc(safe(pend[0].at).slice(0,16).replace('T',' '))} is waiting for the studio.`}</div>`:'';
+      const draft=DRAFTS[r.id]||{};
+      const form=decided?'':`<div class="answer" data-ticket="${esc(r.id)}"><label>Your answer</label><textarea placeholder="What happened? For messages: how many sent, and each reply with a first name (e.g. Ahmed, clinic: asked for the price).">${esc(draft.note||'')}</textarea><div class="row2"><select><option value="note"${draft.decision==='note'||!draft.decision?' selected':''}>Just a note / progress</option><option value="done"${draft.decision==='done'?' selected':''}>Done: I did all the steps</option><option value="approved"${draft.decision==='approved'?' selected':''}>Approved</option><option value="rejected"${draft.decision==='rejected'?' selected':''}>Rejected: do not do this</option></select><button class="send"${CAN_WRITE&&DBREF?'':' disabled'}>Send to the studio</button><span class="st">${DBREF?(CAN_WRITE?'':'Only the owner can answer here.'):'Live connection needed to answer.'}</span></div></div>`;
+      return `<div class="ticket ${r.type==='investment'?'invest':''}"><div><div class="t">${esc(r.title||r.id)}</div><div class="d">${esc(r.business||'')}${r.business?' · ':''}${esc(r.type||'approval')} · raised ${esc(r.raised||'—')} · ${esc(r.id)}</div>${r.why?`<div class="why">${esc(r.why)}</div>`:''}${steps?`<ol class="steps">${steps}</ol>`:''}${att}${r.blocks?`<div class="blk">Blocks: ${esc(r.blocks)}</div>`:''}</div><div class="amt">${r.amount?usd(r.amount):''}</div>${pendHtml}${form}</div>`}).join('');
+    $('queue').querySelectorAll('button.copy').forEach(b=>b.addEventListener('click',async()=>{const el=document.getElementById(b.dataset.copy);try{await navigator.clipboard.writeText(el.textContent);b.textContent='Copied';setTimeout(()=>b.textContent='Copy text',1500)}catch(e){const r=document.createRange();r.selectNodeContents(el);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);b.textContent='Select + Ctrl/Cmd+C'}}));
+    $('queue').querySelectorAll('.answer').forEach(f=>{
+      const id=f.dataset.ticket,ta=f.querySelector('textarea'),sel=f.querySelector('select'),btn=f.querySelector('button.send'),st=f.querySelector('.st');
+      const keep=()=>{DRAFTS[id]={note:ta.value,decision:sel.value}};
+      ta.addEventListener('input',keep);sel.addEventListener('change',keep);
+      btn.addEventListener('click',async()=>{
+        if(!DBREF)return;const note=ta.value.trim(),decision=sel.value;
+        if(decision==='note'&&!note){st.textContent='Write a note first, or choose Done / Approved / Rejected.';return}
+        btn.disabled=true;st.textContent='Sending…';
+        try{await DBREF.collection('replies').add({ticket:id,decision,note,at:new Date().toISOString()});delete DRAFTS[id];st.textContent='Sent. The studio picks it up at its next run.'}
+        catch(e){console.error(e);CAN_WRITE=e&&e.code==='invalid_argument'?false:CAN_WRITE;st.textContent=CAN_WRITE?'Could not send; try again in a minute.':'Only the owner can answer here.';btn.disabled=!CAN_WRITE}
+      });
+    });
   }
   function renderFeed(docs){
     const rows=docs.map(x=>x.data()).sort((a,b)=>safe(b.ts).localeCompare(safe(a.ts))).slice(0,25);
@@ -213,7 +248,10 @@ tr:last-child td{border-bottom:0}
     db.doc('studio/summary').onSnapshot(s=>renderSummary(s.exists?s.data():null),onErr);
     db.collection('teams').onSnapshot(q=>renderTeams(q.docs),onErr);
     db.collection('businesses').onSnapshot(q=>renderBiz(q.docs),onErr);
-    db.collection('tickets').onSnapshot(q=>renderQueue(q.docs),onErr);
+    DBREF=db; let TICKETDOCS=[];
+    const user=await claude.use('user'); if(user){try{const w=await user.can('data.write');if(w===false)CAN_WRITE=false}catch(e){}}
+    db.collection('tickets').onSnapshot(q=>{TICKETDOCS=q.docs;renderQueue(TICKETDOCS)},onErr);
+    db.collection('replies').limit(500).onSnapshot(q=>{REPLIES=q.docs.map(x=>({id:x.id,...x.data()}));renderQueue(TICKETDOCS)},onErr);
     db.collection('ledger').orderBy('date').limit(1000).onSnapshot(q=>renderChart(q.docs),onErr);
     db.collection('activity').orderBy('ts','desc').limit(25).onSnapshot(q=>renderFeed(q.docs),onErr);
   })();

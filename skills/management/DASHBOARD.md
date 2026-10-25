@@ -25,6 +25,27 @@ the ledger, the run log and the business folders, so a run only has to send them
 On the very first refresh the collections are empty; step 1 returns nothing and
 every write creates its document.
 
+## Owner answers (every team, at the start of every run)
+The ticket cards carry an answer form. Each answer is a document in the
+collection `replies`: `{"ticket": "<id>", "decision": "done|approved|rejected|note",
+"note": "...", "at": "<ISO time>"}`. Before any other work a run applies them:
+1. `ArtifactData` `action: "list"`, `collection: "replies"`, the artifact `url`,
+   `query: {"limit": 500}`, `out_dir: "management/.dashboard-state"` (files land
+   in `management/.dashboard-state/replies/<doc_id>.json`); write the versions
+   the result shows into `management/.dashboard-state/versions.json` as
+   `{"replies/<doc_id>": <version>}`. An empty list means nothing to do.
+2. `python tools/replies_apply.py management/.dashboard-state/replies --versions management/.dashboard-state/versions.json --delete-out management/.dashboard-state/replies-delete.json`
+   It writes the decision line (done / approved / rejected close the ticket and
+   move it to closed/; note appends an owner note and leaves it open), saves the
+   note of a validation ticket under `pipeline/15-validating/output/<id>/replies/`,
+   and prints one line per answer.
+3. Send `management/.dashboard-state/replies-delete.json` as one `ArtifactData`
+   `action: "batch"` call (its `writes` delete the applied documents, pinned by
+   version). If the batch is refused because a version moved, list again and
+   resend the delete only; the files are already applied.
+4. Then continue with the team's own procedure: Preparation acts on the closed
+   tickets, Planning on the reply files, Management shows the result.
+
 ## Collections and shapes (what the tool emits)
 
 **studio / summary** (`set` each refresh)
@@ -58,7 +79,18 @@ come from the ledger, metrics from the plan's threshold table and the last row o
 **tickets / <ticket-id>** (`set`; open and closed)
 ```json
 {"title":"...","business":"<slug>","type":"approval|investment","amount":0,
- "raised":"YYYY-MM-DD","status":"open|closed"}
+ "raised":"YYYY-MM-DD","status":"open|closed","blocks":"...","steps":["..."],
+ "why":"one paragraph","file":"pipeline/30-tickets/open/<id>.md",
+ "attachments":[{"name":"message.md","text":"..."}]}
+```
+`attachments` are the top-level .md files under
+`pipeline/15-validating/output/<validation-id>/` for a `<validation-id>-vN`
+ticket (the drafts the owner copies and sends), cut at 6,000 characters.
+
+**replies / <doc_id>** (written by the owner on the page, deleted by the run
+that applied them; see "Owner answers")
+```json
+{"ticket":"<ticket-id>","decision":"done|approved|rejected|note","note":"...","at":"ISO time"}
 ```
 
 **ledger / <YYYYMMDD-slug-n>** (`set` once per ledger entry; never edited)
@@ -75,6 +107,7 @@ than 200 and a versions folder was given)
 
 ## Who writes what
 - Management writes everything above, nightly and weekly, through the procedure.
+- Every team reads and clears `replies` at the start of its run (above).
 - Other teams do not write to the dashboard directly any more; their run summary
   (`runlog.py end --summary`) becomes the team card and the activity line at the
   next Management refresh. This keeps one writer and one version flow.

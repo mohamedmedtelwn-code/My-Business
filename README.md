@@ -76,18 +76,36 @@ tasks in the Claude desktop app, or want a local clone to edit tickets.
    write the change in the rubric's log. Only then automate.
 7. Create the scheduled tasks exactly as written in `SCHEDULE.md`.
 
-## 3. Your daily five minutes
+## 3. Your daily five minutes: how tickets reach you and how you answer
 
-- Open `management/dashboard.md` (or the live dashboard at the URL in
-  `management/dashboard-url.txt`). Red means act today.
-- Open `pipeline/30-tickets/open/`. Each ticket is one page: what, why, cost,
-  exact steps. Do the steps, write `APPROVED`, `REJECTED` or `DONE` with the
-  date at the bottom, and move the file to `closed/`. That is the whole
-  approval process. A ticket older than 3 days shows on the dashboard; older
-  than 7 days pauses that business.
-- Once a week, read `management/reviews/` and sign the decisions in
-  `management/decisions.md` (`signed-stop`, `signed-hold`, `signed-scale`,
-  `signed-pause`).
+Agents never send a message, open an account, accept terms or move money.
+When a team needs one of those, it writes a **ticket**. You meet tickets in
+three places; the first is enough:
+
+1. **The live dashboard** (URL in `management/dashboard-url.txt`, pinned in
+   your Claude sidebar). The top section, "What you need to do now", shows one
+   card per open ticket: the title, why it matters, the numbered steps, and the
+   drafts to copy (open the draft, press "Copy text"). At the bottom of each
+   card is the answer box: write what happened (how many messages you sent,
+   each reply with a first name), choose **Done**, **Approved**, **Rejected**
+   or **Just a note**, and press **Send to the studio**. That is the whole
+   approval process. The next team run reads your answer, closes the ticket
+   and acts on it; the card disappears when it has.
+2. **A phone notification** when a scheduled run ends, saying how many tickets
+   are waiting (turn on notifications for Claude on your phone).
+3. **The files** in `pipeline/30-tickets/open/` on GitHub. Editing the file
+   works too: write `APPROVED`, `REJECTED` or `DONE` with the date on the
+   last line and move it to `closed/`.
+
+Replies from the people you message go in the answer box of the ticket's card
+(one line each: first name, what they said). Planning counts them against the
+validation rules and never reads anything else.
+
+A ticket older than 3 days shows amber on the dashboard; a ticket older than
+7 days pauses the business it belongs to. Once a week, read
+`management/reviews/` and sign the decisions in `management/decisions.md`
+(`signed-stop`, `signed-hold`, `signed-scale`, `signed-pause`); that too can
+be answered on a card when Management raises it as a ticket.
 
 ## 4. Money
 

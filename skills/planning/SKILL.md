@@ -16,6 +16,13 @@ Preparation can execute without asking questions.
   `python tools/runlog.py end --id <RUN_ID> --outcome ok|warn|bad --summary "<ideas assessed, approved, rejected, validations closed>" --commit`.
 - Process at most 10 inbox files per run; leave the rest for the next run.
 
+## Owner answers first
+Before the procedure, apply the owner's answers from the dashboard cards:
+the "Owner answers" steps in `skills/management/DASHBOARD.md` (list the
+`replies` collection, run `python tools/replies_apply.py ...`, delete the applied
+documents). Skip when the ArtifactData tool is not available in this run
+(laptop mode): the owner then writes the decision line in the ticket file.
+
 ## Rules
 - Follow CLAUDE.md hard rules. Task-only context.
 - **Owner hold:** until `edge_hold_until` in `management/config.json`, a

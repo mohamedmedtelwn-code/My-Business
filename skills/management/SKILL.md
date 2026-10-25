@@ -16,6 +16,13 @@ it is costing, which runs failed, and what needs a decision.
 - End: `python tools/check.py`, then
   `python tools/runlog.py end --id <RUN_ID> --outcome ok|warn|bad --summary "<dashboard refreshed; n issues; n decisions pending>" --commit`.
 
+## Owner answers first
+Before the procedure, apply the owner's answers from the dashboard cards:
+the "Owner answers" steps in `skills/management/DASHBOARD.md` (list the
+`replies` collection, run `python tools/replies_apply.py ...`, delete the applied
+documents). Skip when the ArtifactData tool is not available in this run
+(laptop mode): the owner then writes the decision line in the ticket file.
+
 ## Rules
 - Follow CLAUDE.md hard rules. Task-only context.
 - Read-only across businesses. Management never edits a business folder; it

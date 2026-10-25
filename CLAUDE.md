@@ -115,7 +115,7 @@ venture-studio/
   templates/                idea-brief, validation-brief, execution-plan, scoring-rubric,
                             approval-ticket, investment-ticket, business-logbook, weekly-review
   tools/                    check.py, runlog.py, ledger.py, signals.py, rubric.py,
-                            dashboard_push.py, studio.py (shared helpers); stdlib only
+                            dashboard_push.py, replies_apply.py, studio.py (shared helpers); stdlib only
   tests/                    unit tests and dry_run.py (walks three fixture briefs end to end)
   pipeline/
     00-inbox/               Research drops idea briefs here
@@ -168,6 +168,12 @@ See `SCHEDULE.md` for the prompts and cadence.
 - Preparation: daily; processes `20-planned` and closed tickets
 - Work: per business, on that business's own schedule (in its plan)
 - Management: nightly dashboard, weekly review
+
+Tickets reach the owner on the live dashboard (one card per open ticket, with
+the steps and the drafts to copy) and in the push notification each run sends.
+The owner answers on the card (Done, Approved, Rejected, or a note); every run
+applies those answers first with `tools/replies_apply.py` (see
+`skills/management/DASHBOARD.md`). Editing the ticket file by hand still works.
 
 An agent that cannot continue without the owner writes a ticket and stops.
 It does not guess, and it does not wait in a loop. Runs are level-triggered:

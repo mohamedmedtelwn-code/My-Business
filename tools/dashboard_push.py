@@ -198,15 +198,44 @@ def business_doc(root: Path, slug: str, biz_totals: dict, last_run: dict | None)
     }
 
 
+ATTACHMENT_CHARS = 6000
+VALIDATION_TICKET_RE = re.compile(r"^(?P<vid>\d{8}-[a-z0-9-]+?)-v\d+$")
+
+
+def ticket_attachments(root: Path, ticket_id: str) -> list[dict]:
+    """The drafts the owner must send or publish for a validation ticket: the
+    top-level .md files under pipeline/15-validating/output/<validation-id>/."""
+    m = VALIDATION_TICKET_RE.match(ticket_id)
+    if not m:
+        return []
+    folder = root / studio.STAGES["validating"] / "output" / m.group("vid")
+    if not folder.is_dir():
+        return []
+    out = []
+    for p in sorted(folder.glob("*.md")):
+        try:
+            text = p.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        if len(text) > ATTACHMENT_CHARS:
+            text = text[:ATTACHMENT_CHARS].rstrip() + "\n[cut; the full file is in the repository]"
+        out.append({"name": p.name, "text": text})
+    return out
+
+
 def ticket_docs(root: Path) -> list[tuple[str, dict]]:
     import check
     out = []
     for key, status in (("tickets_open", "open"), ("tickets_closed", "closed")):
         for t in check.read_tickets(root, key):
             amount = _num(t.get("amount")) or 0
+            text = Path(t["path"]).read_text(encoding="utf-8") if t.get("path") else ""
+            why = re.sub(r"\s+", " ", (studio.section(text, "Why") or "")).strip()
             out.append((t["id"], {"title": t["title"], "business": t["business"], "type": t["type"],
                                   "amount": amount, "raised": t["raised"] or "", "status": status,
-                                  "blocks": t.get("blocks", ""), "steps": t.get("steps", [])[:8]}))
+                                  "blocks": t.get("blocks", ""), "steps": t.get("steps", [])[:8],
+                                  "why": why, "file": str(Path(t["path"]).relative_to(root)).replace("\\", "/") if t.get("path") else "",
+                                  "attachments": ticket_attachments(root, t["id"]) if status == "open" else []}))
     return out
 
 
