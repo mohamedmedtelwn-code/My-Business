@@ -82,8 +82,8 @@ Agents never send a message, open an account, accept terms or move money.
 When a team needs one of those, it writes a **ticket**. You meet tickets in
 three places; the first is enough:
 
-1. **The live dashboard** (URL in `management/dashboard-url.txt`, pinned in
-   your Claude sidebar). The top section, "What you need to do now", shows one
+1. **The live dashboard** (URL in `management/dashboard-url.txt`; pin it in
+   your Claude sidebar so it is one tap away). The top section, "What you need to do now", shows one
    card per open ticket: the title, why it matters, the numbered steps, and the
    drafts to copy (open the draft, press "Copy text"). At the bottom of each
    card is the answer box: write what happened (how many messages you sent,
