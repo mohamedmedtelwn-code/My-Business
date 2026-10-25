@@ -3,3 +3,6 @@ __pycache__/
 .pytest_cache/
 management/.run-*.json
 management/.lock-*
+management/.dashboard-state/
+management/ledger.sqlite-journal
+tests/.dryrun/

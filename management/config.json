@@ -1,0 +1,33 @@
+{
+  "studio_start": null,
+  "ceiling_usd": 1000,
+  "phase1_days": 90,
+  "phase1_live_cap": 8,
+  "phase2_live_cap": 3,
+  "validation_days": 7,
+  "validation_min_signals": 3,
+  "validation_min_outreach": 50,
+  "validation_first_batch": 20,
+  "validation_min_visitors": 100,
+  "validation_min_signup_rate": 0.08,
+  "validation_min_asks": 20,
+  "ticket_stale_days": 3,
+  "ticket_pause_days": 7,
+  "open_ticket_cap": 10,
+  "run_stale_hours": 3,
+  "breaker_failures": 3,
+  "platform_rules_max_age_days": 30,
+  "payout_route_verified": false,
+  "rubric_threshold": 70,
+  "rubric_weights": [4, 3, 4, 3, 2, 2, 1, 1],
+  "zero_revenue_weeks_to_stop": 4,
+  "kill_weeks": 2,
+  "scale_weeks": 2,
+  "team_cadence": {
+    "research": "Mon and Thu 06:00",
+    "planning": "daily 07:00",
+    "preparation": "daily 07:30",
+    "work": "per business plan",
+    "management": "nightly 22:00, weekly Fri 18:00"
+  }
+}
