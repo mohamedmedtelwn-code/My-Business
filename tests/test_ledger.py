@@ -137,6 +137,22 @@ class LedgerCore(unittest.TestCase):
         self.assertIn("| 2026-11-03 | sale | 0 | 30 |", txt)
         self.assertIn("| 18 |", txt)  # balance after both rows: 30 - 12
 
+    def test_render_creates_business_view_for_pre_launch_entries(self):
+        # spend recorded before the folder exists (Tier 0 before launch), folder created at launch
+        self.led.release(ticket="t-1", business="abc", amount=20)
+        self.led.add(business="abc", item="domain", out=12, source="ceiling", ticket="t-1", tier="0", date="2026-11-02")
+        ok, issues = self.led.reconcile()
+        self.assertTrue(ok, issues)  # no folder yet: nothing to compare
+        (self.root / "businesses" / "abc").mkdir()
+        ok, issues = self.led.reconcile()
+        self.assertFalse(ok)
+        self.assertIn("ledger.py render", issues[0])
+        self.assertEqual(self.led.render_all_businesses(), ["abc"])
+        txt = (self.root / "businesses" / "abc" / "ledger.md").read_text(encoding="utf-8")
+        self.assertIn("| 2026-11-02 | domain | 12 | 0 | t-1 / T0 | -12 |", txt)
+        ok, issues = self.led.reconcile()
+        self.assertTrue(ok, issues)
+
     def test_reconcile_passes_when_business_ledger_matches(self):
         (self.root / "businesses" / "abc").mkdir()
         self.led.add(business="abc", item="sale", inc=30)

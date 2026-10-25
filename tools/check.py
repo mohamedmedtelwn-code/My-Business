@@ -102,10 +102,12 @@ def check_structure(root: Path, rep: Report) -> bool:
         rep.warn("management/config.json", "No config.json; defaults in tools/studio.py apply. Create it from the README.")
     else:
         try:
-            json.loads(_read(cfg_path))
+            cfg = json.loads(_read(cfg_path))
         except json.JSONDecodeError as e:
             rep.error("management/config.json", f"config.json is not valid JSON: {e}")
-            ok = False
+            return False
+        if not cfg.get("studio_start"):
+            rep.warn("management/config.json", "studio_start is not set: Phase 1 never ends. Set it to the first run's date (README step 2).")
     return ok
 
 

@@ -71,7 +71,8 @@ no missing tool, account or decision, and every USD is in the ledger.
    has room:
    - move the plan into `businesses/<slug>/plan.md`, set `**Status:** live`
      and `**Launched:** <today>`; initialise `logbook.md`, `metrics.md`
-     (header only) and let `ledger.py` create `ledger.md` on the first entry
+     (header only); run `python tools/ledger.py render` so pre-launch
+     spend appears in `businesses/<slug>/ledger.md`
    - write a final Approval Ticket **"Schedule Work task: <slug>"** with the
      exact scheduled-task prompt from `SCHEDULE.md` and the cadence
    - run `python tools/check.py` and fix anything it reports

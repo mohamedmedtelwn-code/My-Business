@@ -84,6 +84,13 @@ class CheckSuite(unittest.TestCase):
         self.assertEqual(self.errors(res), [])
         self.assertTrue(res["ok"])
 
+    def test_missing_studio_start_is_a_warning(self):
+        cfg = json.loads((self.root / "management" / "config.json").read_text())
+        cfg["studio_start"] = None
+        (self.root / "management" / "config.json").write_text(json.dumps(cfg))
+        res = self.run_check()
+        self.assertTrue(any("studio_start" in w for w in self.warns(res)))
+
     def test_missing_stage_folder_is_an_error(self):
         import shutil
         shutil.rmtree(self.root / "pipeline" / "20-planned")
