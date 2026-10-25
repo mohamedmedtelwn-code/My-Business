@@ -73,3 +73,18 @@ customer data leaves the customer's machine.
 ## Research confidence
 Medium-low: price anchors are solid, free substitutes are many; validation
 must show that privacy and the report format are worth paying for.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | four vendor price pages and a primary registry; no sales distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0: Python, LGPL parser, Gumroad |
+| 3 | Time to first dollar | 3 | 4 | 12 | build then outreach: 1-3 months |
+| 4 | Automatability | 4 | 3 | 12 | agent builds, documents and lists; owner tests on real files |
+| 5 | Owner time per week | 4 | 2 | 8 | about 1 h a week |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 50-400 anchored on Softedemy and ScheduleLens prices |
+| 7 | Durability | 2 (+1 edge) | 1 | 3 | outreach plus a free lite version; Upwork later |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | Gumroad allowed; LGPL licence respected |
+
+**Total:** 74/100 — APPROVED (threshold 70); owner-edge bonus applied

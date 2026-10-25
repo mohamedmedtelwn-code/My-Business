@@ -75,3 +75,18 @@ the legal basis for income first.
 ## Research confidence
 Medium-high: rates are platform-published; demand in the Gulf is inferred from
 job volume and re-awards, not from a sales dataset.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | Upwork rate pages (two), Fiverr floor, ZipRecruiter pay, Upwork fee policy |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 (Connects optional) |
+| 3 | Time to first dollar | 4 | 4 | 16 | direct asks: 2-6 weeks |
+| 4 | Automatability | 3 | 3 | 9 | agent runs the checks and drafts; owner signs off |
+| 5 | Owner time per week | 3 | 2 | 6 | 2-5 h a week |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 400-2,000 at 2-10 reviews a month; no median |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | outreach, Upwork, later the tool's users |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | one account per person; NDA |
+
+**Total:** 78/100 — APPROVED (threshold 70); owner-edge bonus applied

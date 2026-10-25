@@ -53,7 +53,8 @@ Preparation can execute without asking questions.
    - PARKED -> move to `parked/`; one line in `research/feedback.md`.
    - INCONCLUSIVE -> the tool extended the deadline once; keep working the
      denominator. A second inconclusive result parks.
-   - RUNNING -> nothing to do yet.
+   - RUNNING -> nothing to do yet. If the brief's **Started** date has arrived
+     and its owner ticket (`<id>-v1`) has not been raised, raise it now.
 4. For each passed idea, write `pipeline/20-planned/<id>-plan.md` from
    `templates/execution-plan.md`. Fill every field. The plan must name:
    - exact tools, accounts and access needed (and which need the owner)

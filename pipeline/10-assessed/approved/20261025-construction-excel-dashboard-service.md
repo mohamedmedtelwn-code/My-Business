@@ -73,3 +73,18 @@ basis for income first.
 ## Research confidence
 Medium: platform rates are published; the construction wedge is an inference
 from job posts and profiles, not from a sales dataset.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | Upwork rate pages (two), a live construction job post, Fiverr Pro and category pages |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0: Excel and free Power BI Desktop |
+| 3 | Time to first dollar | 4 | 4 | 16 | direct outreach with a free sample chart: 2-6 weeks |
+| 4 | Automatability | 3 | 3 | 9 | agent builds templates and maps data; owner checks and delivers |
+| 5 | Owner time per week | 3 | 2 | 6 | 2-4 h a week |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 350-2,000 at 1-5 builds a month; platform range USD 50-2,500 per project |
+| 7 | Durability | 2 (+1 edge) | 1 | 3 | outreach plus marketplaces |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | one account per person; client data under NDA |
+
+**Total:** 77/100 — APPROVED (threshold 70); owner-edge bonus applied

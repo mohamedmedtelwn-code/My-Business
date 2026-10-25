@@ -74,3 +74,18 @@ is quoted, not reproduced. Owner confirms the legal basis for income first.
 ## Research confidence
 Medium: platform rules and the content gap are verified; earnings per course are
 unverified and the median is low.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | Udemy policy pages (primary) and course counts (snapshots); earnings per course unverified |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0: free recording tools |
+| 3 | Time to first dollar | 3 | 4 | 12 | 1-3 months: recording, Udemy review, first sales |
+| 4 | Automatability | 3 | 3 | 9 | agent writes curriculum, slides, captions; owner records 20-30 h |
+| 5 | Owner time per week | 4 | 2 | 8 | about 1 h a week after launch |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 50-500; vendor roundup puts the median instructor under USD 1,000 a year |
+| 7 | Durability | 2 (+1 edge) | 1 | 3 | YouTube funnel plus owned lists; both owner-driven |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | Udemy allowed; payout via PayPal |
+
+**Total:** 71/100 — APPROVED (threshold 70); owner-edge bonus applied

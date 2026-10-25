@@ -76,3 +76,18 @@ confirms the legal basis for income before invoicing.
 ## Research confidence
 Medium-high on demand and price anchors; the constraint is owner time, not
 market evidence.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | Upwork platform stats, JurisPro rates, Fiverr floor, Fiverr filing, live re-award news |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0: existing tooling, NDA template |
+| 3 | Time to first dollar | 4 | 4 | 16 | direct asks to contracts managers: 2-6 weeks |
+| 4 | Automatability | 2 | 3 | 6 | agent prepares analysis and drafts; the entitlement judgement is the owner's |
+| 5 | Owner time per week | 2 | 2 | 4 | 4-8 h per review in review weeks |
+| 6 | Earnings ceiling at 6 months | 4 (+1 edge) | 2 | 10 | USD 500-3,000 at 1-6 reviews a month; anchored on expert and freelancer rates |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | outreach plus Upwork; claim-pack buyers later |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | technical review, not legal advice; NDA |
+
+**Total:** 75/100 — APPROVED (threshold 70); owner-edge bonus applied

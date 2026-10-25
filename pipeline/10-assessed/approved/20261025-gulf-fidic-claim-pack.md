@@ -78,3 +78,18 @@ receiving income (management/payments.md) before accepting money.
 ## Research confidence
 Medium: strong price anchors and live demand signals, no sales distribution
 data for this exact product; validation decides.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | four platform or marketplace price anchors and two market signals; no sales distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0: Gumroad listing, drafts by the agent |
+| 3 | Time to first dollar | 4 | 4 | 16 | direct outreach to named planners; Gumroad pays QAR; 2-4 weeks |
+| 4 | Automatability | 4 | 3 | 12 | agent drafts everything; owner reviews and presses publish |
+| 5 | Owner time per week | 3 | 2 | 6 | about 2 h a week of legal and technical review |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 100-600 anchored on utility and template prices; no median |
+| 7 | Durability | 2 (+1 edge) | 1 | 3 | outreach plus a free sample in groups; both are outreach-based channels |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | Gumroad allowed in Qatar; not legal advice disclaimer |
+
+**Total:** 76/100 — APPROVED (threshold 70); owner-edge bonus applied

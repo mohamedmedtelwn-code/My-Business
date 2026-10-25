@@ -70,3 +70,18 @@ confirms the legal basis for income first.
 ## Research confidence
 Medium: demand and gap are visible in platform counts; per-course earnings are
 unverified and the median is low.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | English and Arabic course counts (snapshots), Udemy policy (primary), Ten Six prices |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0: free recording tools |
+| 3 | Time to first dollar | 3 | 4 | 12 | 1-3 months after recording |
+| 4 | Automatability | 2 | 3 | 6 | owner records 30-40 h; agent does curriculum, exercises, captions, listing |
+| 5 | Owner time per week | 4 | 2 | 8 | about 1 h a week |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 50-500; median instructor earnings are low |
+| 7 | Durability | 2 (+1 edge) | 1 | 3 | YouTube funnel plus owned lists |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | Udemy allowed; Oracle marks used descriptively |
+
+**Total:** 72/100 — APPROVED (threshold 70); owner-edge bonus applied
