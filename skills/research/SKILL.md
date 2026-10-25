@@ -23,6 +23,12 @@ methods with the playbook written down.
 
 ## Rules
 - Follow CLAUDE.md hard rules. No personal information about the owner.
+- **Owner hold (CLAUDE.md rule 12):** until `edge_hold_until` in
+  `management/config.json`, write no brief that relates to the owner's
+  construction-planning profession (Primavera P6, schedules, EOT or claims,
+  contractor-facing tools, courses for planners, category 10 as a whole).
+  Excel, Python, data and language skills from OWNER-EDGE.md may still be
+  used on other audiences. Step 0 below is suspended during the hold.
 - Whole world is in scope, but every brief must pass the Qatar check: the
   platform accepts a Qatar-resident seller and a payout route in
   `management/payments.md` exists (`research/platform-rules.md` lists the

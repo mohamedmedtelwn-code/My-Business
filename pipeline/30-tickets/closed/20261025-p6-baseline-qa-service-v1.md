@@ -20,4 +20,4 @@ Rule 10: nothing is built before 3 real signals of interest. This offer scored 7
 Planning writes the verdict at the deadline. PASSED: an execution plan and a Preparation checklist follow. PARKED: one line in research/feedback.md and nothing more is asked of you.
 
 ---
-**Owner decision:** APPROVED / REJECTED / DONE — date — note
+**Owner decision:** REJECTED — 2026-10-25 — owner instruction in chat: no planning-related businesses in the first month; ticket withdrawn by Planning

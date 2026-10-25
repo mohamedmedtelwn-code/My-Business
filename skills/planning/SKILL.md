@@ -18,6 +18,10 @@ Preparation can execute without asking questions.
 
 ## Rules
 - Follow CLAUDE.md hard rules. Task-only context.
+- **Owner hold:** until `edge_hold_until` in `management/config.json`, a
+  brief that relates to the owner's construction-planning profession fails
+  the gate (`## Rejected: owner hold until <date>`); an approved one is parked
+  with that reason, not validated.
 - Gate first, score second. The gates and anchors are in
   `templates/scoring-rubric.md`; the arithmetic is done by
   `python tools/rubric.py score --scores a,b,c,d,e,f,g,h [--edge] --notes "..."`

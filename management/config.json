@@ -38,5 +38,7 @@
     "preparation": "daily 07:30",
     "work": "per business plan",
     "management": "nightly 22:00, weekly Fri 18:00"
-  }
+  },
+  "edge_hold_until": "2026-11-25",
+  "edge_hold_note": "Owner instruction 2026-10-25: no businesses related to the owner's construction-planning profession (P6, schedules, EOT claims, contractor tooling) until this date."
 }

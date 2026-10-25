@@ -30,4 +30,8 @@ payment / pre-order / deposit from a stranger 3 · booked call with a qualified 
 Type is one of: payment, call, intent, signup. Source is a file path under output/ or a URL. Rows without a source do not count.
 
 ## Verdict
-Written by `python tools/signals.py <this file> --write` at the deadline.
+
+**Verdict:** PARKED  
+**Reason:** Owner hold. On 2026-10-25 the owner excluded every business related to the construction-planning profession for the first month. Not a demand result: no messages were sent and no signal was counted.  
+**Re-open:** on 2026-11-25, if the owner lifts the hold, move this file back to 15-validating/, reset Started and Deadline, and raise the owner ticket again.  
+**Counted on:** 2026-10-25 by Planning (owner instruction)

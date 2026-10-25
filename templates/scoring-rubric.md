@@ -45,6 +45,8 @@ separates ideas.
    example a Qatar commercial registration the owner does not hold).
 7. No named channel and first-ten-customers path ("post and wait").
 8. Google organic search is the only acquisition channel.
+9. Relates to the owner's construction-planning profession while the owner
+   hold in `management/config.json` (`edge_hold_until`) is in force.
 
 ## Worked example A (rejected)
 Faceless YouTube Shorts channel, history facts niche. Gate 5 fails: templated

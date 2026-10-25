@@ -62,10 +62,15 @@ Mission, in one line: research, plan, prepare, execute, make money.
     days is paused. Phase 2 (after 90 days): cap drops to the 3 best
     performers and the pool concentrates on them. Management runs the
     pruning; the owner signs each stop.
-12. **Use the owner's edge.** `OWNER-EDGE.md` lists skills and markets the
-    owner brings. It is not personal data; use it. At least one idea per
-    Research cycle must build on it, and the first two cycles weight it
-    heavily.
+12. **Use the owner's edge, within the owner's hold.** `OWNER-EDGE.md` lists
+    skills and markets the owner brings. It is not personal data; use it.
+    Until `edge_hold_until` in `management/config.json` (set by the owner on
+    2026-10-25 to 2026-11-25) no business may relate to the owner's
+    construction-planning profession: P6 or scheduling services, EOT and
+    claims products, contractor-facing tools, courses for planners. General
+    skills in the edge file (Excel modelling, Python tooling, Arabic and
+    English) stay usable. After the hold date, at least one idea per Research
+    cycle builds on the edge.
 13. **No silent spending and no silent stopping.** Spend only within an
     approved ticket, recorded by `tools/ledger.py`, which refuses anything
     the funding rules forbid. Stop, pause or scale a business only through a
