@@ -91,3 +91,36 @@ evidence than any page cited here.
 - First Preparation run: two studio tickets (legal basis for income; Gumroad payout route).
 - First Management nightly: dashboard.md rebuilt; live dashboard pushed (15 writes); ticket cards now show the owner's steps.
 - Cloud mode switched on: five scheduled tasks on the owner's account (see SCHEDULE.md); `.gitattributes` merges the run log and research lists by union so concurrent runs do not conflict.
+
+## Day 1, continued (2026-10-25, evening)
+
+- **Owner hold (owner decision in chat).** No business related to the owner's
+  construction-planning profession until 2026-11-25: `edge_hold_until` in
+  `management/config.json`, rule 12 in CLAUDE.md, gate 9 in the rubric, the
+  Research and Planning SKILLs. The seven cycle-1 validations (all planning
+  related) are parked with that reason; their three owner tickets were withdrawn.
+- **Research cycle 2 (non-planning):** four briefs from categories 2 and 4 with
+  platform-level evidence: spreadsheet automation for small firms, a bilingual
+  CV service for Gulf job seekers, an Arabic modern-Excel course, bilingual
+  finance trackers on Gumroad. Two playbooks, two methods rejected at source.
+- **Planning run 2:** gates passed by all four (gate 9 included); scores 86, 77,
+  77 approved, 66 rejected (course: time to first dollar and ceiling). Three
+  validations opened; the two service tests start today with owner tickets
+  (20 asks each), the tracker test starts 2026-11-02 so the owner's week stays
+  under two hours.
+- **Owner answers from the dashboard.** The ticket cards now carry the why,
+  the steps, the drafts to copy and an answer box (Done / Approved / Rejected /
+  note). Answers land in the artifact database collection `replies`;
+  `tools/replies_apply.py` applies them at the start of every run (closing the
+  ticket, or saving a note under the validation's `replies/` folder so Planning
+  can count signals). README section 3 explains it to the owner.
+- **Cloud runs could not push.** The first scheduled runs cloned the repository
+  but GitHub refused their pushes (the fresh sessions had no repository
+  source). Fix: one permanent runner session created with the repository as a
+  source and `main` as its outcome branch (push verified), and the five
+  scheduled tasks re-bound to fire into that session. The runner's git identity
+  is "Venture Studio" (no personal data). Trade-off: a persistent-session task
+  cannot carry the platform's push notification, so the run itself sends one
+  line through the PushNotification tool when tickets are waiting; the
+  dashboard remains the reliable place.
+- Tests: 114 passing (`python -m unittest discover -s tests`).

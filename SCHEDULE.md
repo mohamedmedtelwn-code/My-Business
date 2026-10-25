@@ -2,12 +2,14 @@
 
 ## Cloud mode (active since 2026-10-25)
 
-The studio runs in the cloud on the owner's Claude account: each scheduled
-task starts a fresh cloud session that clones the GitHub repository
-`mohamedmedtelwn-code/My-Business`, runs one team, commits and pushes. The
-laptop is not needed for the teams to run; it is needed only for what the
-owner does (tickets). The schedule below is in Qatar time (UTC+3), with a
-few minutes of jitter so no two tasks start together.
+The studio runs in the cloud on the owner's Claude account. One permanent
+**runner session** ("Venture Studio runner", created 2026-10-25 with the GitHub
+repository `mohamedmedtelwn-code/My-Business` as its source and `main` as its
+outcome branch, so it can push) receives every scheduled message; each message
+is one team run. The laptop is not needed for the teams to run; it is needed
+only for what the owner does (tickets). The schedule is Qatar time (UTC+3),
+with a few minutes of jitter so no two tasks start together; a message that
+arrives while a run is in progress waits for it, so runs never overlap.
 
 | Task | Qatar time | Cron (stored) |
 |------|------------|---------------|
@@ -18,44 +20,55 @@ few minutes of jitter so no two tasks start together.
 | Management nightly | daily 21:42 | `CRON_TZ=Asia/Qatar 42 21 * * *` |
 | Management weekly | Fri 17:43 | `CRON_TZ=Asia/Qatar 43 17 * * 5` |
 
-Scheduled-task ids on the owner's Claude account (created 2026-10-25; change a
-schedule or prompt with the scheduled-tasks tools or the claude.ai routines
-page, never by recreating):
-`trig_015qhc8VnsYuY8HcwEetw3EU` Research cycle · `trig_01RMBwT7gpdpW4dk2KTqRn8J` Planning pass ·
-`trig_01RnM3C7T7hU4pHhJ4rt8G7i` Preparation pass · `trig_018yTkHkRUFXGWZBpmiCgMCx` Management nightly ·
-`trig_01XjpcHtoSXM8fZmnkJipwnp` Management weekly. Each sends a push notification when a run ends.
+Runner session id and scheduled-task ids are in `management/cloud-ids.md`
+(rewritten whenever they change; change a schedule or prompt with the
+scheduled-tasks tools or the claude.ai routines page, never by recreating).
+
+Why a runner session: a scheduled task that starts a fresh session each time
+cannot push to GitHub (the first two test runs on 2026-10-25 were refused with
+403: no repository source), so its work would be lost. A session created with
+the repository as a source pushes fine (verified the same day). The runner's
+git identity is "Venture Studio <studio@users.noreply.github.com>", no personal
+data. A persistent-session task cannot carry the platform's push notification,
+so each run sends one line through the PushNotification tool when tickets are
+waiting or a run failed; the dashboard is the reliable place to look.
 
 Cloud-mode rules that differ from the laptop mode below:
-- Every run begins with `git pull --rebase origin main` (fresh clone) and ends
-  with `git pull --rebase origin main && git push origin main`. The run log and
-  the research lists merge by union (`.gitattributes`), so two runs that touch
-  them never conflict. If a rebase conflict appears anywhere else, the run
+- Every run begins with `git pull --rebase origin main` in `/home/user/My-Business`
+  (clone it there if missing) and ends with `git pull --rebase origin main &&
+  git push origin main`. The run log and the research lists merge by union
+  (`.gitattributes`). If a rebase conflict appears anywhere else, the run
   aborts the rebase, resets to `origin/main`, redoes its own work and pushes.
-- Team locks (`management/.lock-*`) are not shared between cloud sessions;
-  the staggered schedule is what keeps runs apart. The crash sweep and the
-  circuit breaker still work because `management/runs.jsonl` is committed.
-- Each prompt is self-contained (a fresh session knows nothing). The prompt
-  text is the one stored in the scheduled task; the versions below are kept in
-  sync with it.
+- Every run first applies the owner's answers from the dashboard cards (the
+  "Owner answers" steps in `skills/management/DASHBOARD.md`).
+- Team locks (`management/.lock-*`) live in the runner's container; the queue
+  of messages keeps runs apart. The crash sweep and the circuit breaker work
+  because `management/runs.jsonl` is committed.
+- Each message is self-contained (the runner re-reads every file it needs; other
+  runs change files between messages). The stored prompt text is the one below.
 - Usage: all cloud runs draw on the owner's subscription. The cut order at the
   end of this file applies; the first lever is the Research cadence.
 
-### Cloud prompt skeleton (prepended to every team prompt)
+### Cloud prompt skeleton (the message every task sends to the runner)
 ```
-You are the <team> team of an AI venture studio. The studio is the GitHub
-repository https://github.com/mohamedmedtelwn-code/My-Business.git. Get it:
-if a folder containing CLAUDE.md and tools/check.py exists under your working
-directory, cd into it and run `git pull --rebase origin main`; otherwise run
-`git clone https://github.com/mohamedmedtelwn-code/My-Business.git venture-studio`
-and cd into it. Then read CLAUDE.md and skills/<team>/SKILL.md and do exactly
-what they say for one run, with python tools/check.py and python tools/runlog.py
-at the start and the end (runlog end with --commit). Finish with
-`git pull --rebase origin main && git push origin main`; if the push is
-rejected, wait 10 seconds and repeat the pull and push once. Do not ask
-questions: if something only the owner can do blocks you, write a ticket in
-pipeline/30-tickets/open/ and end the run with --outcome warn. Never open
-accounts, accept terms, enter credentials, send messages on anyone's behalf,
-or move money. Stop after 60 minutes of work even if unfinished.
+Run: <team>. Treat this message as a fresh run: re-read every file you need.
+Repository: /home/user/My-Business (if missing: git clone
+https://github.com/mohamedmedtelwn-code/My-Business.git /home/user/My-Business).
+cd into it; `git pull --rebase origin main` (on failure: git rebase --abort;
+git fetch origin; git reset --hard origin/main); git identity "Venture Studio"
+<studio@users.noreply.github.com>. Read CLAUDE.md and skills/<team>/SKILL.md.
+Owner answers first (skills/management/DASHBOARD.md, "Owner answers": list the
+replies collection with ArtifactData, run python tools/replies_apply.py ...,
+send the delete batch). Then do exactly one run as the SKILL says, with
+python tools/check.py and python tools/runlog.py at the start and the end
+(runlog end with --commit). Finish with `git pull --rebase origin main && git
+push origin main` (if rejected, wait 10 s and repeat once). If tickets are
+waiting for the owner or the run failed, call PushNotification once with one
+line under 200 characters. Do not ask questions: if something only the owner
+can do blocks you, write a ticket in pipeline/30-tickets/open/ and end the run
+with --outcome warn. Never open accounts, accept terms, enter credentials, send
+messages on anyone's behalf, or move money. Stop after 60 minutes even if
+unfinished, ending the run properly. Last line: "RUN <team> <outcome> push=<ok|failed>".
 ```
 
 ## Laptop mode (optional)
