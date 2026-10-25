@@ -29,9 +29,10 @@ the evidence behind them is in `research/STUDIO-RESEARCH.md`.
 
 1. Open `OWNER-EDGE.md` and correct it. It is the only file about you the
    teams read; it holds skills and markets, no personal data.
-2. Open `management/config.json` and set `"studio_start"` to today
-   (`"YYYY-MM-DD"`). Phase 1 runs 90 days from that date. Leave the other
-   numbers unless you have read the rubric and the research.
+2. `management/config.json` already has `"studio_start": "2026-10-25"`, the
+   day the studio was handed over, so Phase 1 runs to 2027-01-23. If you begin
+   later, change it to your real first-run date. Leave the other numbers
+   unless you have read the rubric and the research.
 3. Open a terminal in `Documents\venture-studio` and run the self-checks:
    ```
    python -m unittest discover -s tests

@@ -6,7 +6,7 @@ Businesses: none launched (Phase 1, cap 8)
 Runs: none recorded
 
 ## Needs owner
-Set `studio_start` in management/config.json, then run the first Research cycle (README step 2).
+Run the first Research cycle by hand (README step 2). Phase 1 started 2026-10-25 and ends 2027-01-23.
 
 ## Issues
 None.
