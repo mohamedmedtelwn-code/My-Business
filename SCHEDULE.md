@@ -18,6 +18,13 @@ few minutes of jitter so no two tasks start together.
 | Management nightly | daily 21:42 | `CRON_TZ=Asia/Qatar 42 21 * * *` |
 | Management weekly | Fri 17:43 | `CRON_TZ=Asia/Qatar 43 17 * * 5` |
 
+Scheduled-task ids on the owner's Claude account (created 2026-10-25; change a
+schedule or prompt with the scheduled-tasks tools or the claude.ai routines
+page, never by recreating):
+`trig_015qhc8VnsYuY8HcwEetw3EU` Research cycle · `trig_01RMBwT7gpdpW4dk2KTqRn8J` Planning pass ·
+`trig_01RnM3C7T7hU4pHhJ4rt8G7i` Preparation pass · `trig_018yTkHkRUFXGWZBpmiCgMCx` Management nightly ·
+`trig_01XjpcHtoSXM8fZmnkJipwnp` Management weekly. Each sends a push notification when a run ends.
+
 Cloud-mode rules that differ from the laptop mode below:
 - Every run begins with `git pull --rebase origin main` (fresh clone) and ends
   with `git pull --rebase origin main && git push origin main`. The run log and

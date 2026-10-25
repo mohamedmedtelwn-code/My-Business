@@ -84,3 +84,10 @@ Qatar bank, Lemon Squeezy onboarding under Stripe Managed Payments, Payoneer's
 official Qatar status, exact Claude usage allowances). Research re-verifies the
 platform rules monthly; the first 90 days of ledger data will be better
 evidence than any page cited here.
+
+## Day 1 operations (2026-10-25)
+- First Research cycle run from the cloud session: 8 briefs, 6 playbooks, 7 methods rejected at source.
+- First Planning run: 7 approved (71-78), 1 rejected (newsletter, 69); 7 validation briefs; batch 1 (EOT readiness review, claim pack, P6 baseline QA) started with owner tickets; batch 2 starts 2026-11-01.
+- First Preparation run: two studio tickets (legal basis for income; Gumroad payout route).
+- First Management nightly: dashboard.md rebuilt; live dashboard pushed (15 writes); ticket cards now show the owner's steps.
+- Cloud mode switched on: five scheduled tasks on the owner's account (see SCHEDULE.md); `.gitattributes` merges the run log and research lists by union so concurrent runs do not conflict.
