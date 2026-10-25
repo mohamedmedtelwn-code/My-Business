@@ -1,0 +1,216 @@
+<title>Venture Studio Control Room</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column of stacked panels; summary tiles first, then teams, businesses, owner queue, money chart, activity. Operated from a phone. */
+:root{
+  --bg:#f3f5f7; --panel:#ffffff; --fg:#17202a; --muted:#5e6b7a; --line:#d9dfe6;
+  --accent:#0f6e7a; --accent-soft:#d7eef0;
+  --good:#1f8a4c; --warn:#b7791f; --bad:#c0392b; --soft-good:#e2f3e8; --soft-warn:#faefd9; --soft-bad:#f9e1de;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10151b; --panel:#182028; --fg:#e8edf2; --muted:#98a5b3; --line:#2a3542;
+  --accent:#4cc3cf; --accent-soft:#143338;
+  --good:#4ec27c; --warn:#e0a84a; --bad:#ef6a5c; --soft-good:#17311f; --soft-warn:#3a2d12; --soft-bad:#3b1c18;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10151b; --panel:#182028; --fg:#e8edf2; --muted:#98a5b3; --line:#2a3542;
+  --accent:#4cc3cf; --accent-soft:#143338;
+  --good:#4ec27c; --warn:#e0a84a; --bad:#ef6a5c; --soft-good:#17311f; --soft-warn:#3a2d12; --soft-bad:#3b1c18;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.45;padding-inline:16px;padding-block:16px 32px;max-width:1100px;margin:0 auto}
+h1{font-size:1.25rem;font-weight:600;margin:0;letter-spacing:-.01em}
+h2{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.stamp{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.stack{display:grid;gap:18px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;min-width:0}
+.tile .l{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tile .v{font-family:var(--mono);font-size:1.5rem;font-weight:500;font-variant-numeric:tabular-nums;margin-top:4px}
+.tile .s{font-size:.78rem;color:var(--muted);margin-top:2px}
+.tile.accent{border-color:var(--accent);background:var(--accent-soft)}
+.teams{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.team{border:1px solid var(--line);border-radius:6px;padding:10px 12px;min-width:0;display:grid;gap:4px}
+.team .n{font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.team .w{font-size:.85rem;color:var(--fg)}
+.team .m{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.pill{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+.pill.idle{background:var(--bg);color:var(--muted);border-color:var(--line)}
+.pill.ok,.pill.live,.pill.green{background:var(--soft-good);color:var(--good)}
+.pill.warn,.pill.amber,.pill.paused,.pill.pending{background:var(--soft-warn);color:var(--warn)}
+.pill.bad,.pill.red,.pill.stopped,.pill.blocked{background:var(--soft-bad);color:var(--bad)}
+.pill.run,.pill.running{background:var(--accent-soft);color:var(--accent)}
+.tablewrap{overflow-x:auto;margin:0 -14px;padding:0 14px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:620px}
+th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.stripe{display:inline-block;width:4px;height:1.1em;border-radius:2px;vertical-align:middle;margin-right:8px;background:var(--line)}
+.stripe.green{background:var(--good)}.stripe.amber{background:var(--warn)}.stripe.red{background:var(--bad)}
+.metric{font-family:var(--mono);font-size:.78rem;color:var(--muted);white-space:nowrap}
+.metric b{color:var(--fg);font-weight:500}
+.queue{display:grid;gap:8px}
+.ticket{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:start;border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:6px;padding:10px 12px;min-width:0}
+.ticket.invest{border-left-color:var(--accent)}
+.ticket .t{font-weight:600}
+.ticket .d{font-size:.82rem;color:var(--muted)}
+.ticket .amt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.chart{width:100%;height:auto;display:block}
+.chart text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.legend{display:flex;gap:16px;font-size:.78rem;color:var(--muted);margin-top:6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.feed{display:grid;gap:6px;font-size:.88rem}
+.feed .row{display:grid;grid-template-columns:auto auto 1fr;gap:10px;align-items:baseline;min-width:0}
+.feed .ts{font-family:var(--mono);font-size:.72rem;color:var(--muted);white-space:nowrap}
+.feed .tm{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);white-space:nowrap}
+.feed .tx{min-width:0;overflow-wrap:anywhere}
+.empty{color:var(--muted);font-size:.9rem;padding:6px 0}
+.empty code{font-family:var(--mono);font-size:.82rem;background:var(--bg);padding:1px 5px;border-radius:4px}
+.note{font-size:.78rem;color:var(--muted);margin-top:8px}
+@media (prefers-reduced-motion:no-preference){.tile .v{transition:color .3s}}
+</style>
+
+<div class="top">
+  <h1>Venture Studio Control Room</h1>
+  <div class="stamp" id="stamp">Waiting for the first Management refresh</div>
+</div>
+
+<div class="stack">
+  <section class="tiles" id="tiles">
+    <div class="tile"><div class="l">Released by you</div><div class="v" id="t-rel">—</div><div class="s" id="t-ceil">of USD 1,000 ceiling</div></div>
+    <div class="tile"><div class="l">Spent</div><div class="v" id="t-spent">—</div><div class="s" id="t-unspent">unspent of released —</div></div>
+    <div class="tile accent"><div class="l">Revenue</div><div class="v" id="t-rev">—</div><div class="s" id="t-net">net —</div></div>
+    <div class="tile"><div class="l">Reinvestment pool</div><div class="v" id="t-pool">—</div><div class="s">earnings available to fund the next business</div></div>
+    <div class="tile"><div class="l">Businesses live</div><div class="v" id="t-live">—</div><div class="s" id="t-biz">paused — · stopped —</div></div>
+    <div class="tile"><div class="l">Needs you</div><div class="v" id="t-tix">—</div><div class="s">open tickets</div></div>
+  </section>
+
+  <section class="panel">
+    <h2>Teams</h2>
+    <div class="teams" id="teams"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Businesses</h2>
+    <div class="tablewrap"><table id="biz-table" hidden>
+      <thead><tr><th>Business</th><th>Status</th><th class="num">Days</th><th class="num">Spent</th><th class="num">Revenue</th><th>Metrics vs kill / scale</th><th>Last run</th></tr></thead>
+      <tbody id="biz-body"></tbody>
+    </table></div>
+    <div class="empty" id="biz-empty">No business launched yet. Preparation adds one here when its readiness checklist is complete.</div>
+  </section>
+
+  <section class="panel">
+    <h2>Your queue</h2>
+    <div class="queue" id="queue"></div>
+    <div class="empty" id="queue-empty">Nothing waiting for you. Tickets appear here when a team needs an account, an approval, or money.</div>
+  </section>
+
+  <section class="panel">
+    <h2>Money over time</h2>
+    <svg class="chart" id="chart" viewBox="0 0 720 220" role="img" aria-label="Cumulative spend and revenue"></svg>
+    <div class="legend"><span><i style="background:var(--bad)"></i>Cumulative spend</span><span><i style="background:var(--good)"></i>Cumulative revenue</span></div>
+    <div class="empty" id="chart-empty">The curve draws from the ledger once the first entry is posted.</div>
+  </section>
+
+  <section class="panel">
+    <h2>Pipeline</h2>
+    <div class="tiles" id="pipe"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Recent activity</h2>
+    <div class="feed" id="feed"></div>
+    <div class="empty" id="feed-empty">Each team posts a line here when it finishes a run.</div>
+    <div class="note">Data is written by the Management team's scheduled refresh. Reads are live; nothing on this page edits the studio.</div>
+  </section>
+</div>
+
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const usd=n=>{n=Number(n)||0;return (n<0?'−':'')+'$'+Math.abs(n).toLocaleString('en-US',{maximumFractionDigits:0})};
+  const safe=s=>String(s==null?'':s);
+  const esc=s=>safe(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const TEAMS=['research','planning','preparation','work','management'];
+  const LABEL={research:'Research',planning:'Planning',preparation:'Preparation',work:'Work',management:'Management'};
+
+  function renderSummary(d){
+    d=d||{};const c=d.capital||{},p=d.pipeline||{},b=d.businesses||{};
+    $('t-rel').textContent=c.released==null?'—':usd(c.released);
+    $('t-ceil').textContent='of '+usd(c.ceiling==null?1000:c.ceiling)+' ceiling';
+    $('t-spent').textContent=c.spent==null?'—':usd(c.spent);
+    $('t-unspent').textContent='unspent of released '+(c.released==null||c.spent==null?'—':usd(c.released-c.spent));
+    $('t-rev').textContent=c.revenue==null?'—':usd(c.revenue);
+    $('t-net').textContent='net '+(c.revenue==null||c.spent==null?'—':usd(c.revenue-c.spent));
+    $('t-pool').textContent=c.pool==null?'—':usd(c.pool);
+    $('t-live').textContent=b.live==null?'—':b.live;
+    $('t-biz').textContent='paused '+(b.paused==null?'—':b.paused)+' · stopped '+(b.stopped==null?'—':b.stopped);
+    $('t-tix').textContent=p.tickets_open==null?'—':p.tickets_open;
+    $('stamp').textContent=d.updated?('Refreshed '+d.updated):'Waiting for the first Management refresh';
+    const pipe=[['Inbox',p.inbox,'ideas from Research'],['Assessed',p.assessed,'scored by Planning'],['Planned',p.planned,'awaiting Preparation'],['Open tickets',p.tickets_open,'waiting on you']];
+    $('pipe').innerHTML=pipe.map(([l,v,s])=>`<div class="tile"><div class="l">${l}</div><div class="v">${v==null?'—':v}</div><div class="s">${s}</div></div>`).join('');
+  }
+  function renderTeams(docs){
+    const byId={};docs.forEach(x=>byId[x.id]=x.data());
+    $('teams').innerHTML=TEAMS.map(id=>{const t=byId[id]||{};const st=safe(t.status||'idle').toLowerCase();
+      return `<div class="team"><div class="n"><span>${LABEL[id]}</span><span class="pill ${esc(st)}">${esc(st)}</span></div><div class="w">${esc(t.summary||'No run recorded yet')}</div><div class="m">last ${esc(t.last_run||'—')} · next ${esc(t.next_run||'—')}</div></div>`}).join('');
+  }
+  function renderBiz(docs){
+    const rows=docs.map(x=>({id:x.id,...x.data()}));
+    $('biz-table').hidden=!rows.length;$('biz-empty').hidden=!!rows.length;
+    $('biz-body').innerHTML=rows.map(r=>{const rag=safe(r.rag||'').toLowerCase();const st=safe(r.status||'live').toLowerCase();
+      const ms=(r.metrics||[]).map(m=>`<div class="metric">${esc(m.name)}: <b>${esc(m.value)}</b> / ${esc(m.kill)} · ${esc(m.scale)}</div>`).join('');
+      return `<tr><td><span class="stripe ${rag}"></span>${esc(r.name||r.id)}${r.flag?` <span class="pill bad">flag</span>`:''}<div class="metric">${esc(r.category||'')}</div></td><td><span class="pill ${esc(st)}">${esc(st)}</span></td><td class="num">${r.days_live==null?'—':r.days_live}</td><td class="num">${usd(r.spent)}</td><td class="num">${usd(r.revenue)}</td><td>${ms||'<span class="metric">no metrics yet</span>'}</td><td class="metric">${esc(r.last_run||'—')}</td></tr>`}).join('');
+  }
+  function renderQueue(docs){
+    const rows=docs.map(x=>({id:x.id,...x.data()})).filter(r=>safe(r.status||'open').toLowerCase()==='open');
+    $('queue-empty').hidden=!!rows.length;
+    $('queue').innerHTML=rows.map(r=>`<div class="ticket ${r.type==='investment'?'invest':''}"><div><div class="t">${esc(r.title||r.id)}</div><div class="d">${esc(r.business||'')}${r.business?' · ':''}${esc(r.type||'approval')} · raised ${esc(r.raised||'—')}</div></div><div class="amt">${r.amount?usd(r.amount):''}</div></div>`).join('');
+  }
+  function renderFeed(docs){
+    const rows=docs.map(x=>x.data()).sort((a,b)=>safe(b.ts).localeCompare(safe(a.ts))).slice(0,25);
+    $('feed-empty').hidden=!!rows.length;
+    $('feed').innerHTML=rows.map(r=>`<div class="row"><span class="ts">${esc(r.ts||'')}</span><span class="tm">${esc(r.team||'')}</span><span class="tx">${esc(r.text||'')}</span></div>`).join('');
+  }
+  function renderChart(docs){
+    const rows=docs.map(x=>x.data()).filter(r=>r.date).sort((a,b)=>safe(a.date).localeCompare(safe(b.date)));
+    const svg=$('chart');$('chart-empty').hidden=!!rows.length;
+    if(!rows.length){svg.innerHTML='';return}
+    let so=0,si=0;const pts=rows.map(r=>{so+=Number(r.out)||0;si+=Number(r.in)||0;return{d:r.date,so,si}});
+    const W=720,H=220,L=52,R=12,T=14,B=28,w=W-L-R,h=H-T-B;
+    const max=Math.max(10,...pts.map(p=>Math.max(p.so,p.si)))*1.1;
+    const x=i=>pts.length>1?L+i*w/(pts.length-1):L+w/2, y=v=>T+h-(v/max)*h;
+    const ticks=[0,.25,.5,.75,1].map(f=>Math.round(max*f));
+    let s='';
+    ticks.forEach(t=>{s+=`<line x1="${L}" x2="${L+w}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)" stroke-width="1"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end">${usd(t)}</text>`});
+    const path=(k)=>pts.map((p,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(p[k]).toFixed(1)).join(' ');
+    const area=(k)=>path(k)+` L${x(pts.length-1).toFixed(1)} ${y(0)} L${x(0).toFixed(1)} ${y(0)} Z`;
+    s+=`<path d="${area('so')}" fill="var(--bad)" opacity=".08"/><path d="${area('si')}" fill="var(--good)" opacity=".12"/>`;
+    s+=`<path d="${path('so')}" fill="none" stroke="var(--bad)" stroke-width="2"/><path d="${path('si')}" fill="none" stroke="var(--good)" stroke-width="2"/>`;
+    const last=pts[pts.length-1];
+    s+=`<circle cx="${x(pts.length-1)}" cy="${y(last.so)}" r="3.5" fill="var(--bad)"/><circle cx="${x(pts.length-1)}" cy="${y(last.si)}" r="3.5" fill="var(--good)"/>`;
+    s+=`<text x="${x(0)}" y="${H-8}" text-anchor="start">${esc(pts[0].d)}</text>`;
+    if(pts.length>1)s+=`<text x="${x(pts.length-1)}" y="${H-8}" text-anchor="end">${esc(last.d)}</text>`;
+    svg.innerHTML=s;
+  }
+
+  renderSummary(null);renderTeams([]);renderBiz([]);renderQueue([]);renderFeed([]);renderChart([]);
+
+  (async()=>{
+    const db=window.claude&&await claude.use('db');
+    if(!db){$('stamp').textContent='Live data unavailable in this view';return}
+    const onErr=e=>console.error('db',e);
+    db.doc('studio/summary').onSnapshot(s=>renderSummary(s.exists?s.data():null),onErr);
+    db.collection('teams').onSnapshot(q=>renderTeams(q.docs),onErr);
+    db.collection('businesses').onSnapshot(q=>renderBiz(q.docs),onErr);
+    db.collection('tickets').onSnapshot(q=>renderQueue(q.docs),onErr);
+    db.collection('ledger').orderBy('date').limit(1000).onSnapshot(q=>renderChart(q.docs),onErr);
+    db.collection('activity').orderBy('ts','desc').limit(25).onSnapshot(q=>renderFeed(q.docs),onErr);
+  })();
+})();
+</script>
