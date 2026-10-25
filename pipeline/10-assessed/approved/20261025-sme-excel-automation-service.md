@@ -77,3 +77,18 @@ the legal basis for income first.
 ## Research confidence
 Medium: platform rates are published; GCC small-business demand is inferred,
 not measured. Validation decides.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | platform rate pages and job feed, no first-person earnings |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, owner's Excel and free Sheets |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-6 weeks by direct outreach |
+| 4 | Automatability | 4 | 3 | 12 | agent builds macros and dashboards from uploaded files, owner scopes |
+| 5 | Owner time per week | 3 | 2 | 6 | 2-4 h a week of scoping and final checks |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 300-1,500 at 1-5 projects, platform range USD 500-1,500 |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | repeat work and refresh retainers, but every client is won by outreach |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | simple NDA, income legal basis pending (studio-1) |
+
+**Total:** 77/100 — APPROVED (threshold 70); owner-edge bonus applied
+

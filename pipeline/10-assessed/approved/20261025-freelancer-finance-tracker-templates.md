@@ -70,3 +70,18 @@ confirms the legal basis for income first.
 
 ## Research confidence
 Medium on the (low) base rate; low on this pack's conversion.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | 146k-product dataset gives the (low) base rate, vendor first-person report |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 3 | 4 | 12 | 1-3 months, median creator USD 72 a month |
+| 4 | Automatability | 5 | 3 | 15 | agent builds trackers and listing, owner checks formulas |
+| 5 | Owner time per week | 5 | 2 | 10 | under 1 h a week |
+| 6 | Earnings ceiling at 6 months | 1 (+1 edge) | 2 | 4 | USD 20-300, platform median USD 72 |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | evergreen listing and cross-sell to the service, no audience yet |
+| 8 | Legal / platform clarity | 5 | 1 | 5 | Gumroad allowed, no advice given |
+
+**Total:** 77/100 — APPROVED (threshold 70); owner-edge bonus applied
+

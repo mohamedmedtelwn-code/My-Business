@@ -72,3 +72,26 @@ income first.
 
 ## Research confidence
 Medium: category size and policy are verified; Arabic conversion is unknown.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | Udemy course counts and policy, no first-person earnings |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 2 | 4 | 8 | 1-3 months after 25-35 h of recording |
+| 4 | Automatability | 3 | 3 | 9 | owner records every lesson |
+| 5 | Owner time per week | 4 | 2 | 8 | 1 h a week after launch |
+| 6 | Earnings ceiling at 6 months | 2 (+1 edge) | 2 | 6 | USD 50-500, median course has 217 enrolments |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | evergreen but Udemy-dependent and discounted |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | Microsoft marks used descriptively |
+
+**Total:** 66/100 — REJECTED (threshold 70); owner-edge bonus applied
+
+
+## Rejected: score 66/100, below the threshold of 70
+Lowest criteria: Time to first dollar (2: the owner must record 25-35 hours
+before any sale) and Earnings ceiling (2: the median Udemy course has 217
+lifetime enrolments and Udemy keeps 63% of organic sales). Gates passed,
+including gate 9 (no construction content). Resubmit as a presale cohort once
+the CV service or the finance trackers have a warm list of Arabic-speaking
+office professionals to sell to; that would lift Time to first dollar to 3-4.

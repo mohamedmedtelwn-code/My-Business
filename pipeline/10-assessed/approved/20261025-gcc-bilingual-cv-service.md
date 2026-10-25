@@ -77,3 +77,18 @@ Owner confirms the legal basis for income first.
 ## Research confidence
 Medium-high: prices and volumes are published by platforms and local
 competitors; conversion in the owner's network is the unknown.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | platform rates, order volumes and two local competitor price pages |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 5 | 4 | 20 | under 2 weeks with direct asks to job seekers |
+| 4 | Automatability | 4 | 3 | 12 | agent drafts everything, owner reviews 15 minutes per CV |
+| 5 | Owner time per week | 4 | 2 | 8 | 2-3 h a week |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 300-1,500 at 4-20 orders |
+| 7 | Durability | 2 (+1 edge) | 1 | 3 | one-off purchases and AI resume tools commoditise the English CV |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | no guarantees of jobs, data deleted after delivery |
+
+**Total:** 86/100 — APPROVED (threshold 70); owner-edge bonus applied
+
