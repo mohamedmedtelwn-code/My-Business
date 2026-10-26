@@ -90,3 +90,17 @@ legal basis per ticket 20261025-studio-1.
 ## Research confidence
 Medium-High on rates and demand (survey plus platform stats); Medium on
 conversion from outreach.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | 12-source rate aggregate, Upwork profile job counts and earnings, ProZ job volume |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 4 | 4 | 16 | 1-3 weeks by outreach with a free sample |
+| 4 | Automatability | 3 | 3 | 9 | agent drafts, owner reviews every job so income scales with review hours |
+| 5 | Owner time per week | 3 | 2 | 6 | 4-6 h at 2,000-10,000 words a month |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 300-1,500 at per-word rates in the evidence |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | direct clients plus Upwork/ProZ/Fiverr, recurring marketing content |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | certified work excluded (MOJ offices), AI assistance disclosed on request |
+
+**Total:** 78/100 — APPROVED (threshold 70); owner-edge bonus applied

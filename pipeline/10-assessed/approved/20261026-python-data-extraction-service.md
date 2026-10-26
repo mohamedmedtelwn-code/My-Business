@@ -90,3 +90,17 @@ verified name must match bank.
 Medium. Demand and prices are platform-level and current; Qatar-side demand
 is inferred from GCC business practice, not measured. Upwork account access
 from Qatar unverified.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | platform stats (Upwatcher medians, Upwork job feed, profile earnings) but no small-operator income distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 4 | 4 | 16 | 1-3 weeks by outreach to firms the owner must still name |
+| 4 | Automatability | 4 | 3 | 12 | agent drafts, builds and tests, owner scopes and delivers |
+| 5 | Owner time per week | 3 | 2 | 6 | 3-5 h a week |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 300-1,500 at 2-8 jobs from the Upwork median fixed budget |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | direct clients plus Upwork, refresh retainers repeat |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | public data only, Upwork access from Qatar unverified, scraping terms vary per site |
+
+**Total:** 80/100 — APPROVED (threshold 70); owner-edge bonus applied

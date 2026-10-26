@@ -87,3 +87,17 @@ basis per ticket 20261025-studio-1.
 Medium. Prices are well documented (survey plus first-person gig data);
 GCC-specific demand is inferred from LinkedIn user counts and funding
 activity.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | agency survey of 185 clients and one first-person Fiverr gig with numbers, rest vendor pricing pages |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-4 weeks by direct asks with a sample post |
+| 4 | Automatability | 4 | 3 | 12 | agent drafts from transcripts, owner edits 15 minutes a post |
+| 5 | Owner time per week | 3 | 2 | 6 | 1-1.5 h per client, 4-6 h at capacity |
+| 6 | Earnings ceiling at 6 months | 4 (+1 edge) | 2 | 10 | USD 1,000-4,000 at 2-4 entry retainers shown in the survey |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | direct clients plus Fiverr, monthly retainers repeat |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | ghostwriting permitted, client publishes, no engagement manipulation |
+
+**Total:** 79/100 — APPROVED (threshold 70); owner-edge bonus applied

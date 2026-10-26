@@ -87,3 +87,17 @@ employer conflict: not construction-related (owner hold respected).
 ## Research confidence
 Medium-High on price and demand (platform cost pages, incubator counts);
 Medium on conversion from outreach.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | Upwork cost page median and project bands, incubator cohort counts, academic DIC data |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-4 weeks by direct asks to listed founders |
+| 4 | Automatability | 3 | 3 | 9 | agent builds the workbook, owner reviews every model and runs the calls |
+| 5 | Owner time per week | 3 | 2 | 6 | 4-6 h at 1-2 models a month |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 500-3,000 at Upwork low-to-mid project band |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | direct founders plus Upwork, update work repeats per round |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | not advice, no regulated valuation claims, clear |
+
+**Total:** 78/100 — APPROVED (threshold 70); owner-edge bonus applied

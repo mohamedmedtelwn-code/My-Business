@@ -99,3 +99,27 @@ per ticket 20261025-studio-1.
 Medium-Low. The add-on monetisation model is documented with numbers, but
 no sales data exists for this specific niche; demand is shown by requests
 and free tools, not by purchases.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | method revenue is first-person (Sync2Sheets, Email-to-Sheets) but the niche shows requests and free tools, no purchases |
+| 2 | Capital to first dollar | 4 | 3 | 12 | USD 12 domain |
+| 3 | Time to first dollar | 2 | 4 | 8 | 4-8 weeks, Marketplace review, no waitlist or audience |
+| 4 | Automatability | 4 | 3 | 12 | agent builds, owner publishes and supports |
+| 5 | Owner time per week | 4 | 2 | 8 | 1-2 h a week |
+| 6 | Earnings ceiling at 6 months | 2 (+1 edge) | 2 | 6 | USD 0-300, median indie utility under USD 50 a month |
+| 7 | Durability | 2 (+1 edge) | 1 | 3 | Marketplace search and groups, no owned audience yet |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | Workspace publishing from Qatar unverified, Gumroad clear |
+
+**Total:** 64/100 — REJECTED (threshold 70); owner-edge bonus applied
+
+## Rejected: score 64/100, below the threshold of 70
+Lowest criteria: Time to first dollar (2: build plus Marketplace review is
+4-8 weeks with no waitlist), Earnings ceiling (2: the median indie utility
+earns under USD 50 a month and the comparable Sheets add-on with 3,000 users
+earned USD 0) and Durability (2: Marketplace search and groups, no owned
+audience). Gates passed, including gate 9 (no construction content). Resubmit
+once the finance-tracker or Excel-automation businesses have a buyer list of
+Gulf bookkeepers to presell to, or as a free add-on bundled with those
+templates; a presale of 20 licences would lift Time to first dollar to 4.

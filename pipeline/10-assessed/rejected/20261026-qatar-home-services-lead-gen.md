@@ -93,3 +93,27 @@ ticket 20261025-studio-1.
 Low-Medium. Cost-per-lead evidence is first-person but from other markets;
 Qatar numbers are vendor estimates. The pay-per-lead model is widely
 practised; no first-person Qatar earnings report was found.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 2 | 4 | 8 | first-person case studies from other markets, Qatar cost-per-lead figures are modelled or vendor |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, client funds ad spend |
+| 3 | Time to first dollar | 3 | 4 | 12 | 3-5 weeks: sign a pilot, run two weeks, invoice |
+| 4 | Automatability | 3 | 3 | 9 | owner runs campaigns in the client account daily, agent drafts creatives and reports |
+| 5 | Owner time per week | 3 | 2 | 6 | 2-3 h a week |
+| 6 | Earnings ceiling at 6 months | 3 | 2 | 6 | USD 300-1,500 at 2-5 clients |
+| 7 | Durability | 3 | 1 | 3 | direct clients plus referrals, exclusivity per niche |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | Meta policies, lead data stays with the client, licensed firms only |
+
+**Total:** 62/100 — REJECTED (threshold 70)
+
+## Rejected: score 62/100, below the threshold of 70
+Lowest criteria: Evidence strength (2: first-person cost-per-lead data comes
+from other markets and every Qatar figure is a vendor estimate or modelled),
+Time to first dollar (3: a pilot must be signed and run before the first
+invoice) and Automatability (3: the owner runs daily checks inside the
+client's ad account). Gates passed. Resubmit with one Qatar first-person
+result: if a live service business of the studio runs its own Meta lead
+campaign and records cost per qualified lead, that number turns Evidence into
+a 4 and the idea into a service the same client base will buy.
