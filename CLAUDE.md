@@ -30,7 +30,10 @@ Mission, in one line: research, plan, prepare, execute, make money.
    penalises it. Planning rejects these outright.
 6. **The owner does these, never an agent:** open accounts, accept terms,
    enter passwords or payment details, pass identity checks, send money,
-   sign anything. Agents prepare everything and raise a ticket.
+   sign anything. Agents prepare everything and raise a ticket. The owner
+   does nothing else: the owner's name, face, personal accounts and personal
+   network are never used for marketing, outreach or delivery (owner
+   decision 2026-10-27, `management/decisions.md`).
 7. **Every decision is written down.** Idea briefs, plans, tickets, logs,
    and reviews live in the folders below. If it is not in a file, it did
    not happen. Every number in a metrics or review file names its source.
@@ -43,10 +46,11 @@ Mission, in one line: research, plan, prepare, execute, make money.
    first ten customers, and exactly how they will be reached. "Post and
    wait" is not a plan; Google organic search alone is not a channel.
 10. **Validate before building.** Between Planning and Preparation every
-    idea gets a USD 0 validation run (stage 15): 50 personalised outreach
-    messages (20 first, 30 more unless the first 20 bring nothing), or a
-    landing page seen by at least 100 qualified visitors, or 20 direct
-    pre-sale asks. Pass = 3 signal units within 7 days: a payment or
+    idea gets a USD 0 validation run (stage 15), run by the agents under
+    rule 15: 50 personalised outreach emails from the studio domain (20
+    first, 30 more unless the first 20 bring nothing), or a landing page
+    seen by at least 100 qualified visitors, or 20 direct pre-sale asks by
+    email. Pass = 3 signal units within 7 days: a payment or
     pre-order counts 3, a booked call 1, a reply with explicit intent 1, an
     email sign-up one third (only above an 8% sign-up rate), likes and
     follows 0. `tools/signals.py` counts and decides. Under the denominator
@@ -80,6 +84,21 @@ Mission, in one line: research, plan, prepare, execute, make money.
     logged, locked and, after three failures in a row, stopped until the
     owner resets). The numbers the tools enforce live in
     `management/config.json`; this file quotes them, the config decides.
+15. **Agents run everything.** Every business is run end to end by the
+    agents: prospecting, outreach, content, delivery, support, reporting.
+    Outreach goes out only under the studio brand from studio-owned channels:
+    email from the studio domain (personalised, business addresses only,
+    at most 20 cold messages a day across the studio, an opt-out line in
+    every message, no second follow-up after a "no"), landing pages and
+    product pages the agents publish, and marketplace listings under the
+    studio brand where the platform's terms allow an account to be operated
+    on the holder's behalf. Channels that require a real person to operate
+    them (LinkedIn messaging, Upwork, Fiverr, personal social accounts) are
+    out of scope. Consumer audiences reachable only through personal social
+    accounts or paid ads are out of scope until a studio-owned channel
+    exists. The studio brand, domain, email-sending account and API keys
+    are set up by the owner through tickets and stored as environment
+    secrets of the runner session; agents never see passwords.
 
 ## Funding tiers
 

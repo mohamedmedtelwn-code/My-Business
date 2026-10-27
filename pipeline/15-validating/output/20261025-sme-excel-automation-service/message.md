@@ -1,7 +1,9 @@
-# Outreach message: spreadsheet automation (send as written, fill the one personal line)
+# Outreach email (agent sends from the studio domain; fill the personal line from the prospect's own site)
 
 ## English
-Hi <name>, <one personal line: how you know them or what their business does>.
+Subject: <one line naming their business and the outcome>
+
+Hello <name>, <one personal line taken from their website or a recent post about their business>.
 
 I am setting up a small service that turns a business's painful spreadsheet
 routine (month-end merging, cleaning data, sales or stock reports) into a
@@ -25,8 +27,11 @@ perfectly good answer.
 الملف أو صورة منه وسأخبرك ما الذي يمكن أتمتته وكم سيوفر من وقت. وإن لم يكن
 مناسباً فكلمة "لا" إجابة كافية.
 
-## Follow-up (day 3, one line)
-Hi <name>, quick nudge on the free 15-minute spreadsheet look; if this month is
+## Signature and opt-out (every email ends with this)
+<Studio brand>, Doha. Reply "stop" and you will not hear from us again.
+
+## Follow-up (day 3, one line; never after a "no" or a "stop")
+Hello <name>, quick nudge on the free 15-minute spreadsheet look; if this month is
 busy, say "later" and I will not ask again.
 
 ## Price guard

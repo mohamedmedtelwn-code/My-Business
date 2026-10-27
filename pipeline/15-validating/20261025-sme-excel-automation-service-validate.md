@@ -1,19 +1,23 @@
 # Validation Brief: Excel and Google Sheets automation for small businesses
 
 - **Id:** 20261025-sme-excel-automation-service
-- **Started:** 2026-10-25  **Deadline:** 2026-11-01 (7 days; replies count to day 9)
+- **Started:** 2026-11-03  **Deadline:** 2026-11-10 (7 days; replies count to day 9)
 - **Test:** outreach
 - **Extended:** no
 - **Cost:** USD 0
 
 ## The test
-The owner sends the message in `output/20261025-sme-excel-automation-service/message.md`
-to 20 owners or operations and finance staff of small firms (trading, clinics,
-agencies, e-commerce, services) in Qatar and the GCC who run part of the
-business on spreadsheets, offering a free 15-minute look at one painful
-spreadsheet and a first automation at a fixed USD 290 (QAR 1,050). If the
-first 20 bring no signal, 30 more follow. The prospect criteria are in
-`prospect-criteria.md`. Agents never send the messages.
+The agents email 20 owners or operations and finance staff of small firms
+in Qatar and the GCC that run part of the business on spreadsheets (trading,
+clinics, agencies, e-commerce, services), from the studio domain, offering a
+free 15-minute look at one painful spreadsheet (they send the file, the agents
+reply with what can be automated) and a first automation at a fixed USD 290
+(QAR 1,050). If the first 20 bring no signal, 30 more follow. Prospects come
+from public company websites and directories; business addresses only, one
+opt-out line in every email, no second follow-up after a "no". The email is in
+`output/20261025-sme-excel-automation-service/message.md`; the list-building
+rules are in `prospect-criteria.md`. The owner does nothing. Starts when the
+studio email sender exists (tickets pending); Planning shifts the date if not.
 
 ## Denominator (update as the test runs)
 - **Messages sent:** 0   (outreach: 20 first, then 30 more unless 0 signals; pass needs 50)
@@ -26,11 +30,14 @@ stranger 1 (void if not held within 14 days) · reply with explicit intent 1 ·
 email sign-up 1/3 (landing test only) · likes, follows, friends and family 0.
 
 ## Owner steps (ticket raised if any)
-1. Read prospect-criteria.md and list 20 people who match (business contacts, not family or close friends).
-2. Send message.md to each, with the one personal line filled in. Update **Messages sent:** above.
-3. Day 3: send the follow-up line from message.md to anyone who has not answered.
-4. Record every reply: on the dashboard card (write what they said, press Send) or as a file in output/20261025-sme-excel-automation-service/replies/.
-5. Nothing else. Planning counts the signals with tools/signals.py on 2026-11-01.
+None for this test. The owner only completes the studio set-up tickets
+(brand domain, email-sending account and API key, legal basis). Agent steps:
+1. Build the prospect list from public business sources per prospect-criteria.md; business addresses only; keep the list in output/<id>/prospects.csv (company, role, address, source URL).
+2. Send 20 personalised emails from the studio domain over the first 3 days (studio-wide cap 20 a day), each with the opt-out line.
+3. Day 3: one follow-up to anyone silent; never after a "no" or an opt-out.
+4. Save every reply as a file in output/<id>/replies/ (first name, company type, what they said, date) and add a Signals row citing it.
+5. Outreach tests: if the first 20 bring no signal by day 5, send 30 more. Presale tests: 20 asks.
+6. Planning counts the signals with tools/signals.py at the deadline.
 
 ## Signals
 | Date | Type | Who / what | Source |
@@ -44,5 +51,5 @@ output/ (screenshot, export) or a URL. Rows without a source do not count.
 **Verdict:** RUNNING  
 **Signal units:** 0 (payments 0 x3, calls 0, intent replies 0, sign-ups 0 -> 0 SU)  
 **Denominator:** 0 of 50 messages (not reached)  
-**Reason:** Deadline 2026-11-01 not reached; 0 SU so far.  
+**Reason:** Deadline 2026-11-10 not reached; 0 SU so far.  
 **Counted on:** 2026-10-27 by tools/signals.py

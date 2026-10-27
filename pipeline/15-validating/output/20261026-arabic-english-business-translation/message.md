@@ -1,7 +1,9 @@
-# Outreach message: your website in Gulf Arabic (send as written, fill the one personal line)
+# Outreach email (agent sends from the studio domain; fill the personal line from the prospect's own site)
 
 ## English
-Hi <name>, <one personal line: how you know them or what their company does>.
+Subject: <company> in Arabic: a free 300-word sample
+
+Hello <name>, <one personal line from their website>.
 
 I noticed <company>'s website and materials are in English only. I run a
 small Arabic-English translation service for business content (web pages,
@@ -29,8 +31,11 @@ not for you, a one-word "no" is a perfectly good answer.
 مجاناً خلال يوم لتحكم على الجودة بنفسك. وإن لم يكن مناسباً فكلمة "لا" إجابة
 كافية.
 
-## Follow-up (day 3, one line)
-Hi <name>, quick nudge on the free 300-word sample; if this quarter is busy,
+## Signature and opt-out (every email ends with this)
+<Studio brand>, Doha. Reply "stop" and you will not hear from us again.
+
+## Follow-up (day 3, one line; never after a "no" or a "stop")
+Hello <name>, quick nudge on the free 300-word sample; if this quarter is busy,
 say "later" and I will not ask again.
 
 ## Price guard

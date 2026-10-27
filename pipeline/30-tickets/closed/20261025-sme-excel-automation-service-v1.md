@@ -25,4 +25,4 @@ writes the execution plan and Preparation builds the sample automations and
 the proposal template. PARKED: nothing more is asked of you.
 
 ---
-**Owner decision:** APPROVED / REJECTED / DONE — date — note
+**Owner decision:** REJECTED — 2026-10-27 — owner decision in chat: agents run every business, the owner sends no messages; ticket withdrawn, test re-planned as an agent-run email test

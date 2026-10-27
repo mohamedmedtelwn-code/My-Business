@@ -57,9 +57,10 @@ methods with the playbook written down.
 3. Marketplaces and app stores: Gumroad, Google Play (Qatar is a merchant
    country), Apple App Store (payout to Qatar unverified), Shopify App Store,
    Udemy. Etsy is excluded for this owner.
-4. Services and gigs: direct outreach to named B2B buyers first; Upwork; Fiverr
-   only for outcome-priced offers (its entry-level gig segment is shrinking).
-   The fastest route to a first dollar.
+4. Services and gigs: agent-run email outreach to named B2B buyers from the
+   studio domain (rule 15). Upwork and Fiverr are out of scope (a real person
+   must operate the account). Still the fastest route to a first dollar.
+   Consumer services with no studio-owned channel are rejected at source.
 5. Software: micro-SaaS, browser extensions, bots, APIs, data products, sold
    through a merchant of record (Lemon Squeezy, Paddle, Polar).
 6. Arbitrage and resale: retail, domain, cross-border, dropship. Only with a

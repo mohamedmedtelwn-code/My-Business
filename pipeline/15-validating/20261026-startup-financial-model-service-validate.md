@@ -1,24 +1,23 @@
 # Validation Brief: Fixed-fee financial models for GCC startups and SMEs
 
 - **Id:** 20261026-startup-financial-model-service
-- **Started:** 2026-11-10  **Deadline:** 2026-11-17 (7 days; replies count to day 9)
+- **Started:** 2026-11-11  **Deadline:** 2026-11-18 (7 days; replies count to day 9)
 - **Test:** presale
 - **Extended:** no
 - **Cost:** USD 0
 
 ## The test
-The owner asks 20 founders of early-stage startups and owners of SMEs in
-Qatar who are raising money or applying to QDB, QSTP or an incubator
-programme to buy an investor-ready three-statement Excel model (assumptions,
-drivers, income statement, balance sheet, cash flow, scenarios, dashboard,
-one revision, 30-minute walkthrough) at the test price of QAR 3,280
-(USD 900; list USD 1,500), delivered in 5 working days. The message offers a
-free 30-minute review of their current numbers first. A yes with a deposit
-counts 3; a booked review call counts 1; "yes, send the quote and start"
-counts 1 (intent). The message is in
-`output/20261026-startup-financial-model-service/message.md`; who qualifies is
-in `prospect-criteria.md`. Starts 2026-11-10 alongside the ghostwriting
-presale (two tests, about 90 minutes of owner time that week).
+The agents email 20 founders of early-stage startups and SME owners in Qatar
+and the GCC who are raising money or applying to QDB, QSTP or an incubator
+(found on public cohort pages and funding announcements, company addresses
+only), from the studio domain, asking them to buy an investor-ready
+three-statement Excel model at the test price of USD 900 (QAR 3,280), with a
+free written review of their current numbers first (they send a sheet, the
+agents reply with the three things an investor will question). A deposit
+counts 3; "yes, start" or a booked review call counts 1. The email is in
+`output/20261026-startup-financial-model-service/message.md`; list rules in
+`prospect-criteria.md`. The owner does nothing. Starts when the studio email
+sender exists; Planning shifts the date if not.
 
 ## Denominator (update as the test runs)
 - **Messages sent:** 0   (not used)
@@ -31,12 +30,14 @@ stranger 1 (void if not held within 14 days) · reply with explicit intent 1 ·
 likes, follows, friends and family 0.
 
 ## Owner steps (ticket raised if any)
-1. On 2026-11-10 read prospect-criteria.md and list 20 founders or SME owners you can message (incubator cohort pages, funding announcements, professional contacts; not family).
-2. Send message.md to each with the one personal line filled in. Update **Asks:** above.
-3. If someone books the review: hold the 30-minute call within 14 days (the agents prepare a one-page note on their numbers beforehand if they send a file). Take a deposit only after ticket 20261025-studio-1 (legal basis) is approved; until then record the call and any "start" as intent.
-4. Day 3: send the follow-up line.
-5. Record every reply on the dashboard card (write what they said, press Send) or as a file in output/20261026-startup-financial-model-service/replies/.
-6. Nothing else. Planning counts the signals on 2026-11-17.
+None for this test. The owner only completes the studio set-up tickets
+(brand domain, email-sending account and API key, legal basis). Agent steps:
+1. Build the prospect list from public business sources per prospect-criteria.md; business addresses only; keep the list in output/<id>/prospects.csv (company, role, address, source URL).
+2. Send 20 personalised emails from the studio domain over the first 3 days (studio-wide cap 20 a day), each with the opt-out line.
+3. Day 3: one follow-up to anyone silent; never after a "no" or an opt-out.
+4. Save every reply as a file in output/<id>/replies/ (first name, company type, what they said, date) and add a Signals row citing it.
+5. Outreach tests: if the first 20 bring no signal by day 5, send 30 more. Presale tests: 20 asks.
+6. Planning counts the signals with tools/signals.py at the deadline.
 
 ## Signals
 | Date | Type | Who / what | Source |
@@ -50,5 +51,5 @@ output/ (screenshot, export) or a URL. Rows without a source do not count.
 **Verdict:** RUNNING  
 **Signal units:** 0 (payments 0 x3, calls 0, intent replies 0, sign-ups 0 -> 0 SU)  
 **Denominator:** 0 of 20 asks (not reached)  
-**Reason:** Deadline 2026-11-17 not reached; 0 SU so far.  
+**Reason:** Deadline 2026-11-18 not reached; 0 SU so far.  
 **Counted on:** 2026-10-27 by tools/signals.py

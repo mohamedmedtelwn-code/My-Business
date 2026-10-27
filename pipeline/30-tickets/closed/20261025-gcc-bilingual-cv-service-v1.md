@@ -25,4 +25,4 @@ questionnaire, the CV templates and the first drafts for every yes; you review
 each CV for 15 minutes. PARKED: nothing more is asked of you.
 
 ---
-**Owner decision:** APPROVED / REJECTED / DONE — date — note
+**Owner decision:** REJECTED — 2026-10-27 — owner decision in chat: agents run every business, the owner sends no messages; ticket withdrawn, test re-planned as an agent-run email test

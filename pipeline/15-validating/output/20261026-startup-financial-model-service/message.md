@@ -1,7 +1,9 @@
-# Presale message: investor-ready financial model (send as written, fill the one personal line)
+# Outreach email (agent sends from the studio domain; fill the personal line from the prospect's own site)
 
 ## English
-Hi <name>, <one personal line: where you saw their startup or what it does>.
+Subject: <one line naming their startup and the raise>
+
+Hello <name>, <one personal line from their public cohort page or announcement>.
 
 I build investor-ready financial models for founders in Qatar: a linked
 three-statement Excel model (assumptions, revenue drivers, hiring and costs,
@@ -28,8 +30,11 @@ first. If it is not for you now, a one-word "no" is a perfectly good answer.
 أو العرض وسأخبرك بما سيسأل عنه المستثمر أولاً. وإن لم يكن الوقت مناسباً
 فكلمة "لا" إجابة كافية.
 
-## Follow-up (day 3, one line)
-Hi <name>, quick nudge on the free 30-minute numbers review; if you are not
+## Signature and opt-out (every email ends with this)
+<Studio brand>, Doha. Reply "stop" and you will not hear from us again.
+
+## Follow-up (day 3, one line; never after a "no" or a "stop")
+Hello <name>, quick nudge on the free 30-minute numbers review; if you are not
 raising this quarter, say "later" and I will not ask again.
 
 ## Price guard

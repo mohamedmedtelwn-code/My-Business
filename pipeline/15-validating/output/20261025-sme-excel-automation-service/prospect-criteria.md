@@ -1,4 +1,4 @@
-# Who to message (20 first, 30 more if needed)
+# Prospect list rules (agent-built, 20 first, 30 more if needed)
 
 Count a person only if all four hold:
 1. They own or run operations, finance or admin at a firm with roughly 3-50
@@ -7,13 +7,11 @@ Count a person only if all four hold:
    planning consultancies until 2026-11-25 (owner hold).
 2. They or their team touch Excel or Google Sheets every week (you have seen
    it, or they have complained about it).
-3. They are a professional contact (client, supplier, ex-colleague, LinkedIn
-   connection, business group member), not family or a close friend.
-4. You can reach them by WhatsApp, LinkedIn message or email today.
+3. They are reachable at a published business address (not family or a contact of the owner).
+4. A business email address for them or their role is published on the company site or a directory.
 
 Good sources: LinkedIn connections with "Operations", "Finance", "Admin",
 "Owner", "Founder" in the title in Qatar, UAE or KSA; local business groups;
 suppliers and vendors you already deal with.
 
-List the 20 names privately (not in this folder). This folder holds replies
-only, without personal details beyond a first name and company type.
+Agents build the list from public business sources only (company websites, directories, cohort pages, exhibitor lists, funding announcements): company, role, business email address, source URL, saved in prospects.csv in this folder. No personal addresses, no scraped private data, no family or contacts of the owner. Replies are saved in replies/ with a first name and company type only.

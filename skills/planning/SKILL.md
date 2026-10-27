@@ -55,8 +55,10 @@ documents). Skip when the ArtifactData tool is not available in this run
    from `templates/validation-brief.md`: the USD 0 test (outreach, landing or
    presale), the first-ten-customers list and the exact message or page draft
    under `pipeline/15-validating/output/<id>/`, the denominator plan (20 then
-   30 messages; 100 visitors; 20 asks), and the 7-day deadline. Raise a ticket
-   if the owner must publish or send anything.
+   30 messages; 100 visitors; 20 asks), and the 7-day deadline. The agents
+   run the test (rule 15): email from the studio domain, a landing page the
+   agents publish. Raise a ticket only for an account, domain or key the
+   owner must create. Gate 7 fails when the only channel needs a person.
 3. On every run, for each file in `pipeline/15-validating/`: update the
    denominator lines and the Signals table from the evidence files, then run
    `python tools/signals.py <file> --write`.

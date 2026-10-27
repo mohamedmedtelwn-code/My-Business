@@ -1,7 +1,9 @@
-# Presale message: LinkedIn posts from one call (send with the sample post attached)
+# Outreach email (agent sends from the studio domain; fill the personal line from the prospect's own site)
 
 ## English
-Hi <name>, <one personal line: where you saw them speak or what their company does>.
+Subject: a LinkedIn post written in your voice (sample attached)
+
+Hello <name>, <one personal line from their public interview or company page>.
 
 I read your <interview / company page> and wrote the attached LinkedIn post
 in your voice to show what I mean. I run a small bilingual ghostwriting
@@ -26,7 +28,10 @@ the sample post is not your voice, say so and I will stop; if it is, reply
 يكن المنشور المرفق بصوتك فقل لي وسأتوقف؛ وإن كان كذلك فاكتب "احجز المكالمة"
 وسأرسل ثلاثة مواعيد.
 
-## Follow-up (day 3, one line)
+## Signature and opt-out (every email ends with this)
+<Studio brand>, Doha. Reply "stop" and you will not hear from us again.
+
+## Follow-up (day 3, one line; never after a "no" or a "stop")
 Hi <name>, did the sample post read like you? A "yes, book the call" or a
 "not for me" both help me, and I will not ask again.
 

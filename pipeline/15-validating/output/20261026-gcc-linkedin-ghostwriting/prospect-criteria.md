@@ -1,4 +1,4 @@
-# Who to ask (20 direct asks)
+# Prospect list rules (agent-built, 20 first, 30 more if needed)
 
 Count a person only if all four hold:
 1. They are a founder or senior partner of a company based in Qatar, the UAE
@@ -11,7 +11,7 @@ Count a person only if all four hold:
 3. They are reachable as a professional contact (connection, group member,
    someone who has spoken publicly so a sample post can be written from their
    own words), not family or a close friend.
-4. You can message them on LinkedIn, WhatsApp or email today.
+4. A business email address for them or their role is published on the company site or a directory.
 
 Good sources: Wamda and MAGNiTT funding announcements for Qatar and UAE
 startups; QSTP, QBIC and Qatar FinTech Hub cohort pages; speakers at Doha

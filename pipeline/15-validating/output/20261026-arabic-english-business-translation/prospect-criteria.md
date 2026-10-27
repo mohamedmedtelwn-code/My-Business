@@ -1,4 +1,4 @@
-# Who to message (20 first, 30 more if needed)
+# Prospect list rules (agent-built, 20 first, 30 more if needed)
 
 Count a firm only if all four hold:
 1. It sells to customers in Qatar, the UAE or KSA and its website, proposal
@@ -11,12 +11,11 @@ Count a firm only if all four hold:
 3. Your contact is a marketing, operations or founder-level professional
    contact or a named person on the company site, not family or a close
    friend.
-4. You can reach them by LinkedIn message, WhatsApp or email today.
+4. A business email address for them or their role is published on the company site or a directory.
 
 Good sources: exhibitor lists of upcoming Doha trade shows; Qatar and UAE
 SaaS and e-commerce directories; LinkedIn connections with "Marketing",
 "Growth", "Operations", "Founder" titles in the Gulf; suppliers you already
 buy from whose materials are English-only.
 
-List the 20 names privately (not in this folder). This folder holds replies
-only, without personal details beyond a first name and company type.
+Agents build the list from public business sources only (company websites, directories, cohort pages, exhibitor lists, funding announcements): company, role, business email address, source URL, saved in prospects.csv in this folder. No personal addresses, no scraped private data, no family or contacts of the owner. Replies are saved in replies/ with a first name and company type only.

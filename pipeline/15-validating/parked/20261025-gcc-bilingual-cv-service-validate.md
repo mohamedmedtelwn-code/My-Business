@@ -41,8 +41,8 @@ output/ (screenshot, export) or a URL. Rows without a source do not count.
 
 ## Verdict
 
-**Verdict:** RUNNING  
+**Verdict:** PARKED  
 **Signal units:** 0 (payments 0 x3, calls 0, intent replies 0, sign-ups 0 -> 0 SU)  
 **Denominator:** 0 of 20 asks (not reached)  
-**Reason:** Deadline 2026-11-01 not reached; 0 SU so far.  
+**Reason:** Parked by owner decision 2026-10-27 (agents run everything, no owner network): the test needed the owner to message job seekers or post in consumer groups, and no studio-owned channel reaches that audience yet. Re-open when a studio-owned consumer channel exists.
 **Counted on:** 2026-10-27 by tools/signals.py
