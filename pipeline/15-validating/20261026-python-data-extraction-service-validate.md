@@ -50,4 +50,4 @@ output/ (screenshot, export) or a URL. Rows without a source do not count.
 **Signal units:** 0 (payments 0 x3, calls 0, intent replies 0, sign-ups 0 -> 0 SU)  
 **Denominator:** 0 of 50 messages (not reached)  
 **Reason:** Deadline 2026-11-09 not reached; 0 SU so far.  
-**Counted on:** 2026-10-26 by tools/signals.py
+**Counted on:** 2026-10-27 by tools/signals.py
