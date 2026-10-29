@@ -108,3 +108,33 @@
 | 2026-10-26 | 2 | https://www.udemy.com/course/data-engineering-bootcamp-from-zero-to-job-ready-arabic/ | rejected at source: Udemy Arabic Python course |
 | 2026-10-26 | 2 | https://kdpcalculatortool.com/how-much-do-kdp-authors-make | rejected at source: KDP Arabic non-fiction ebook |
 | 2026-10-26 | 2 | https://www.reddit.com/r/KDP/comments/1uaps7l/is_amazon_kdp_still_worth_starting_in_2026/ | rejected at source: KDP Arabic non-fiction ebook |
+| 2026-10-29 | 5 | https://www.tendersinfo.com/global-gcc-countries-tenders.php | 20261029-gcc-tender-alert-digest |
+| 2026-10-29 | 5 | https://www.tenderuae.com/specialoffer.aspx | 20261029-gcc-tender-alert-digest |
+| 2026-10-29 | 5 | https://tarsiya.ae/guides/gcc-tender-portals | 20261029-gcc-tender-alert-digest |
+| 2026-10-29 | 5 | https://tendersalerts.com/en/plans | 20261029-gcc-tender-alert-digest (context) |
+| 2026-10-29 | 5 | https://gcctendergate.com/ | 20261029-gcc-tender-alert-digest |
+| 2026-10-29 | 2 | https://marketsy.ai/tools/gumroad-trends/category/excel%20template | 20261029-gcc-financial-model-templates |
+| 2026-10-29 | 2 | https://tdavidson.gumroad.com/l/standard | 20261029-gcc-financial-model-templates |
+| 2026-10-29 | 2 | https://accountingsidekick.gumroad.com/l/financialmodel | 20261029-gcc-financial-model-templates |
+| 2026-10-29 | 2 | https://thefoundingcompany.gumroad.com/l/financial-model-template | 20261029-gcc-financial-model-templates |
+| 2026-10-29 | 2 | https://www.eloquens.com/category/startups/marketplaces/135 | 20261029-gcc-financial-model-templates |
+| 2026-10-29 | 4 | https://salla.com/en/ai-info | 20261029-salla-zid-merchant-reporting |
+| 2026-10-29 | 4 | https://storeleads.app/reports/salla | 20261029-salla-zid-merchant-reporting |
+| 2026-10-29 | 4 | https://storeleads.app/reports/zid | 20261029-salla-zid-merchant-reporting |
+| 2026-10-29 | 4 | https://zid.sa/en/pricing | 20261029-salla-zid-merchant-reporting |
+| 2026-10-29 | 4 | https://help.salla.sa/en/article/integration-with-zapier-platform/ftl5qsb41goyjq6o0ecxdohn | 20261029-salla-zid-merchant-reporting |
+| 2026-10-29 | 4 | https://docs.salla.dev/ | 20261029-salla-zid-merchant-reporting |
+| 2026-10-29 | 4 | https://www.upwork.com/hire/data-cleansing-freelancers | 20261029-crm-list-cleaning-service |
+| 2026-10-29 | 4 | https://implisense.com/en/services/crm-datenbereinigung | 20261029-crm-list-cleaning-service |
+| 2026-10-29 | 4 | https://www.wissasystems.com/blog/data-cleaning-services-price | 20261029-crm-list-cleaning-service (context) |
+| 2026-10-29 | 4 | https://ivristech.com/data-cleansing-services | 20261029-crm-list-cleaning-service (context) |
+| 2026-10-29 | 4 | https://www.cleanlist.ai/learn/crm-data-cleaning | 20261029-crm-list-cleaning-service (context) |
+| 2026-10-29 | channel | https://sales.co/research/cold-email-statistics | all cycle-4 briefs (cold email reply 2.09%, positive 14.1% of replies, 1-10 staff firms 2.40%) |
+| 2026-10-29 | channel | https://www.cleanlist.ai/blog/2026-02-18-cold-email-response-rate-statistics | all cycle-4 briefs (verified lists 4.6% reply; warm new domains 2-4 weeks; 30-50 emails per mailbox per day) |
+| 2026-10-29 | channel | https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/warmup-process-email-marketing | all cycle-4 briefs (domain warm-up 4-8 weeks to full reputation) |
+| 2026-10-29 | 2 | https://apps.odoo.com/apps/modules/19.0/mdv_l10n_gcc_payroll | rejected at source: GCC HR calculator and template pack (USD 49 price anchor only) |
+| 2026-10-29 | 2 | https://gulfgratuity.com/calculator | rejected at source: GCC HR calculator and template pack (free tools) |
+| 2026-10-29 | 2 | https://peakhr.ae/ | rejected at source: GCC HR calculator and template pack (templates given away as lead magnets) |
+| 2026-10-29 | 5 | https://pricewatchhq.com/ | rejected at source: competitor price-monitoring SaaS (USD 49-199/month vendor pricing only) |
+| 2026-10-29 | 5 | https://monitoringmonkey.com/ | rejected at source: competitor price-monitoring SaaS |
+| 2026-10-29 | 5 | https://www.indiehackers.com/product/competitor-tracker | rejected at source: competitor price-monitoring SaaS (no revenue reported) |
