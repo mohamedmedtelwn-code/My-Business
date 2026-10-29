@@ -95,3 +95,17 @@ portal robots.txt and rate limits. Income legal basis per ticket
 Medium. Demand and price anchors come from incumbents' live counts and
 published prices; no small-operator earnings report exists for this niche,
 so the ceiling is an estimate.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | incumbent live counts and published prices, an operator's portal guide, no small-operator earnings |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 3 | 4 | 12 | 3-5 weeks: scraper, free digest, outreach, trial |
+| 4 | Automatability | 5 | 3 | 15 | agent scrapes, filters, sends and sells, owner creates the Gumroad membership |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 150-900 at 5-30 subscribers |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | studio email, an owned newsletter list and Gumroad |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | public listings only, portal terms and rate limits must be respected, construction excluded under the hold |
+
+**Total:** 79/100 — APPROVED (threshold 70); owner-edge bonus applied

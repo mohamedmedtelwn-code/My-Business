@@ -95,3 +95,17 @@ ticket 20261025-studio-1.
 Medium. Merchant counts, reporting gaps and reachability are platform-level;
 willingness to pay USD 49 and the developer-account access from Qatar are
 unverified.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | official merchant counts, third-party store crawls, platform pricing that gates reports, help-centre demand signal |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 3 | 4 | 12 | 4-6 weeks: app build, pilot, then first paid month |
+| 4 | Automatability | 5 | 3 | 15 | agent builds, prospects, onboards and runs weekly reports, owner holds the developer account |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 250-1,500 at 5-30 merchants |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | studio email plus app-store listing, monthly recurring |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | developer-account eligibility from Qatar unverified, merchant data stays in their Sheet |
+
+**Total:** 83/100 — APPROVED (threshold 70); owner-edge bonus applied

@@ -87,3 +87,17 @@ ticket 20261025-studio-1. No construction-sector content under the hold.
 ## Research confidence
 Medium. Prices and one listing's revenue are platform-visible; the GCC
 variant has no sales history, and the Gumroad median is low.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | aggregated Gumroad listing revenue for the niche and the Gumroad median, no first-person report |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-4 weeks: by-product of the service workbook, email list exists |
+| 4 | Automatability | 5 | 3 | 15 | agent builds, lists and supports, owner presses publish |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h |
+| 6 | Earnings ceiling at 6 months | 2 (+1 edge) | 2 | 6 | USD 72-600, Gumroad median is USD 72 a month |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | email list plus Gumroad Discover and a free calculator page |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | not financial advice, Gumroad terms clear |
+
+**Total:** 82/100 — APPROVED (threshold 70); owner-edge bonus applied

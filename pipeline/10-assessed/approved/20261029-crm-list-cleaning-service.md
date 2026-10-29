@@ -92,3 +92,17 @@ the client's lawful basis. Income legal basis per ticket 20261025-studio-1.
 ## Research confidence
 Medium-High on price (platform guidance plus three independent vendor
 ranges); Medium on GCC demand, inferred from the general market.
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | Upwork project guidance, a competitor price page and a 2M-email reply-rate survey, no operator income distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, verification credits are a pass-through |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-4 weeks: free 48-hour report then a fixed quote, buyers reachable by company email |
+| 4 | Automatability | 5 | 3 | 15 | agent prospects, reports, cleans and delivers, owner signs the terms template once |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 300-1,500 at 1-5 jobs a month on the Upwork band |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | studio email plus a landing tool and referrals from sister services |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | personal data processing needs written terms and deletion |
+
+**Total:** 87/100 — APPROVED (threshold 70); owner-edge bonus applied
