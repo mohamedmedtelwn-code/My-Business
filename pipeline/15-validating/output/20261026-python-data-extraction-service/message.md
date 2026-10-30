@@ -30,7 +30,9 @@ Google Sheets نظيف، وتحدّثه تلقائياً حسب جدول محد�
 فكلمة "لا" إجابة كافية.
 
 ## Signature and opt-out (every email ends with this)
-Mteryak Studio, Doha, hello@mteryakstudio.com. Reply "stop" and you will not hear from us again.
+The Mteryak Studio team
+Mteryak Studio, Doha · hello@mteryakstudio.com
+Reply "stop" and you will not hear from us again.
 
 ## Follow-up (day 3, one line; never after a "no" or a "stop")
 Hello <name>, quick nudge on the free 50-row sample; if this month is busy, say

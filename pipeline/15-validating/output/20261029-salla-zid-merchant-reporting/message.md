@@ -31,7 +31,9 @@ authorisation link. If it is not for you, a one-word "no" is a perfectly good
 answer.
 
 ## Signature and opt-out (every email ends with this)
-Mteryak Studio, Doha, hello@mteryakstudio.com. Reply "stop" and you will not hear from us again.
+The Mteryak Studio team
+Mteryak Studio, Doha · hello@mteryakstudio.com
+Reply "stop" and you will not hear from us again.
 
 ## Follow-up (day 3, one line; never after a "no" or a "stop")
 Hello <name>, quick nudge on the free two-week report pilot; if this month is

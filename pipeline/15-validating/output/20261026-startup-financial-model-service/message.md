@@ -31,7 +31,9 @@ first. If it is not for you now, a one-word "no" is a perfectly good answer.
 فكلمة "لا" إجابة كافية.
 
 ## Signature and opt-out (every email ends with this)
-Mteryak Studio, Doha, hello@mteryakstudio.com. Reply "stop" and you will not hear from us again.
+The Mteryak Studio team
+Mteryak Studio, Doha · hello@mteryakstudio.com
+Reply "stop" and you will not hear from us again.
 
 ## Follow-up (day 3, one line; never after a "no" or a "stop")
 Hello <name>, quick nudge on the free 30-minute numbers review; if you are not
