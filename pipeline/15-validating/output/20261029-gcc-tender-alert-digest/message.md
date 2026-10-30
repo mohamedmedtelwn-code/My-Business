@@ -29,7 +29,7 @@ keywords. If it is not for you, a one-word "no" is a perfectly good answer.
 مفتاحية. وإن لم يكن مناسباً فكلمة "لا" إجابة كافية.
 
 ## Signature and opt-out (every email ends with this)
-<Studio brand>, Doha. Reply "stop" and you will not hear from us again.
+Mteryak Studio, Doha, hello@mteryakstudio.com. Reply "stop" and you will not hear from us again.
 
 ## Follow-up (day 3, one line; never after a "no" or a "stop")
 Hello <name>, quick nudge on the free 14-day tender alerts; if tenders are not

@@ -34,7 +34,7 @@ perfectly good answer.
 وإن لم يكن مناسباً فكلمة "لا" إجابة كافية.
 
 ## Signature and opt-out (every email ends with this)
-<Studio brand>, Doha. Reply "stop" and you will not hear from us again.
+Mteryak Studio, Doha, hello@mteryakstudio.com. Reply "stop" and you will not hear from us again.
 
 ## Follow-up (day 3, one line; never after a "no" or a "stop")
 Hello <name>, did the runway calculator help? A "yes, send the link" or a

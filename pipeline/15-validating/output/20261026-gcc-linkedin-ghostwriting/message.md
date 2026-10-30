@@ -29,7 +29,7 @@ the sample post is not your voice, say so and I will stop; if it is, reply
 وسأرسل ثلاثة مواعيد.
 
 ## Signature and opt-out (every email ends with this)
-<Studio brand>, Doha. Reply "stop" and you will not hear from us again.
+Mteryak Studio, Doha, hello@mteryakstudio.com. Reply "stop" and you will not hear from us again.
 
 ## Follow-up (day 3, one line; never after a "no" or a "stop")
 Hi <name>, did the sample post read like you? A "yes, book the call" or a

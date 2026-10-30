@@ -52,7 +52,7 @@ Stripe direct from Qatar: not available (Stripe's supported-country list exclude
 ## Verified details (owner fills in)
 | Date | Route | What was verified | Fee observed | Days to arrive |
 |------|-------|-------------------|--------------|----------------|
-| | | | | |
+| 2026-10-30 | legal basis (ticket studio-1) | Owner decision: the studio may accept payments. Owner's note: amounts under USD 10,000 a month will not be questioned under Qatar law (owner's own assessment, not verified by the studio; employer consent, licence and GTA registration remain the owner's responsibility) | n/a | n/a |
 
 ## Sources (checked 2026-10-25)
 - Gumroad: https://gumroad.com/help/article/13-getting-paid ; https://gumroad.com/help/article/66-gumroads-fees ; https://gumroad.com/pricing ; https://gumroad.com/help/article/223-payoneer-and-gumroad.html ; https://gumroad.com/help/article/260-your-payout-settings-page.html

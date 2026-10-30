@@ -18,6 +18,9 @@
   "breaker_failures": 3,
   "platform_rules_max_age_days": 30,
   "payout_route_verified": false,
+  "studio_brand": "Mteryak Studio",
+  "studio_domain": "mteryakstudio.com",
+  "legal_basis_decided": "2026-10-30",
   "rubric_threshold": 70,
   "rubric_weights": [
     4,
