@@ -138,3 +138,44 @@
 | 2026-10-29 | 5 | https://pricewatchhq.com/ | rejected at source: competitor price-monitoring SaaS (USD 49-199/month vendor pricing only) |
 | 2026-10-29 | 5 | https://monitoringmonkey.com/ | rejected at source: competitor price-monitoring SaaS |
 | 2026-10-29 | 5 | https://www.indiehackers.com/product/competitor-tracker | rejected at source: competitor price-monitoring SaaS (no revenue reported) |
+| 2026-11-02 | 4 | https://www.upwork.com/hire/technical-seo-freelancers | 20261102-website-technical-audit-service |
+| 2026-11-02 | 4 | https://www.upwork.com/hire/seo-experts | 20261102-website-technical-audit-service |
+| 2026-11-02 | 4 | https://www.upwork.com/services/product/marketing-a-detailed-technical-seo-audit-for-your-website-1644701339302768640 | 20261102-website-technical-audit-service |
+| 2026-11-02 | 4 | https://foundgrove.com/blog/how-much-does-seo-audit-cost-2026 | 20261102-website-technical-audit-service |
+| 2026-11-02 | 4 | https://www.digitalapplied.com/blog/seo-pricing-2026-what-seo-services-cost | 20261102-website-technical-audit-service |
+| 2026-11-02 | 4 | https://www.upwork.com/hire/zapier-developers/ | 20261102-gcc-automation-setup-service |
+| 2026-11-02 | 4 | https://www.upwork.com/resources/upwork-hourly-rates | 20261102-gcc-automation-setup-service |
+| 2026-11-02 | 4 | https://betonai.net/ai-automation-rate-card-2026-what-to-charge-for-n8n-make-and-zapier-builds-real-rates-from-54-operators | 20261102-gcc-automation-setup-service |
+| 2026-11-02 | 4 | https://golmtech.solutions/blog/how-much-does-a-zapier-consultant-cost | 20261102-gcc-automation-setup-service |
+| 2026-11-02 | 4 | https://jobpaulautomation.com/articles/how-much-does-an-automation-consultant-cost.html | 20261102-gcc-automation-setup-service |
+| 2026-11-02 | 4 | https://www.upwork.com/freelance-jobs/apply/Automation-Systems-Architect-Zapier-Make-Airtable-Invoice-Factoring-Workflow_~022056566870352483142 | 20261102-gcc-automation-setup-service |
+| 2026-11-02 | 4 | https://www.fiverr.com/categories/business/online-presentations/pitch-decks | 20261102-gcc-startup-pitch-deck-service |
+| 2026-11-02 | 4 | https://www.fiverr.com/categories/finance/fundraising/funding-pitch-presentations | 20261102-gcc-startup-pitch-deck-service |
+| 2026-11-02 | 4 | https://www.fiverr.com/gigs/pitch-deck | 20261102-gcc-startup-pitch-deck-service |
+| 2026-11-02 | 4 | https://waveup.com/blog/pitch-deck-cost | 20261102-gcc-startup-pitch-deck-service |
+| 2026-11-02 | 4 | https://www.strategypresentation.com/blog/how-much-does-a-pitch-deck-cost | 20261102-gcc-startup-pitch-deck-service |
+| 2026-11-02 | 4 | https://pitchworx.com/how-much-does-it-cost-to-design-a-pitch-deck | 20261102-gcc-startup-pitch-deck-service |
+| 2026-11-02 | 4 | https://www.upwork.com/services/data-analysis-reports/data-entry-cleaning | 20261102-arabic-document-digitisation-service |
+| 2026-11-02 | 4 | https://www.upwork.com/services/data-entry/get/document-conversion | 20261102-arabic-document-digitisation-service |
+| 2026-11-02 | 4 | https://dataconvertpro.com/ | 20261102-arabic-document-digitisation-service |
+| 2026-11-02 | 4 | https://gotranscript.com/pdf-to-excel-services | 20261102-arabic-document-digitisation-service |
+| 2026-11-02 | 4 | https://www.xhtmlteam.com/data-conversion.html | 20261102-arabic-document-digitisation-service |
+| 2026-11-02 | 4 | https://www.upwork.com/hire/data-entry-specialists/eg | 20261102-arabic-document-digitisation-service |
+| 2026-11-02 | 8 | https://dirstarter.com/blog/openalternative-case-study | 20261102-arabic-saas-directory |
+| 2026-11-02 | 8 | https://www.indiehackers.com/post/79k-from-side-projects-in-2025-my-year-in-review-e145b2fa95 | 20261102-arabic-saas-directory |
+| 2026-11-02 | 8 | https://www.indiehackers.com/post/i-built-a-simple-directory-of-job-boards-4-years-ago-it-just-passed-100k-60da9ba8f2 | 20261102-arabic-saas-directory |
+| 2026-11-02 | 8 | https://www.jasminedirectory.com/blog/case-study-tripling-directory-revenue-with-a-ppl-system/ | 20261102-arabic-saas-directory |
+| 2026-11-02 | 8 | https://stealwhatworks.com/blogs/news/indie-hackers-show-revenue-monthly | 20261102-arabic-saas-directory |
+| 2026-11-02 | 8 | https://www.indiehackers.com/post/indieneed-just-crossed-250-in-revenue-0cdc423fa5 | 20261102-arabic-saas-directory |
+| 2026-11-02 | 8 | https://outscraper.com/directory-guy-earns-2500-month-using-outscraper | 20261102-arabic-saas-directory |
+| 2026-11-02 | 3 | https://weekonelabs.com/blog/shopify-app-revenue-benchmarks-2026 | rejected at source: Shopify niche app for GCC merchants (median listed app under USD 1,000/month; 500-800 new apps a month) |
+| 2026-11-02 | 3 | https://www.adsx.com/blog/how-much-shopify-app-developers-make | rejected at source: Shopify niche app (expect under USD 500 MRR in the first months; survivorship bias in public numbers) |
+| 2026-11-02 | 3 | https://shopify.dev/docs/apps/launch/distribution/revenue-share | rejected at source: Shopify niche app (0% share to USD 1M, 2.9% processing, USD 19 registration) |
+| 2026-11-02 | 3 | https://help.shopify.com/en/partners/manage-account/manage-payouts-invoices/payout-method | rejected at source: Shopify niche app (payout by PayPal or bank via Hyperwallet, country-dependent; Qatar unverified) |
+| 2026-11-02 | 3 | https://apps.shopify.com/invoia | rejected at source: Shopify Arabic invoice app (crowded: Invoia, Fatura, Bilinguo, Sufio, five ZATCA apps; several 2026 launches with 0 reviews) |
+| 2026-11-02 | 3 | https://docs.rapidapi.com/docs/payouts-and-finance | rejected at source: RapidAPI micro-API (25% marketplace fee from 15 Nov 2025 plus PayPal fee; payout two months after the transaction month) |
+| 2026-11-02 | 3 | https://www.reddit.com/r/devsarg/comments/1lkp8k2/mi_experiencia_con_rapidapi_de_0_a_4_clientes?tl=en | rejected at source: RapidAPI micro-API (first-person: 4 paying customers, USD 30 gross a month) |
+| 2026-11-02 | 1 | https://support.substack.com/hc/en-us/articles/4405482746132-How-do-I-set-up-my-Stripe-account-on-Substack-to-start-receiving-payments | rejected at source: paid newsletter on Substack or beehiiv (Stripe is the sole payment provider; Stripe does not serve Qatar businesses) |
+| 2026-11-02 | 1 | https://www.beehiiv.com/blog/the-state-of-paid-newsletters-2026 | rejected at source: paid newsletter (median conversion 0.84%, median price USD 10/month; needs an audience the studio does not have) |
+| 2026-11-02 | 2 | https://hustledge.com/google-sheets-template-income/ | rejected at source: generic Google Sheets template catalogue (USD 300-1,200/month needs 20-30 templates and Etsy or Pinterest traffic) |
+| 2026-11-02 | 2 | https://www.foundershut.com/explore/better-sheets-google-sheets-business | rejected at source: generic spreadsheet templates (USD 5k/month only after AppSumo, Udemy and YouTube audience) |
