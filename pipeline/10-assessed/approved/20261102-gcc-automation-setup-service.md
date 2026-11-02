@@ -97,3 +97,19 @@ list-cleaning service. Income legal basis per ticket 20261025-studio-1.
 Medium-High on price (Upwork guidance, two vendor price pages, a
 54-operator survey); Medium on GCC demand, inferred from the general
 market.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | Upwork marketplace guidance, a 54-operator rate card, two vendor price pages and a live job post, no income distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, client pays its own Make or Zapier plan |
+| 3 | Time to first dollar | 3 | 4 | 12 | 3-5 weeks: scoping by email and client access before the build |
+| 4 | Automatability | 5 | 3 | 15 | agent scopes, builds in the client account, tests and hands over |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 400-2,500 at 1-3 builds plus retainers on the rate-card bands |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | studio email plus a recipe landing page and cross-sell |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | client-issued access and API keys as session secrets, support expectations need written fix windows |
+
+**Total:** 83/100 — APPROVED (threshold 70); owner-edge bonus applied
+

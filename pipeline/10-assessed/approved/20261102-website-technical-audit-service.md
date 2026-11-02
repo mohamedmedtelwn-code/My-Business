@@ -95,3 +95,19 @@ basis per ticket 20261025-studio-1.
 Medium-High on price (two Upwork guidance pages, one live seller listing,
 two survey round-ups); Medium on GCC demand, inferred from the general
 market and the bilingual-site gap.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | Upwork guidance pages, a live seller listing with 56 completed projects and two survey round-ups, no operator income distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, crawler and Lighthouse already in the runner |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-4 weeks: free mini audit in the first email, fixed quote on reply, 3-day delivery |
+| 4 | Automatability | 5 | 3 | 15 | agent crawls, audits, writes the fix list and delivers, owner does nothing |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 250-1,600 at 1-4 audits a month on the Upwork band |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | studio email plus a landing tool and cross-sell to sister services |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | public pages only, fix work under written client access |
+
+**Total:** 88/100 — APPROVED (threshold 70); owner-edge bonus applied
+

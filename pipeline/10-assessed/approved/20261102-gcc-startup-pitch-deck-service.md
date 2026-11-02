@@ -95,3 +95,19 @@ Medium-High on price (three Fiverr category pages with gig counts and
 review counts, two vendor ranges, Upwork lifetime earnings); Medium on
 conversion from cold email to founders, who are a harder audience than
 operations managers.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | three Fiverr category pages with gig and review counts, Upwork lifetime earnings via a vendor, two vendor ranges, no distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, slide tooling in the runner |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-4 weeks: one redesigned slide in the first email, fixed quote, 3-5 day delivery |
+| 4 | Automatability | 5 | 3 | 15 | agent writes, lays out, revises and delivers |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h |
+| 6 | Earnings ceiling at 6 months | 3 | 2 | 6 | USD 500-2,000 at 1-3 decks a month on the Fiverr and freelancer bands |
+| 7 | Durability | 3 | 1 | 3 | studio email plus Gumroad and a shared prospect list with the financial-model service |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | confidential founder material under written terms, no funding-outcome claims |
+
+**Total:** 85/100 — APPROVED (threshold 70)
+

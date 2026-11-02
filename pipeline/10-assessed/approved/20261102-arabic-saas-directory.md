@@ -100,3 +100,19 @@ Income legal basis per ticket 20261025-studio-1.
 Medium: strong first-person revenue evidence for the model, but every
 case shows a slow ramp and depends on traffic the studio does not yet
 have; the vendor-side email channel is the studio's only early lever.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | four first-person revenue reports with numbers (USD 250 to 6,500 a month) plus one payment-connected aggregator, but every case needs about a year of traffic, no median |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0 on a studio sub-domain and free static hosting |
+| 3 | Time to first dollar | 2 | 4 | 8 | 6-12 weeks to the first featured listing, revenue follows traffic the studio does not yet have |
+| 4 | Automatability | 5 | 3 | 15 | agent builds, verifies, emails vendors and invoices |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h after one DNS record |
+| 6 | Earnings ceiling at 6 months | 2 | 2 | 4 | USD 0-800 at 6 months, the published cases reach USD 2,500-6,500 only after a year |
+| 7 | Durability | 3 | 1 | 3 | vendor email plus vendor-shared badges and comparison pages, organic search is not the only channel |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | sponsored and affiliate placements disclosed, nominative trademark use |
+
+**Total:** 75/100 — APPROVED (threshold 70)
+

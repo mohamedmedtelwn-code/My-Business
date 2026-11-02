@@ -93,3 +93,19 @@ enrichment. Income legal basis per ticket 20261025-studio-1.
 Medium-High on price (two Upwork catalog pages with review counts, two
 competitor price lists, one vendor rate card); Medium on GCC demand,
 inferred from the general market and the Arabic gap.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | two Upwork catalog pages with review counts, two competitor price lists and a vendor rate card, no income distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, OCR and vision models in the runner, paid OCR only as a ticketed pass-through |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-3 weeks: free 5-page sample in the first email, flat tier on reply, 72-hour delivery |
+| 4 | Automatability | 5 | 3 | 15 | agent OCRs, verifies, maps columns and delivers |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 300-1,500 at 3-8 batches a month on the competitor tiers |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | studio email plus Gumroad tiers and cross-sell to Excel and list-cleaning clients |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | financial and personal records need written terms, encryption and deletion |
+
+**Total:** 87/100 — APPROVED (threshold 70); owner-edge bonus applied
+
