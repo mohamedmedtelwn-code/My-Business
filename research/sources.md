@@ -179,3 +179,29 @@
 | 2026-11-02 | 1 | https://www.beehiiv.com/blog/the-state-of-paid-newsletters-2026 | rejected at source: paid newsletter (median conversion 0.84%, median price USD 10/month; needs an audience the studio does not have) |
 | 2026-11-02 | 2 | https://hustledge.com/google-sheets-template-income/ | rejected at source: generic Google Sheets template catalogue (USD 300-1,200/month needs 20-30 templates and Etsy or Pinterest traffic) |
 | 2026-11-02 | 2 | https://www.foundershut.com/explore/better-sheets-google-sheets-business | rejected at source: generic spreadsheet templates (USD 5k/month only after AppSumo, Udemy and YouTube audience) |
+| 2026-11-05 | 4 | https://www.upwork.com/hire/tender-freelancers/ | 20261105-gcc-bid-proposal-writing-service |
+| 2026-11-05 | 4 | https://www.upwork.com/hire/proposal-writers | 20261105-gcc-bid-proposal-writing-service |
+| 2026-11-05 | 4 | https://www.upwork.com/hire/project-proposal-freelancers/ | 20261105-gcc-bid-proposal-writing-service |
+| 2026-11-05 | 4 | https://labeeb.ae/saudi-arabia/business-proposal-writing/ | 20261105-gcc-bid-proposal-writing-service |
+| 2026-11-05 | 4 | https://www.tendersignal.co.uk/blog/hire-a-bid-writer-uk-cost | 20261105-gcc-bid-proposal-writing-service |
+| 2026-11-05 | 4 | https://tenderstandard.co.uk/guides/bid-writing-cost-uk-fm | 20261105-gcc-bid-proposal-writing-service |
+| 2026-11-05 | 4 | https://www.upwork.com/hire/google-business-profile-experts | 20261105-gbp-review-management-service |
+| 2026-11-05 | 4 | https://www.upwork.com/hire/google-my-business-freelancers | 20261105-gbp-review-management-service |
+| 2026-11-05 | 4 | https://www.surfa.co/blog/gbp-management-pricing-for-freelancers | 20261105-gbp-review-management-service |
+| 2026-11-05 | 4 | https://cited.so/blog/google-business-profile-optimization-service | 20261105-gbp-review-management-service |
+| 2026-11-05 | 4 | https://wemanagereviews.com/review-management-for-restaurants | 20261105-gbp-review-management-service |
+| 2026-11-05 | 4 | https://www.thehoth.com/blog/review-management-services/ | 20261105-gbp-review-management-service |
+| 2026-11-05 | 4 | https://outportreviews.com/blog/online-reputation-management-cost | 20261105-gbp-review-management-service |
+| 2026-11-05 | 3 | https://zid.sa/en/partners/developers/apps | 20261105-zid-salla-order-profit-app |
+| 2026-11-05 | 3 | https://help-partner.zid.sa/en/articles/11501759-app-payouts | 20261105-zid-salla-order-profit-app; platform-rules row |
+| 2026-11-05 | 3 | https://partners.salla.com/en/apps | 20261105-zid-salla-order-profit-app |
+| 2026-11-05 | 3 | https://partners.salla.com/en | 20261105-zid-salla-order-profit-app; platform-rules row |
+| 2026-11-05 | 3 | https://developers.zid.sa/ | 20261105-zid-salla-order-profit-app |
+| 2026-11-05 | 4 | https://www.upwork.com/hire/prospect-lists-freelancers | rejected at source: selling B2B contact lists (USD 4-6/h profiles with 400-1,700 jobs; USD 200-800 per project) |
+| 2026-11-05 | 4 | https://www.upwork.com/services/browse/b2b-lead-generation | rejected at source: selling B2B contact lists (17,230 catalog gigs from USD 20-25) |
+| 2026-11-05 | 4 | https://sales.co/blog/how-much-does-b2b-lead-generation-cost | rejected at source: selling B2B contact lists (list building USD 3.00 per contact; static lists USD 295) |
+| 2026-11-05 | 9 | https://help.skool.com/article/86-payments-faq | rejected at source: paid community (payout to Qatar supported, but gate 7: no audience and no studio-owned consumer channel); platform-rules row |
+| 2026-11-05 | 9 | https://support.patreon.com/hc/en-us/articles/39694936541965-Payouts-guide-for-creators-outside-of-the-US | rejected at source: paid community / membership (PayPal and Payoneer payouts; gate 7); platform-rules row |
+| 2026-11-05 | 6 | https://www.buysidomains.si/domain-flipping/ | rejected at source: domain flipping (1-2% annual sell-through; 82% of investors sell under 50 names a year) |
+| 2026-11-05 | 6 | https://www.domainsmoke.com/blog/is-domain-flipping-still-profitable | rejected at source: domain flipping (cash-flow positive at about 44 months, cumulative profit after 7+ years at 1-1.5% sell-through) |
+| 2026-11-05 | 6 | https://names.center/domain-flipping-2026-real-flip-data.php | rejected at source: domain flipping (70-80% of hand-registered names never sell) |
