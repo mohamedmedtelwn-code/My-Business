@@ -95,3 +95,22 @@ platform where the agreement says so. Income legal basis per ticket
 Medium: platform-level numbers are strong, but no first-person developer
 income report for Zid or Salla was found, the payout transfer method is
 unverified, and the comparable Shopify median is low.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 3 | 4 | 12 | platform-level numbers from Zid and Salla, but no first-person developer income and the only comparable median (Shopify) is under USD 1,000 |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, partner accounts and development stores are free |
+| 3 | Time to first dollar | 2 | 4 | 8 | 2-3 months: build, market review and a signed agreement before any subscription can bill |
+| 4 | Automatability | 4 | 3 | 12 | agent builds, submits and supports, owner opens two partner accounts, signs agreements and passes identity checks |
+| 5 | Owner time per week | 5 | 2 | 10 | 0 h after set-up |
+| 6 | Earnings ceiling at 6 months | 2 (+1 edge) | 2 | 6 | USD 0-650 at 0-50 stores, no evidence of small-developer earnings on these markets |
+| 7 | Durability | 3 (+1 edge) | 1 | 4 | two app markets plus studio email and the reporting service |
+| 8 | Legal / platform clarity | 2 | 1 | 2 | Zid pays non-Saudi partners in USD but the transfer method is unverified and Salla eligibility is unverified |
+
+**Total:** 69/100 — REJECTED (threshold 70); owner-edge bonus applied
+
+
+## Rejected: 69/100, below the 70 threshold
+Lowest criteria: time to first dollar (2, a 2-3 month build and review before any subscription bills), legal and platform clarity (2, Zid's transfer method to a non-Saudi partner and Salla's eligibility are unverified) and earnings ceiling (2, no small-developer income evidence on either market). Research may resubmit once a Zid or Salla partner payout route to Qatar is verified in management/payments.md and the merchant-reporting service (20261029-salla-zid-merchant-reporting) has passed its validation, which would supply the first installs and the missing demand evidence.

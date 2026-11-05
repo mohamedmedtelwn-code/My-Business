@@ -97,3 +97,19 @@ generation beyond a compliant request kit. Income legal basis per ticket
 High on price (two Upwork guidance pages, a freelancer-side rate guide,
 two competitor price pages, two vendor round-ups citing a consumer
 survey); Medium on GCC conversion by email.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | two Upwork guidance pages, a freelancer-side rate guide, two competitor price pages and two vendor round-ups citing a consumer survey, no operator income distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, Manager access and the runner |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-3 weeks: free 10-point audit in the first email, fixed set-up fee on reply, 3-day delivery |
+| 4 | Automatability | 5 | 3 | 15 | agent audits, optimises, replies daily and reports |
+| 5 | Owner time per week | 5 | 2 | 10 | owner does nothing |
+| 6 | Earnings ceiling at 6 months | 3 | 2 | 6 | 0 h |
+| 7 | Durability | 4 | 1 | 4 | USD 400-2,000 at 3-10 locations on the retainer plus set-ups, inside the published USD 125-475 band |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | monthly retainer gives repeat buyers plus studio email, a landing tool and cross-sell |
+
+**Total:** 86/100 — APPROVED (threshold 70)
+

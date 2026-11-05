@@ -99,3 +99,19 @@ ticket 20261025-studio-1.
 Medium-High on price (three Upwork pages with earnings and job counts,
 one GCC competitor price list, two UK rate round-ups); Medium on
 conversion, since bid contacts are busiest exactly when they need help.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | three Upwork pages with job counts and lifetime earnings, one GCC competitor price list, two UK rate round-ups, no distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0, document tooling in the runner |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-4 weeks: free compliance matrix for a live tender in the first email, fixed quote on reply |
+| 4 | Automatability | 5 | 3 | 15 | agent analyses, drafts, formats and revises |
+| 5 | Owner time per week | 5 | 2 | 10 | owner does nothing |
+| 6 | Earnings ceiling at 6 months | 3 | 2 | 6 | 0 h |
+| 7 | Durability | 3 | 1 | 3 | USD 400-2,500 at 1-4 proposals a month on the Upwork and GCC bands |
+| 8 | Legal / platform clarity | 3 | 1 | 3 | studio email plus the tender-digest channel and a Gumroad package |
+
+**Total:** 84/100 — APPROVED (threshold 70)
+
