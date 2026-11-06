@@ -1,9 +1,9 @@
-# Dashboard — 2026-11-06 14:45
+# Dashboard — 2026-11-06 18:43
 
 Capital: ceiling 1000 · released 23.08 · released unspent 23.08 · spent 0 · revenue 0 · pool 0
 Pipeline: inbox 0 · assessed 30 · validating 16 (passed 0, parked 9) · planned 0 · tickets open 4 (closed 7)
 Businesses: live 0 · paused 0 · stopped 0 (Phase 1, day 13 of 90; ends 2027-01-23)
-Source: tools/ledger.py report and tools/check.py, 2026-11-06 14:45. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
+Source: tools/ledger.py report and tools/check.py, 2026-11-06 18:43. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
 
 Operating rule since 2026-10-27 (signed): agents run every business; the
 owner does accounts and set-ups only; outreach goes out by email from
@@ -19,8 +19,8 @@ recorded when the owner reports each purchase paid.
 | planning | 2026-11-06T03:48:22 | ok | 0 | closed | inbox empty; 16 validations recounted, all RUNNING at 0 SU, none started; 0 tickets |
 | preparation | 2026-11-06T05:15:05 | ok | 0 | closed | no owner answers, no plans; 3 studio tickets open and stale, purchases pending |
 | work | - | idle | 0 | closed | no business live yet |
-| management | 2026-11-06T14:44 | running | 0 | closed | weekly review 2026-45 written: 25 runs ok, 0 revenue, 16 tests queued and 0 run; 1 decision proposed (hold Research until the mailbox exists, ticket studio-6) |
-Source: tools/runlog.py status, 2026-11-06 14:45. No crashed runs.
+| management | 2026-11-06T18:42 | running | 0 | closed | nightly: this refresh; weekly review 2026-45 written at 14:46 (25 runs ok, 0 revenue, 16 tests queued and 0 run; 1 decision proposed, ticket studio-6) |
+Source: tools/runlog.py status, 2026-11-06 18:43. No crashed runs.
 
 ## Validations running (7-day agent-run email tests; each starts only once the studio mailbox exists)
 | Id | Test | Started | Deadline | Signal units so far |
@@ -57,7 +57,7 @@ None live.
 Decisions: one pending-owner (Research hold, ticket studio-6); the rest signed (owner hold until 2026-11-25; agents-run rule 2026-10-27; brand 2026-10-30; legal basis 2026-10-30). None pending.
 
 ## Issues
-tools/check.py (2026-11-06 14:45): 0 errors, 3 warnings (studio-2 at 12 days, studio-4 and studio-5 at 7; studio-6 raised today). Weekly review 2026-45 written to management/reviews/.
+tools/check.py (2026-11-06 18:43): 0 errors, 3 warnings (studio-2 at 12 days, studio-4 and studio-5 at 7; studio-6 raised today). Weekly review 2026-45 written to management/reviews/.
 Ledger reconcile OK; USD 23.08 released, nothing spent yet.
 The two tests dated 2026-11-03 did not start: Planning moved them to
 2026-11-10 and will move them again if the mailbox is not DONE by then.
