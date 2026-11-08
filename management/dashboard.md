@@ -1,9 +1,9 @@
-# Dashboard — 2026-11-07 18:43
+# Dashboard — 2026-11-08 18:43
 
 Capital: ceiling 1000 · released 23.08 · released unspent 23.08 · spent 0 · revenue 0 · pool 0
 Pipeline: inbox 0 · assessed 30 · validating 16 (passed 0, parked 9) · planned 0 · tickets open 4 (closed 7)
-Businesses: live 0 · paused 0 · stopped 0 (Phase 1, day 14 of 90; ends 2027-01-23)
-Source: tools/ledger.py report and tools/check.py, 2026-11-07 18:43. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
+Businesses: live 0 · paused 0 · stopped 0 (Phase 1, day 15 of 90; ends 2027-01-23)
+Source: tools/ledger.py report and tools/check.py, 2026-11-08 18:43. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
 
 Operating rule since 2026-10-27 (signed): agents run every business; the
 owner does accounts and set-ups only; outreach goes out by email from
@@ -16,11 +16,11 @@ recorded when the owner reports each purchase paid.
 | Team | Last run | Outcome | Fails in a row | Breaker | Summary |
 |---|---|---|---|---|---|
 | research | 2026-11-05T02:51:26 | ok | 0 | closed | cycle 6: 3 briefs, 3 playbooks, 4 platform-rule rows, 4 rejections at source. Next cycle Mon 2026-11-09 unless the owner approves the hold (ticket studio-6) |
-| planning | 2026-11-07T03:48:19 | ok | 0 | closed | inbox empty; 16 validations recounted, all RUNNING at 0 SU, none started; 0 tickets |
-| preparation | 2026-11-07T05:14:42 | ok | 0 | closed | no owner answers, no plans; 4 studio tickets open, purchases pending |
+| planning | 2026-11-08T03:48:15 | ok | 0 | closed | inbox empty; 16 validations recounted, all RUNNING at 0 SU, none started; 0 tickets |
+| preparation | 2026-11-08T05:14:56 | ok | 0 | closed | no owner answers, no plans; 4 studio tickets open, purchases pending |
 | work | - | idle | 0 | closed | no business live yet |
-| management | 2026-11-07T18:42 | running | 0 | closed | nightly: this refresh; weekly review 2026-45 on 2026-11-06 proposed the Research hold (ticket studio-6) |
-Source: tools/runlog.py status, 2026-11-07 18:43. No crashed runs.
+| management | 2026-11-08T18:42 | running | 0 | closed | nightly: this refresh; weekly review 2026-45 on 2026-11-06 proposed the Research hold (ticket studio-6) |
+Source: tools/runlog.py status, 2026-11-08 18:43. No crashed runs.
 
 ## Validations running (7-day agent-run email tests; each starts only once the studio mailbox exists)
 | Id | Test | Started | Deadline | Signal units so far |
@@ -41,23 +41,23 @@ Source: tools/runlog.py status, 2026-11-07 18:43. No crashed runs.
 | 20261102-arabic-saas-directory | email outreach (20 then 30) | 2026-12-21 | 2026-12-28 | 0 (not started; directory site and one DNS ticket needed before 2026-12-14) |
 | 20261105-gbp-review-management-service | email outreach (20 then 30) | 2026-12-29 | 2027-01-05 | 0 (not started) |
 | 20261105-gcc-bid-proposal-writing-service | email outreach (20 then 30) | 2026-12-29 | 2027-01-05 | 0 (not started; shares the tender-digest list) |
-Source: Verdict block of each brief in pipeline/15-validating/, counted 2026-11-07 by tools/signals.py.
+Source: Verdict block of each brief in pipeline/15-validating/, counted 2026-11-08 by tools/signals.py.
 Parked (9): 7 cycle-1 planning tests on hold until 2026-11-25; CV service and finance trackers (no studio-owned consumer channel).
 
 ## Businesses
 None live.
 
 ## Needs owner (oldest first)
-- **20261025-studio-2** (account, raised 2026-10-25 by preparation, 13 days, stale; owner said on 2026-10-30 "this week"): open the Gumroad account with the Qatari bank account. Blocks: paid signals for the template presale and the tender digest; any digital-product revenue. About 20 minutes.
-- **20261030-studio-4** (account, Tier 0 USD 11.08, raised 2026-10-30, approved 2026-10-30, 8 days, stale, purchase pending): buy mteryakstudio.com at Porkbun, decline add-ons, write DONE. Blocks: the mailbox and all 16 tests. About 5 minutes.
-- **20261030-studio-5** (account, Tier 0 USD 12, raised 2026-10-30, approved 2026-10-30, 8 days, stale, purchase pending; after studio-4): Zoho Mail Lite mailbox hello@mteryakstudio.com, DNS records, IMAP on, app password, five secrets in the runner's environment. Blocks: all 16 tests. About 20 minutes.
+- **20261025-studio-2** (account, raised 2026-10-25 by preparation, 14 days, stale; owner said on 2026-10-30 "this week"): open the Gumroad account with the Qatari bank account. Blocks: paid signals for the template presale and the tender digest; any digital-product revenue. About 20 minutes.
+- **20261030-studio-4** (account, Tier 0 USD 11.08, raised 2026-10-30, approved 2026-10-30, 9 days, stale, purchase pending): buy mteryakstudio.com at Porkbun, decline add-ons, write DONE. Blocks: the mailbox and all 16 tests. About 5 minutes.
+- **20261030-studio-5** (account, Tier 0 USD 12, raised 2026-10-30, approved 2026-10-30, 9 days, stale, purchase pending; after studio-4): Zoho Mail Lite mailbox hello@mteryakstudio.com, DNS records, IMAP on, app password, five secrets in the runner's environment. Blocks: all 16 tests. About 20 minutes.
 
 - **20261106-studio-6** (other, raised 2026-11-06 by management): decide whether to pause the Mon and Thu Research cycles until the mailbox is DONE; 16 tests are queued and none can run. One word on the card. Blocks nothing.
 
 Decisions: one pending-owner (Research hold, ticket studio-6); the rest signed (owner hold until 2026-11-25; agents-run rule 2026-10-27; brand 2026-10-30; legal basis 2026-10-30). None pending.
 
 ## Issues
-tools/check.py (2026-11-07 18:43): 0 errors, 3 warnings (studio-2 at 13 days, studio-4 and studio-5 at 8; studio-6 open 1 day). Weekly review 2026-45 written to management/reviews/.
+tools/check.py (2026-11-08 18:43): 0 errors, 3 warnings (studio-2 at 14 days, studio-4 and studio-5 at 9; studio-6 open 2 days). Weekly review 2026-45 written to management/reviews/.
 Ledger reconcile OK; USD 23.08 released, nothing spent yet.
 The two tests dated 2026-11-03 did not start: Planning moved them to
 2026-11-10 and will move them again if the mailbox is not DONE by then.
