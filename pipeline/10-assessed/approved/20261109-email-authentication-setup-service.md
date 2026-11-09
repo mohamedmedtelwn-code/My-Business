@@ -110,3 +110,19 @@ a revocable delegated role. Income legal basis per ticket 20261025-studio-1.
 High on price (two Upwork project bands, a provider-side pricing guide,
 three vendor price pages, one competitor service page) and on the size of
 the fault (a 1,728-domain public study); Medium on GCC conversion by email.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 4 | 4 | 16 | two Upwork project bands, a provider-side pricing guide, three vendor price pages, a competitor service page and a 1,728-domain public study, no operator income distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0: public DNS queries, a report mailbox on the studio domain and a Python parser |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-3 weeks: the fault is proven in the first email, fixed fee on reply, records delivered in 2 days |
+| 4 | Automatability | 5 | 3 | 15 | agent checks DNS, drafts records, verifies hourly, parses reports and invoices |
+| 5 | Owner time per week | 5 | 2 | 10 | owner does nothing |
+| 6 | Earnings ceiling at 6 months | 3 (+1 edge) | 2 | 8 | USD 400-1,500 at 2-5 set-ups a month plus 10-30 domains on the USD 19 retainer (edge: Python tooling is the delivery) |
+| 7 | Durability | 4 (+1 edge) | 1 | 5 | per-domain retainer and mailbox-provider rules that keep tightening (edge applied) |
+| 8 | Legal / platform clarity | 5 | 1 | 5 | public DNS only, no credentials, no personal data in aggregate reports, studio email rule 15 |
+
+**Total:** 90/100 — APPROVED (threshold 70); owner-edge bonus applied
+

@@ -1,13 +1,13 @@
 # Validation Brief: Python data-extraction and automation service for small firms
 
 - **Id:** 20261026-python-data-extraction-service
-- **Started:** 2026-11-10  **Deadline:** 2026-11-17 (7 days; replies count to day 9)
+- **Started:** 2026-11-17  **Deadline:** 2026-11-24 (7 days; replies count to day 9)
 - **Test:** outreach
 - **Extended:** no
 - **Cost:** USD 0
 
 ## The test
-Date shifted by Planning on 2026-11-03: the studio mailbox (ticket studio-5) did not exist on the planned start day, so the start moved from 2026-11-03 to 2026-11-10; it moves again if the mailbox is not DONE by then, and the first two weeks run at the warm-up rate of 5-10 emails a day.
+Date shifted by Planning on 2026-11-03 (2026-11-03 to 2026-11-10) and again on 2026-11-09 (to 2026-11-17): the studio mailbox (ticket studio-5) still does not exist; the start moves week by week until it is DONE, and the first two weeks after purchase run at the warm-up rate of 5-10 emails a day, so the real first send is about 14 days after the owner reports DONE.
 The agents email 20 owners or operations staff of small GCC firms that copy
 web data by hand (e-commerce resellers, recruitment agencies, brokerages,
 market-research firms), from the studio domain, offering a free 50-row sample
@@ -52,5 +52,5 @@ output/ (screenshot, export) or a URL. Rows without a source do not count.
 **Verdict:** RUNNING  
 **Signal units:** 0 (payments 0 x3, calls 0, intent replies 0, sign-ups 0 -> 0 SU)  
 **Denominator:** 0 of 50 messages (not reached)  
-**Reason:** Deadline 2026-11-17 not reached; 0 SU so far.  
-**Counted on:** 2026-11-08 by tools/signals.py
+**Reason:** Deadline 2026-11-24 not reached; 0 SU so far.  
+**Counted on:** 2026-11-09 by tools/signals.py
