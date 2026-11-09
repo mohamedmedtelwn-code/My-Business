@@ -205,3 +205,26 @@
 | 2026-11-05 | 6 | https://www.buysidomains.si/domain-flipping/ | rejected at source: domain flipping (1-2% annual sell-through; 82% of investors sell under 50 names a year) |
 | 2026-11-05 | 6 | https://www.domainsmoke.com/blog/is-domain-flipping-still-profitable | rejected at source: domain flipping (cash-flow positive at about 44 months, cumulative profit after 7+ years at 1-1.5% sell-through) |
 | 2026-11-05 | 6 | https://names.center/domain-flipping-2026-real-flip-data.php | rejected at source: domain flipping (70-80% of hand-registered names never sell) |
+| 2026-11-09 | 4 | https://www.upwork.com/hire/email-marketing-consultants | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://www.upwork.com/hire/instantly-experts | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://dmarc.ai/academy/how-to-price-dmarc-services-as-an-msp | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://dev.to/ashtech52/dmarc-for-small-business-we-checked-1728-local-business-domains-and-46-had-no-dmarc-record-22ii | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://dmarcian.com/pricing | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://powerdmarc.com/dmarc-cost-pricing | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://trustyourinbox.com/pricing | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://www.trenet.eu/en/services/spf-dkim-dmarc | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://christopholivierconsulting.com/email-marketing-agency/ | 20261109-email-authentication-setup-service |
+| 2026-11-09 | 4 | https://www.dooza.ai/customer-service-outsourcing | rejected at source: e-commerce support inbox retainer (per ticket USD 0.75-7; dedicated agent USD 1,200-3,500/month) |
+| 2026-11-09 | 4 | https://helplama.com/outsource-ecommerce-customer-service | rejected at source: e-commerce support inbox retainer (entry USD 399/month; 24/7 coverage expected) |
+| 2026-11-09 | 4 | https://www.taskbird.co/services/customer-support | rejected at source: e-commerce support inbox retainer (Dubai trilingual support VA from AED 4,600/month, under-30-minute response) |
+| 2026-11-09 | 4 | https://whatshouldicharge.io/copywriter | rejected at source: bilingual website copy service (homepage flat fee USD 2,500; USD 0.10-1.00 per word); duplicate of 20261026-arabic-english-business-translation |
+| 2026-11-09 | 4 | https://www.upwork.com/hire/copywriters/eg/ | rejected at source: bilingual website copy service (Egypt copywriters USD 15/h, USD 9K lifetime earnings on profile) |
+| 2026-11-09 | 8 | https://connect.plusuae.com/affiliate-program | rejected at source: company-formation affiliate (5-12% commission, AED 400-1,800 per referral, PayPal or bank payout, AED 200 minimum) |
+| 2026-11-09 | 8 | https://endb.ae/affiliate-program | rejected at source: company-formation affiliate (20% commission, PayPal or bank, paid 10 working days after setup) |
+| 2026-11-09 | 8 | https://omcuae.com/refer | rejected at source: company-formation affiliate (fixed USD 500-750 per UAE company, paid monthly by bank, Wise or USDT) |
+| 2026-11-09 | 8 | https://startsmartuae.com/partners | rejected at source: company-formation affiliate (10-15% of setup fee, quarterly payouts) |
+| 2026-11-09 | 2 | https://www.legalia.me/contract-library | rejected at source: bilingual legal template pack (UAE NDA AED 99, employment contract AED 149, partnership AED 299) |
+| 2026-11-09 | 2 | https://www.moet.gov.ae/en/common-contracts-projects | rejected at source: bilingual legal template pack (UAE Ministry of Economy publishes free contract templates) |
+| 2026-11-09 | 2 | https://sighaty.com/guides/best-bilingual-contract-templates-for-foreign-owned-saudi-businesses.en.html | rejected at source: bilingual legal template pack (67 Saudi bilingual templates already sold; Arabic text prevails in court) |
+| 2026-11-09 | 1 | https://www.growthactivated.com/blog/youtube-for-b2b-strategy-samu-kovacs | rejected at source: YouTube or podcast as a lead channel (about 90 days to first leads; the client records 2-4 h a month on camera) |
+| 2026-11-09 | 1 | https://alanspicer.com/youtube-case-studies | rejected at source: YouTube or podcast as a lead channel (B2B firm: 28 videos, 3,200 monthly views and 6 enquiries by month 6 with the managing director on camera) |
