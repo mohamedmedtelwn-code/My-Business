@@ -76,6 +76,7 @@ def make_scratch(root: Path) -> None:
     shutil.copy(REPO / "research" / "platform-rules.md", root / "research" / "platform-rules.md")
     cfg = json.loads(studio.read_text(REPO / "management" / "config.json"))
     cfg["studio_start"] = d(-20)
+    cfg["ceiling_usd"] = 1000  # the dry run exercises releases whatever the live ceiling is
     write(root, "management/config.json", json.dumps(cfg, indent=2))
     write(root, "management/dashboard-url.txt", "https://claude.ai/artifact/DRYRUN\n")
     write(root, "research/feedback.md", "# Feedback to Research and Planning\n\n")

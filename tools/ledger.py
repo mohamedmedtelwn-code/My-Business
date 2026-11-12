@@ -18,6 +18,8 @@ Rules enforced (CLAUDE.md funding rules):
 Usage (run from anywhere inside the studio folder):
   python tools/ledger.py init
   python tools/ledger.py release --ticket 20261101-abc-1 --business abc --amount 40
+  python tools/ledger.py withdraw --ticket 20261101-abc-1 --business abc --amount 40   # owner withdrew an unspent release
+  python tools/ledger.py set-ceiling --amount 0 --note "owner decision"             # refused below the released total
   python tools/ledger.py add --business abc --item "domain" --out 12 --source ceiling --ticket 20261101-abc-1 --tier 0
   python tools/ledger.py add --business abc --item "first sale" --in 25
   python tools/ledger.py report [--json]
@@ -144,6 +146,43 @@ class Ledger:
         self.con.commit()
         self.render()
         return cur.lastrowid
+
+    def withdraw(self, ticket: str, business: str, amount: float, date: str | None = None, note: str = "") -> int:
+        """Cancel an unspent release (the owner withdrew the approval or the studio stopped drawing on the ceiling)."""
+        amount = float(amount)
+        if not ticket:
+            raise LedgerError("A withdrawal names the ticket whose release it cancels.")
+        if amount <= 0:
+            raise LedgerError("Withdrawal amount must be positive.")
+        unspent = self.released_on(ticket) - self.spent_on(ticket)
+        if amount > unspent + EPS:
+            raise LedgerError(
+                f"Ticket {ticket} has USD {studio.fmt_usd(unspent)} released and unspent; "
+                f"cannot withdraw USD {studio.fmt_usd(amount)}.")
+        date = date or studio.today()
+        studio.parse_date(date)
+        cur = self.con.execute(
+            "INSERT INTO entries(date,business,kind,item,amount,ticket,note,created) VALUES(?,?,?,?,?,?,?,?)",
+            (date, business or "studio", "release", f"Release of USD {studio.fmt_usd(amount)} on ticket {ticket} withdrawn",
+             -amount, ticket, note, studio.now_iso()))
+        self.con.commit()
+        self.render()
+        return cur.lastrowid
+
+    def set_ceiling(self, amount: float, note: str = "") -> float:
+        """Record the owner's new ceiling. Refused below what is already released."""
+        amount = float(amount)
+        if amount < 0:
+            raise LedgerError("The ceiling cannot be negative.")
+        if amount + EPS < self.released_total():
+            raise LedgerError(
+                f"Released total is USD {studio.fmt_usd(self.released_total())}; withdraw releases before "
+                f"lowering the ceiling to USD {studio.fmt_usd(amount)}.")
+        self.con.execute("INSERT OR REPLACE INTO meta(key,value) VALUES('ceiling_usd',?)", (str(amount),))
+        self.con.execute("INSERT OR REPLACE INTO meta(key,value) VALUES('ceiling_note',?)", (f"{studio.today()}: {note}",))
+        self.con.commit()
+        self.render()
+        return amount
 
     def add(self, business: str, item: str, out: float = 0, inc: float = 0, source: str | None = None,
             ticket: str | None = None, tier: str | None = None, date: str | None = None, note: str = "",
@@ -422,6 +461,15 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--amount", type=float, required=True)
     r.add_argument("--date")
     r.add_argument("--note", default="")
+    w = sub.add_parser("withdraw", help="cancel an unspent release on a ticket (owner withdrew the approval)")
+    w.add_argument("--ticket", required=True)
+    w.add_argument("--business", required=True)
+    w.add_argument("--amount", type=float, required=True)
+    w.add_argument("--date")
+    w.add_argument("--note", default="")
+    sc = sub.add_parser("set-ceiling", help="record the owner's new ceiling (refused below the released total)")
+    sc.add_argument("--amount", type=float, required=True)
+    sc.add_argument("--note", default="")
     rep = sub.add_parser("report", help="ceiling / released / spent / revenue / pool")
     rep.add_argument("--json", action="store_true")
     rec = sub.add_parser("reconcile", help="compare business ledgers with the studio ledger")
@@ -457,6 +505,15 @@ def main(argv: list[str] | None = None) -> int:
             r = led.report()
             print(f"OK release #{eid}. Released {studio.fmt_usd(r['released'])} of ceiling {studio.fmt_usd(r['ceiling'])}; "
                   f"remaining {studio.fmt_usd(r['ceiling_remaining'])}")
+        elif args.cmd == "withdraw":
+            eid = led.withdraw(args.ticket, args.business, args.amount, date=args.date, note=args.note)
+            r = led.report()
+            print(f"OK withdrawal #{eid}. Released {studio.fmt_usd(r['released'])} of ceiling {studio.fmt_usd(r['ceiling'])}; "
+                  f"remaining {studio.fmt_usd(r['ceiling_remaining'])}")
+        elif args.cmd == "set-ceiling":
+            led.set_ceiling(args.amount, note=args.note)
+            r = led.report()
+            print(f"OK ceiling set to USD {studio.fmt_usd(r['ceiling'])}; released {studio.fmt_usd(r['released'])}")
         elif args.cmd == "report":
             r = led.report()
             if args.json:

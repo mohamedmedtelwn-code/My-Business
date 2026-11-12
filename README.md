@@ -109,9 +109,9 @@ be answered on a card when Management raises it as a ticket.
 
 ## 4. Money
 
-Nothing is deposited. USD 1,000 is a ceiling you release only when a ticket
-earns it; every spend, however small, is a ticket you pay yourself at that
-moment. Revenue goes into a reinvestment pool that is spent before any ceiling
+Nothing is deposited and, since your decision of 2026-11-12, nothing is
+released: the ceiling is USD 0 and the studio spends only what it has earned.
+Every pool spend, however small, is still a ticket you sign. Revenue goes into a reinvestment pool that is spent before any ceiling
 money. The ledger is a database the tools keep (`management/ledger.sqlite`,
 readable view `management/ledger.md`); it refuses any spend without a released
 ticket or from an empty pool. Check it any time with

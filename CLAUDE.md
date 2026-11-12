@@ -102,23 +102,40 @@ Mission, in one line: research, plan, prepare, execute, make money.
 
 ## Funding tiers
 
+**Owner decision 2026-11-12: the studio runs at zero external cost.** The
+ceiling is USD 0 (`ceiling_usd` in `management/config.json`); the owner pays
+nothing. The only money the studio may spend is what it has earned (the
+reinvestment pool), and every pool spend still needs an owner-signed ticket.
+The alternative the owner named was shutdown; zero cost was chosen. The
+tiers below stay as the ticket format for pool spend.
+
 | Tier | Amount per business | Who decides |
 |------|---------------------|-------------|
-| 0 | under USD 50 | Approval Ticket to owner (money is never pre-funded; owner pays at the moment of need) |
-| 1 | USD 50 – 1,000 | Investment Ticket to owner; wait for written approval |
-| 2 | above USD 1,000 | Investment Ticket with tranche plan; each tranche released on a milestone the owner confirms |
+| 0 | under USD 50 | Approval Ticket to owner, paid from the pool only |
+| 1 | USD 50 – 1,000 | Investment Ticket to owner, paid from the pool only; wait for written approval |
+| 2 | above USD 1,000 | Investment Ticket with tranche plan from the pool; each tranche released on a milestone the owner confirms |
 
-No capital is deposited up front. The owner has set a **ceiling of USD 1,000**
-that may be released in pieces, only when a ticket makes the case. The default
-for every idea is USD 0: start free, earn first, spend later. The ledger
-(`tools/ledger.py`, view in `management/ledger.md`) tracks ceiling, released,
-spent, revenue and the reinvestment pool (revenue minus spend from the pool).
+No capital is deposited and none is released: the ceiling is USD 0 since
+2026-11-12 (it was USD 1,000 from 2026-10-25 to 2026-11-12; the two Tier 0
+releases of that period were withdrawn unspent). The default for every idea
+is USD 0: start free, earn first, spend later. The ledger (`tools/ledger.py`,
+view in `management/ledger.md`) tracks ceiling, released, spent, revenue and
+the reinvestment pool (revenue minus spend from the pool), and refuses any
+release above the ceiling.
+
+Zero-cost means free tools only until the pool funds better ones: a free
+mailbox under the studio brand instead of a bought domain (rule 15 reads
+"studio mailbox" for "studio domain" until a domain is bought from the pool),
+free hosting for landing pages (GitHub Pages or a free static host under a
+studio-brand account), free marketplace accounts (Gumroad), free tiers of
+every API. The first pool spend proposed by Management is the studio domain,
+once the pool holds USD 25.
 
 ## Funding order
 
 When a plan needs money, Preparation draws in this order:
 1. Reinvestment pool (studio earnings): ticket to owner, no new money
-2. Ceiling (owner's USD 1,000): Investment Ticket, owner pays
+2. Ceiling: USD 0 since 2026-11-12; nothing can be drawn
 The pool is spent before the ceiling, always. The ledger tool enforces both.
 
 ## Folder layout
