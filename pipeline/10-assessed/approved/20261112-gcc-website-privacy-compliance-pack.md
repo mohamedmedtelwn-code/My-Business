@@ -110,3 +110,19 @@ tool is free.
 High on demand (two independent scans with stated samples, enforcement
 confirmed by two law firms) and on price (two competitor price pages, one
 vendor plan); Medium on GCC conversion by email from a free mailbox.
+
+## Score
+
+| # | Criterion | Score | Weight | Points | Justification |
+|---|---|---|---|---|---|
+| 1 | Evidence strength | 5 | 4 | 20 | two independent scans with stated samples (1,556 Saudi stores and 547 UAE sites), one academic study of 100 sites, enforcement confirmed by two law firms, two competitor price pages, no operator income distribution |
+| 2 | Capital to first dollar | 5 | 3 | 15 | USD 0: Playwright in the runner, document templates, the free studio mailbox |
+| 3 | Time to first dollar | 4 | 4 | 16 | 2-3 weeks: the fault is proven in the first email, fixed fee on reply, 3-day delivery |
+| 4 | Automatability | 5 | 3 | 15 | agent scans, drafts both notices and the banner text, re-scans monthly and invoices |
+| 5 | Owner time per week | 5 | 2 | 10 | owner does nothing |
+| 6 | Earnings ceiling at 6 months | 3 | 2 | 6 | USD 400-1,500 at 2-6 packs a month plus 10-30 sites on the USD 19 re-scan |
+| 7 | Durability | 4 | 1 | 4 | the law is in force with active enforcement and amendments pending, and the retainer tracks changes |
+| 8 | Legal / platform clarity | 4 | 1 | 4 | document service with a not-legal-advice line, public page loads only, studio email rule 15, regulated sectors referred to a lawyer |
+
+**Total:** 90/100 — APPROVED (threshold 70)
+
