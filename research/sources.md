@@ -228,3 +228,19 @@
 | 2026-11-09 | 2 | https://sighaty.com/guides/best-bilingual-contract-templates-for-foreign-owned-saudi-businesses.en.html | rejected at source: bilingual legal template pack (67 Saudi bilingual templates already sold; Arabic text prevails in court) |
 | 2026-11-09 | 1 | https://www.growthactivated.com/blog/youtube-for-b2b-strategy-samu-kovacs | rejected at source: YouTube or podcast as a lead channel (about 90 days to first leads; the client records 2-4 h a month on camera) |
 | 2026-11-09 | 1 | https://alanspicer.com/youtube-case-studies | rejected at source: YouTube or podcast as a lead channel (B2B firm: 28 videos, 3,200 monthly views and 6 enquiries by month 6 with the managing director on camera) |
+| 2026-11-12 | 4 | https://arqam360.com/gulf-privacy-readiness-index | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://arxiv.org/pdf/2602.18616 | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://www.aoshearman.com/en/insights/enforcement-of-the-saudi-personal-data-protection-law | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://arqam360.com/regulations/saudi-pdpl | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://www.dlapiperdataprotection.com/?c=SA | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://arqam360.com/ | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://waqisec.com/en/guides/pdpl-privacy-notice | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://waqi.ai/blog/from-website-scan-to-full-grc-how-saudi-smes-can-operationalize-pdpl-without-a-c | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://www.adyft.com/blog/uae-pdpl-website-privacy-small-business | 20261112-gcc-website-privacy-compliance-pack |
+| 2026-11-12 | 4 | https://webaim.org/projects/million | website-technical-audit-service playbook, accessibility add-on (95.9% of top million home pages with detectable WCAG failures, Feb 2026) |
+| 2026-11-12 | 4 | https://accessible.org/how-much-digital-accessibility-audit-cost/ | website-technical-audit-service playbook, accessibility add-on (USD 100-250 per page; typical audit USD 1,250-2,750) |
+| 2026-11-12 | 4 | https://thefrontkit.com/blogs/accessibility-audit-cost-2026 | rejected at source: stand-alone accessibility audit (small-site manual audits USD 1,000-3,000; fixed tiers USD 499-5,900; drivers are US lawsuits and the EU act, not GCC law) |
+| 2026-11-12 | 4 | https://admiral.media/aso-agency-pricing | rejected at source: Arabic app-listing localisation service (24% of 1,107 app-storefront pairs not fully localised; agency does not publish prices) |
+| 2026-11-12 | 4 | https://asoagency.io/blogs/app-store-optimization-cost | rejected at source: Arabic app-listing localisation service (Freelancer.com profiles USD 2-40/h; packages USD 490-1,990; agency audits EUR 2,500) |
+| 2026-11-12 | 4 | https://aso-copilot.com/pricing | rejected at source: Arabic app-listing localisation service (AI tool from USD 9.80 per listing against USD 60 at the lowest freelance rate) |
+| 2026-11-12 | 4 | https://asoenginelabs.com/en/languages/arabic | rejected at source: Arabic app-listing localisation service (vendor: Arabic ASO from EUR 499 per store) |

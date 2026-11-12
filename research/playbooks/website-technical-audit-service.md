@@ -36,6 +36,16 @@ Owner 0 h.
 ## Ramp
 First dollar 2-4 weeks. At 6 months: USD 250-1,600 a month. Median unknown.
 
+## Add-on: accessibility module (added 2026-11-12)
+An automated WCAG 2.2 pass (axe-core via Playwright: contrast, alt text,
+form labels, empty links, document language) is sold as a USD 90 add-on
+to the audit, not as a separate business: the WebAIM Million 2026 found
+detectable failures on 95.9% of the top million home pages, and published
+manual-audit prices run USD 100-250 a page (Accessible.org) and USD 499-
+2,750 per small site; the GCC has no private-sector mandate, so the buyer
+is the same site owner the audit already reaches, with the European
+Accessibility Act (June 2025) as the hook for GCC firms selling into the EU.
+
 ## Risks
 Free tools cover the basics; buyers expect rankings, not fix lists; CMS
 access for fixes; USD 5-15/h marketplace tier.
