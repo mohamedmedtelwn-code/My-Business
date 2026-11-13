@@ -1,9 +1,9 @@
-# Dashboard — 2026-11-13 15:41 (weekly review 2026-46)
+# Dashboard — 2026-11-13 18:43
 
 Capital: ceiling 0 · released 0 · released unspent 0 · spent 0 · revenue 0 · pool 0
 Pipeline: inbox 0 · assessed 32 · validating 18 (passed 0, parked 9) · planned 0 · tickets open 4 (closed 9)
 Businesses: live 0 · paused 0 · stopped 0 (Phase 1, day 20 of 90; ends 2027-01-23)
-Source: tools/ledger.py report and tools/check.py, 2026-11-13 15:41. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
+Source: tools/ledger.py report and tools/check.py, 2026-11-13 18:43. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
 
 Operating rule since 2026-10-27 (signed): agents run every business; the
 owner does accounts and set-ups only. **Funding rule since 2026-11-12
@@ -20,8 +20,8 @@ funds mteryakstudio.com. Legal basis for income: owner decision 2026-10-30.
 | planning | 2026-11-13T03:48:29 | ok | 0 | closed | inbox empty; 18 validations recounted, all RUNNING at 0 SU; none due before 2026-11-17; 0 tickets |
 | preparation | 2026-11-13T05:14:56 | ok | 0 | closed | no owner answers, no new decisions, no plans; 3 studio tickets open, all free |
 | work | - | idle | 0 | closed | no business live yet |
-| management | 2026-11-13T15:41 | running | 0 | closed | weekly review 2026-46 written (25 runs ok, 0 revenue, 0 emails sent); one new decision proposed (phase-1 clock restart, ticket studio-8); this refresh |
-Source: tools/runlog.py status, 2026-11-13 15:41. No crashed runs.
+| management | 2026-11-13T18:43 | running | 0 | closed | nightly: this refresh; weekly review 2026-46 written at 15:41 (25 runs ok, 0 revenue, 0 emails sent; phase-1 clock restart proposed, ticket studio-8) |
+Source: tools/runlog.py status, 2026-11-13 18:43. No crashed runs.
 
 ## Validations running (18 seven-day agent-run email tests; each starts only once the free studio mailbox exists)
 | Id | Test | Started | Deadline | Signal units so far |
@@ -60,7 +60,7 @@ None live.
 Decisions: two pending-owner (Research hold, ticket studio-6; phase-1 clock restart, ticket studio-8); the rest signed (owner hold until 2026-11-25; agents-run rule 2026-10-27; brand 2026-10-30; legal basis 2026-10-30; zero external cost 2026-11-12).
 
 ## Issues
-tools/check.py (2026-11-13 15:41): 0 errors, 2 warnings (studio-2 at 19 days, studio-6 at 7 days).
+tools/check.py (2026-11-13 18:43): 0 errors, 2 warnings (studio-2 at 19 days, studio-6 at 7 days).
 Ledger reconcile OK; ceiling USD 0, released 0, spent 0, revenue 0.
 Weekly review 2026-46 written to management/reviews/: 25 runs this week,
 all ok; 2 tests opened (18 queued); 0 emails sent; 4 tests re-dated a
