@@ -42,3 +42,12 @@ cases reach USD 2,500-6,500 only after a year or more.
 ## Risks
 Slow traffic; organic search cannot be the only channel; directory
 saturation and AI answers; verification burden.
+
+## Price references for featured listings (added 2026-11-16)
+Niche directories sell position month to month at USD 29 (verified badge and
+followed link), USD 99 (featured) and USD 127 (category banner) (AI Agency
+Search, Nov 2026); GoodFirms PRO USD 49 a month; SaaSHub earns about USD
+10,000 MRR from roughly 100 featured listings; OpenAlternative sells featured
+listings at USD 197 a month. Revenue follows search traffic that took those
+sites about a year to build, so the Arabic SaaS directory test sells the
+first ten listings by email to vendors, not from traffic.
