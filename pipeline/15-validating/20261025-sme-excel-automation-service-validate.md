@@ -1,13 +1,13 @@
 # Validation Brief: Excel and Google Sheets automation for small businesses
 
 - **Id:** 20261025-sme-excel-automation-service
-- **Started:** 2026-11-17  **Deadline:** 2026-11-24 (7 days; replies count to day 9)
+- **Started:** 2026-11-24  **Deadline:** 2026-12-01 (7 days; replies count to day 9)
 - **Test:** outreach
 - **Extended:** no
 - **Cost:** USD 0
 
 ## The test
-Date shifted by Planning on 2026-11-03 (2026-11-03 to 2026-11-10) and again on 2026-11-09 (to 2026-11-17): the studio mailbox (ticket studio-5) still does not exist; the start moves week by week until it is DONE, and the first two weeks after purchase run at the warm-up rate of 5-10 emails a day, so the real first send is about 14 days after the owner reports DONE.
+Date shifted by Planning on 2026-11-03 (2026-11-03 to 2026-11-10), 2026-11-09 (to 2026-11-17) and 2026-11-16 (to 2026-11-24): the free studio mailbox (ticket studio-7) does not exist yet. This is the last pair-by-pair shift: per the 2026-11-13 lesson, the day studio-7 is DONE Planning re-dates the whole queue once from "DONE + 14 days of warm-up", two tests a week.
 The agents email 20 owners or operations and finance staff of small firms
 in Qatar and the GCC that run part of the business on spreadsheets (trading,
 clinics, agencies, e-commerce, services), from the studio domain, offering a
@@ -52,5 +52,5 @@ output/ (screenshot, export) or a URL. Rows without a source do not count.
 **Verdict:** RUNNING  
 **Signal units:** 0 (payments 0 x3, calls 0, intent replies 0, sign-ups 0 -> 0 SU)  
 **Denominator:** 0 of 50 messages (not reached)  
-**Reason:** Deadline 2026-11-24 not reached; 0 SU so far.  
-**Counted on:** 2026-11-15 by tools/signals.py
+**Reason:** Deadline 2026-12-01 not reached; 0 SU so far.  
+**Counted on:** 2026-11-16 by tools/signals.py
