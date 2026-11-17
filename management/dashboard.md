@@ -1,9 +1,9 @@
-# Dashboard — 2026-11-16 18:43
+# Dashboard — 2026-11-17 18:43
 
 Capital: ceiling 0 · released 0 · released unspent 0 · spent 0 · revenue 0 · pool 0
 Pipeline: inbox 0 · assessed 32 · validating 18 (passed 0, parked 9) · planned 0 · tickets open 4 (closed 9)
-Businesses: live 0 · paused 0 · stopped 0 (Phase 1, day 23 of 90; ends 2027-01-23)
-Source: tools/ledger.py report and tools/check.py, 2026-11-16 18:43. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
+Businesses: live 0 · paused 0 · stopped 0 (Phase 1, day 24 of 90; ends 2027-01-23)
+Source: tools/ledger.py report and tools/check.py, 2026-11-17 18:43. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
 
 Operating rule since 2026-10-27 (signed): agents run every business; the
 owner does accounts and set-ups only. **Funding rule since 2026-11-12
@@ -17,11 +17,11 @@ funds mteryakstudio.com. Legal basis for income: owner decision 2026-10-30.
 | Team | Last run | Outcome | Fails in a row | Breaker | Summary |
 |---|---|---|---|---|---|
 | research | 2026-11-16T02:48:20 | ok | 0 | closed | cycle 9 (lean): 0 briefs by design, 2 rejections at source (stand-alone checker tools, GCC agency directory), 10 source rows, directory playbook gained listing prices. Next cycle Thu 2026-11-19 re-checks platform-rules.md unless the owner approves the hold (ticket studio-6) |
-| planning | 2026-11-16T03:48:47 | ok | 0 | closed | inbox empty; 18 validations recounted, all RUNNING at 0 SU; the pair due 2026-11-17 shifted to 2026-11-24 (last pair-by-pair shift); 0 tickets |
-| preparation | 2026-11-16T05:15:34 | ok | 0 | closed | no owner answers, no new decisions, no plans; 3 studio tickets open, all free |
+| planning | 2026-11-17T03:49:44 | ok | 0 | closed | inbox empty; 18 validations recounted, all RUNNING at 0 SU; none due today; the pair dated 2026-11-18 reaches Started tomorrow with the mailbox still open; 0 tickets |
+| preparation | 2026-11-17T05:14:59 | ok | 0 | closed | no owner answers, no new decisions, no plans; 4 studio tickets open, all free |
 | work | - | idle | 0 | closed | no business live yet |
-| management | 2026-11-16T18:43 | running | 0 | closed | nightly: this refresh; weekly review 2026-46 on 2026-11-13 proposed the phase-1 clock restart (ticket studio-8) |
-Source: tools/runlog.py status, 2026-11-16 18:43. No crashed runs.
+| management | 2026-11-17T18:43 | running | 0 | closed | nightly: this refresh; weekly review 2026-46 on 2026-11-13 proposed the phase-1 clock restart (ticket studio-8) |
+Source: tools/runlog.py status, 2026-11-17 18:43. No crashed runs.
 
 ## Validations running (18 seven-day agent-run email tests; each starts only once the free studio mailbox exists)
 | Id | Test | Started | Deadline | Signal units so far |
@@ -44,29 +44,31 @@ Source: tools/runlog.py status, 2026-11-16 18:43. No crashed runs.
 | 20261105-gcc-bid-proposal-writing-service | email outreach (20 then 30) | 2026-12-29 | 2027-01-05 | 0 (not started; shares the tender-digest list) |
 | 20261109-email-authentication-setup-service | email outreach (20 then 30) | 2027-01-06 | 2027-01-13 | 0 (not started; approved 2026-11-09 at 90/100) |
 | 20261112-gcc-website-privacy-compliance-pack | email outreach (20 then 30) | 2027-01-14 | 2027-01-21 | 0 (not started; approved 2026-11-12 at 90/100; shares one site scan with the audit, listing and email-authentication tests) |
-Source: Verdict block of each brief in pipeline/15-validating/, counted 2026-11-16 by tools/signals.py.
+Source: Verdict block of each brief in pipeline/15-validating/, counted 2026-11-17 by tools/signals.py.
 Parked (9): 7 cycle-1 planning tests on hold until 2026-11-25; CV service and finance trackers (no studio-owned consumer channel).
 
 ## Businesses
 None live.
 
 ## Needs owner (oldest first)
-- **20261025-studio-2** (account, USD 0, raised 2026-10-25 by preparation, 22 days, stale; owner said on 2026-10-30 "this week"): open the Gumroad account with the Qatari bank account. Blocks: paid signals for the template presale and the tender digest; any digital-product revenue. About 20 minutes.
-- **20261106-studio-6** (other, raised 2026-11-06 by management, 10 days, stale): decide whether to pause the Mon and Thu Research cycles until the mailbox is DONE; 18 tests are queued and none can run. One word on the card. Blocks nothing.
-- **20261112-studio-7** (account, USD 0, raised 2026-11-12 by management, 4 days, stale): create the free Gmail account "mteryakstudio" (name Mteryak Studio), turn on 2-step verification, make an app password, enable IMAP, store the five STUDIO_* secrets in the runner's environment, write DONE with the address. Blocks: all 18 tests. About 15 minutes. Replaces the withdrawn domain and Zoho tickets.
+- **20261025-studio-2** (account, USD 0, raised 2026-10-25 by preparation, 23 days, stale; owner said on 2026-10-30 "this week"): open the Gumroad account with the Qatari bank account. Blocks: paid signals for the template presale and the tender digest; any digital-product revenue. About 20 minutes.
+- **20261106-studio-6** (other, raised 2026-11-06 by management, 11 days, stale): decide whether to pause the Mon and Thu Research cycles until the mailbox is DONE; 18 tests are queued and none can run. One word on the card. Blocks nothing.
+- **20261112-studio-7** (account, USD 0, raised 2026-11-12 by management, 5 days, stale): create the free Gmail account "mteryakstudio" (name Mteryak Studio), turn on 2-step verification, make an app password, enable IMAP, store the five STUDIO_* secrets in the runner's environment, write DONE with the address. Blocks: all 18 tests. About 15 minutes. Replaces the withdrawn domain and Zoho tickets.
 
-- **20261113-studio-8** (other, USD 0, raised 2026-11-13 by management, 3 days): one word on whether the 90-day phase-1 clock restarts on the day the mailbox is DONE. Blocks nothing. About a minute.
+- **20261113-studio-8** (other, USD 0, raised 2026-11-13 by management, 4 days, stale): one word on whether the 90-day phase-1 clock restarts on the day the mailbox is DONE. Blocks nothing. About a minute.
 
 Decisions: two pending-owner (Research hold, ticket studio-6; phase-1 clock restart, ticket studio-8); the rest signed (owner hold until 2026-11-25; agents-run rule 2026-10-27; brand 2026-10-30; legal basis 2026-10-30; zero external cost 2026-11-12).
 
 ## Issues
-tools/check.py (2026-11-16 18:43): 0 errors, 3 warnings (studio-2 at 22 days, studio-6 at 10 days, studio-7 at 4 days).
+tools/check.py (2026-11-17 18:43): 0 errors, 4 warnings (studio-2 at 23 days, studio-6 at 11 days, studio-7 at 5 days, studio-8 at 4 days).
 Ledger reconcile OK; ceiling USD 0, released 0, spent 0, revenue 0.
 Quiet day: three runs, all ok, nothing new to process. Weekly review
 2026-46 (2026-11-13) proposed restarting the phase-1 clock on the day the
-free mailbox is DONE (ticket studio-8). All 18 tests wait on studio-7; the
-pair due 2026-11-17 moved to 2026-11-24 this morning, the last pair-by-pair
-shift: when studio-7 is DONE Planning re-dates the whole queue once from
+free mailbox is DONE (ticket studio-8). All 18 tests wait on studio-7. The
+pair dated 2026-11-18 (startup financial model, LinkedIn ghostwriting)
+reaches its Started date tomorrow with no mailbox; pair-by-pair shifting
+ended on 2026-11-16, so Planning decides tomorrow how that pair is held
+until studio-7 is DONE and the whole queue is re-dated once from
 "DONE + 14 days". Research cycle 9 wrote no brief by design. The five
 scheduled-task prompts still carry the old "owner sends" wording;
 Management rewrites them the day studio-7 is DONE. Owner hold on
