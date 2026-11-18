@@ -4,6 +4,7 @@
 - **Started:** 2027-01-06  **Deadline:** 2027-01-13 (7 days; replies count to day 9)
 - **Test:** outreach
 - **Extended:** no
+- **Blocked by:** 20261112-studio-7 (free studio mailbox; the 7-day clock starts when it is DONE and Planning re-dates the whole queue once from DONE + 14 days of warm-up)
 - **Cost:** USD 0
 
 ## The test
@@ -42,5 +43,5 @@ output/ (screenshot, export) or a URL. Rows without a source do not count.
 **Verdict:** RUNNING  
 **Signal units:** 0 (payments 0 x3, calls 0, intent replies 0, sign-ups 0 -> 0 SU)  
 **Denominator:** 0 of 50 messages (not reached)  
-**Reason:** Deadline 2027-01-13 not reached; 0 SU so far.  
-**Counted on:** 2026-11-17 by tools/signals.py
+**Reason:** Blocked by ticket 20261112-studio-7 (still open); the clock starts when it closes. 0 SU so far.  
+**Counted on:** 2026-11-18 by tools/signals.py

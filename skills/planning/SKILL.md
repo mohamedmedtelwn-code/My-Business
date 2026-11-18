@@ -68,6 +68,13 @@ documents). Skip when the ArtifactData tool is not available in this run
      denominator. A second inconclusive result parks.
    - RUNNING -> nothing to do yet. If the brief's **Started** date has arrived
      and its owner ticket (`<id>-v1`) has not been raised, raise it now.
+     If the test cannot start because a studio ticket is open (mailbox,
+     hosting, account), write `- **Blocked by:** <ticket id>` under
+     **Extended** instead of moving the dates: signals.py holds the test
+     RUNNING while that ticket is in `30-tickets/open/`. The run after the
+     ticket closes re-dates every held brief once (DONE + 14 days of
+     warm-up, two tests a week) and deletes the line. Never re-date pair by
+     pair while the dependency is open (lesson 2026-11-13).
 4. For each passed idea, write `pipeline/20-planned/<id>-plan.md` from
    `templates/execution-plan.md`. Fill every field. The plan must name:
    - exact tools, accounts and access needed (and which need the owner)

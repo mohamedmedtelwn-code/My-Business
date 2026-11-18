@@ -16,7 +16,9 @@ Rule 10 v2 (see research/STUDIO-RESEARCH.md section 4):
               landing:  validation_min_visitors qualified visitors
               presale:  validation_min_asks direct asks
   verdicts    PASSED        3 SU reached
-              RUNNING       deadline not reached, under 3 SU
+              RUNNING       deadline not reached, under 3 SU; or **Blocked by:** names a ticket that is
+                            still in pipeline/30-tickets/open/ (the clock has not started; Planning
+                            re-dates the brief and removes the line when the ticket closes)
               PARKED        deadline reached, denominator reached, under 3 SU (or 0 of the first batch)
               INCONCLUSIVE  deadline reached, denominator not reached, not yet extended
                             (--write extends the deadline once by validation_days and sets Extended: yes;
@@ -26,6 +28,7 @@ The brief format (templates/validation-brief.md):
   - **Started:** YYYY-MM-DD  **Deadline:** YYYY-MM-DD
   - **Test:** outreach | landing | presale
   - **Extended:** no | yes
+  - **Blocked by:** <ticket id>   (optional; a studio dependency the test cannot start without)
   - **Messages sent:** N   - **Visitors:** N   - **Asks:** N
   ## Signals table: | Date | Type | Who / what | Source |   (Type: payment, call, intent, signup)
 
@@ -97,14 +100,23 @@ def parse(text: str) -> dict:
             counts["signup"] += 1
         else:
             ignored.append(t)
+    blocked_by = re.sub(r"\.md$", "", (f.get("blocked by") or "").strip().split()[0]) if (f.get("blocked by") or "").strip() else ""
     return {"started": studio.first_date(f.get("started")), "deadline": deadline, "test": test,
-            "extended": (f.get("extended") or "no").strip().lower().startswith("y"),
+            "extended": (f.get("extended") or "no").strip().lower().startswith("y"), "blocked_by": blocked_by,
             "messages": messages, "visitors": visitors, "asks": asks, "counts": counts, "ignored": ignored}
 
 
-def verdict(text: str, cfg: dict, today: str | None = None) -> dict:
+def ticket_is_open(root, ticket_id: str) -> bool:
+    """True when pipeline/30-tickets/open/<ticket_id>.md exists under root."""
+    if not root or not ticket_id:
+        return False
+    return (Path(root) / "pipeline" / "30-tickets" / "open" / f"{ticket_id}.md").is_file()
+
+
+def verdict(text: str, cfg: dict, today: str | None = None, root=None) -> dict:
     p = parse(text)
     today = today or studio.today()
+    blocked = ticket_is_open(root, p["blocked_by"])
     c = p["counts"]
     su = 3.0 * c["payment"] + 1.0 * c["call"] + 1.0 * c["intent"]
     signup_su = 0.0
@@ -130,6 +142,8 @@ def verdict(text: str, cfg: dict, today: str | None = None) -> dict:
 
     if su >= 3:
         v, reason = "PASSED", f"{su:g} signal units (3 needed)."
+    elif blocked:
+        v, reason = "RUNNING", f"Blocked by ticket {p['blocked_by']} (still open); the clock starts when it closes. {su:g} SU so far."
     elif not due:
         v, reason = "RUNNING", f"Deadline {p['deadline']} not reached; {su:g} SU so far."
     elif early_park:
@@ -143,7 +157,7 @@ def verdict(text: str, cfg: dict, today: str | None = None) -> dict:
     return {"verdict": v, "reason": reason, "su": su, "counts": c, "signup_su": round(signup_su, 2),
             "signup_rate": round(signup_rate, 4), "test": p["test"], "deadline": p["deadline"],
             "denominator": denominator, "denominator_reached": reached, "extended": p["extended"],
-            "ignored": p["ignored"], "today": today}
+            "blocked_by": p["blocked_by"] if blocked else "", "ignored": p["ignored"], "today": today}
 
 
 def render(v: dict) -> str:
@@ -160,10 +174,15 @@ def render(v: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
-def write_verdict(path: Path, cfg: dict, today: str | None = None) -> dict:
+def write_verdict(path: Path, cfg: dict, today: str | None = None, root=None) -> dict:
     path = Path(path)
     text = studio.read_text(path)
-    v = verdict(text, cfg, today)
+    if root is None:
+        try:
+            root = studio.find_root(path.resolve().parent)
+        except FileNotFoundError:
+            root = None
+    v = verdict(text, cfg, today, root=root)
     if v["verdict"] == "INCONCLUSIVE" and not v["extended"]:
         new_deadline = (studio.parse_date(v["today"]) + __import__("datetime").timedelta(days=int(cfg["validation_days"]))).isoformat()
         text = re.sub(r"(\*\*Deadline:\*\*\s*)\d{4}-\d{2}-\d{2}", r"\g<1>" + new_deadline, text, count=1)
@@ -198,7 +217,7 @@ def main(argv=None) -> int:
         root = Path.cwd()
     cfg = studio.load_config(root)
     try:
-        v = write_verdict(path, cfg) if args.write else verdict(studio.read_text(path), cfg)
+        v = write_verdict(path, cfg, root=root) if args.write else verdict(studio.read_text(path), cfg, root=root)
     except SignalsError as e:
         print(f"ERROR: {e}")
         return 2

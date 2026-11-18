@@ -4,6 +4,7 @@
 - **Started:** YYYY-MM-DD  **Deadline:** YYYY-MM-DD (7 days; replies count to day 9)
 - **Test:** outreach | landing | presale
 - **Extended:** no
+- **Blocked by:** (optional) <ticket id> — a studio dependency the test cannot start without; while that ticket is in 30-tickets/open/ signals.py keeps the test RUNNING and the deadline does not count. Delete the line and re-date when the ticket closes.
 - **Cost:** USD 0
 
 ## The test

@@ -129,6 +129,28 @@ class WriteVerdict(unittest.TestCase):
         v2 = signals.verdict(text, CFG)
         self.assertEqual(v2["verdict"], "RUNNING")
 
+    def test_blocked_by_open_ticket_stays_running_past_deadline(self):
+        (self.root / "pipeline" / "30-tickets" / "open").mkdir(parents=True)
+        (self.root / "pipeline" / "30-tickets" / "closed").mkdir(parents=True)
+        p = self.root / "20261101-x-validate.md"
+        text = brief(deadline=-3).replace("- **Extended:** no", "- **Extended:** no\n- **Blocked by:** 20261112-studio-7")
+        p.write_text(text, encoding="utf-8")
+        # ticket open: RUNNING, no extension written, deadline untouched
+        (self.root / "pipeline" / "30-tickets" / "open" / "20261112-studio-7.md").write_text("t", encoding="utf-8")
+        v = signals.write_verdict(p, CFG, root=self.root)
+        self.assertEqual(v["verdict"], "RUNNING")
+        self.assertEqual(v["blocked_by"], "20261112-studio-7")
+        self.assertIn("Blocked by ticket 20261112-studio-7", v["reason"])
+        self.assertNotIn("**Extended:** yes", p.read_text(encoding="utf-8"))
+        # ticket closed: the normal rules apply again (0 of 50 past the deadline -> INCONCLUSIVE)
+        (self.root / "pipeline" / "30-tickets" / "open" / "20261112-studio-7.md").rename(
+            self.root / "pipeline" / "30-tickets" / "closed" / "20261112-studio-7.md")
+        v2 = signals.verdict(p.read_text(encoding="utf-8"), CFG, root=self.root)
+        self.assertEqual(v2["verdict"], "INCONCLUSIVE")
+        self.assertEqual(v2["blocked_by"], "")
+        # without a root the line is inert
+        self.assertEqual(signals.verdict(text, CFG)["verdict"], "INCONCLUSIVE")
+
     def test_cli(self):
         import io
         from contextlib import redirect_stdout

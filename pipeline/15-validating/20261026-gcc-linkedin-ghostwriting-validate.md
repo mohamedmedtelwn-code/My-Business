@@ -4,9 +4,11 @@
 - **Started:** 2026-11-18  **Deadline:** 2026-11-25 (7 days; replies count to day 9)
 - **Test:** presale
 - **Extended:** no
+- **Blocked by:** 20261112-studio-7 (free studio mailbox; the 7-day clock starts when it is DONE and Planning re-dates the whole queue once from DONE + 14 days of warm-up)
 - **Cost:** USD 0
 
 ## The test
+Started date 2026-11-18 arrived with no studio mailbox (ticket studio-7 open). Planning no longer shifts dates pair by pair (lesson 2026-11-13): the **Blocked by** line above holds the test as RUNNING until studio-7 is DONE, when the whole queue is re-dated once from DONE + 14 days of warm-up (first two weeks at 5-10 emails a day).
 Date shifted by Planning on 2026-11-10: the studio mailbox (ticket studio-5) did not exist the day before the planned start, so the start moved from 2026-11-11 to 2026-11-18; it moves again week by week until the mailbox is DONE, and the first two weeks after purchase run at the warm-up rate of 5-10 emails a day.
 The agents email 20 founders and partners of GCC companies whose public
 LinkedIn profiles post less than monthly (found on cohort pages, funding
@@ -52,5 +54,5 @@ output/ (screenshot, export) or a URL. Rows without a source do not count.
 **Verdict:** RUNNING  
 **Signal units:** 0 (payments 0 x3, calls 0, intent replies 0, sign-ups 0 -> 0 SU)  
 **Denominator:** 0 of 20 asks (not reached)  
-**Reason:** Deadline 2026-11-25 not reached; 0 SU so far.  
-**Counted on:** 2026-11-17 by tools/signals.py
+**Reason:** Blocked by ticket 20261112-studio-7 (still open); the clock starts when it closes. 0 SU so far.  
+**Counted on:** 2026-11-18 by tools/signals.py
