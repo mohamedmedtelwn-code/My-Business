@@ -254,3 +254,25 @@
 | 2026-11-16 | 8 | https://www.clutchreviews.com/best-agency-directories | rejected at source: GCC agency directory (Clutch Verified USD 499 a year; GoodFirms PRO USD 49 a month; DesignRush USD 200-350 a month plus bids; Sortlist EUR 129-189 a month) |
 | 2026-11-16 | 8 | https://aiagencysearch.com/pricing | rejected at source: GCC agency directory (niche directory tiers USD 29, 99 and 127 a month, month to month) |
 | 2026-11-16 | 8 | https://marketingltb.com/blog/agency/best-agency-directories | rejected at source: GCC agency directory (Agency Spotter USD 2,800-10,680 a year; HubSpot directory USD 400 a month; Semrush partners USD 90 a month) |
+| 2026-11-19 | 4/2 | https://gumroad.com/help/article/13-getting-paid | platform-rules re-check 2026-11-19: Qatar | QAR, USD 100 minimum, Tuesday payouts, KYC |
+| 2026-11-19 | 4/2 | https://docs.lemonsqueezy.com/help/getting-started/supported-countries | platform-rules re-check: Lemon Squeezy closed to new sign-ups, shutdown 31 Mar 2027 |
+| 2026-11-19 | 5 | https://paddle.com/help/manage/get-paid/when-and-how-do-i-get-paid | platform-rules re-check: monthly payout, USD 100 minimum, wire or Payoneer |
+| 2026-11-19 | 3 | https://support.google.com/googleplay/android-developer/answer/9306917 | platform-rules re-check: Qatar developer and merchant registration, USD |
+| 2026-11-19 | 3 | https://support.google.com/googleplay/android-developer/answer/112622 | platform-rules re-check: service fee tiers 15/30 outside AU-EEA-JP-UK-US |
+| 2026-11-19 | 3 | https://support.google.com/googleplay/android-developer/answer/14151465 | platform-rules re-check: 12 testers for 14 days before production |
+| 2026-11-19 | 1 | https://support.google.com/youtube/answer/72851 | platform-rules re-check: YPP thresholds, 1 Feb 2027 updated terms |
+| 2026-11-19 | 1 | https://support.google.com/youtube/answer/1311392 | platform-rules re-check: inauthentic content policy wording |
+| 2026-11-19 | 1 | https://support.google.com/youtube/answer/7101720 | platform-rules re-check: Qatar on YPP country list |
+| 2026-11-19 | 1 | https://www.tiktok.com/creator-academy/article/creator-rewards-program | platform-rules re-check: 8 countries, 10k followers, 100k views, 18+ |
+| 2026-11-19 | 2 | https://kdp.amazon.com/en_US/help/topic/G200672390 | platform-rules re-check: AI-generated vs AI-assisted disclosure |
+| 2026-11-19 | 2 | https://kdp.amazon.com/en_US/help/topic/G201207800 | platform-rules re-check: EFT no threshold, check and wire USD 100 |
+| 2026-11-19 | 7 | https://affiliate-program.amazon.com/help/node/topic/G8VUMS6GTBCR9RGV | platform-rules re-check: 52 bank-transfer countries, Qatar absent |
+| 2026-11-19 | 2 | https://help.etsy.com/hc/en-us/articles/115015710408-Countries-Eligible-for-Etsy-Payments | platform-rules re-check: Qatar absent from Etsy Payments |
+| 2026-11-19 | 3 | https://developer.apple.com/help/app-store-connect/reference/reporting/minimum-payment-threshold | platform-rules re-check: USD 40 minimum for unlisted bank countries |
+| 2026-11-19 | 3 | https://developer.apple.com/support/enrollment/ | platform-rules re-check: USD 99, two-factor Apple Account, regions may be unsupported |
+| 2026-11-19 | 1/9 | https://help.skool.com/article/86-subscriptions-faq | platform-rules re-check: Qatar on payout list; Hobby USD 9 + 10%, Pro USD 99 + 2.9%; fails zero-cost |
+| 2026-11-19 | 1/9 | https://support.patreon.com/hc/articles/11111747095181 | platform-rules re-check: 10% standard platform fee, processing and payout fees |
+| 2026-11-19 | 1/9 | https://support.patreon.com/hc/en-us/articles/39694936541965-Payouts-guide-for-creators-outside-of-the-US | platform-rules re-check: Payoneer bank transfer, PayPal, USD 10 minimum |
+| 2026-11-19 | 5 | https://help-partner.zid.sa/en/articles/11501759-app-payouts | platform-rules re-check: bank transfer, 20% default share, 15% WHT non-Saudi, USD invoices |
+| 2026-11-19 | 5 | https://help-partner.zid.sa/en/articles/8635324-explore-partner-dashboard | platform-rules re-check: individuals verify with ID, Iqama or passport |
+| 2026-11-19 | 5 | https://salla.dev/blog/partners-account-verification-for-internationals | platform-rules re-check: non-Saudi individuals verify with passport |

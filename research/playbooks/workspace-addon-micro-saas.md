@@ -4,7 +4,8 @@ Checked 2026-10-26. Sources in the brief 20261026-tafqeet-invoice-sheets-addon.
 
 ## What is sold
 A small utility inside Google Sheets (Workspace Marketplace, 0% fee) with a
-free tier and a Pro licence key sold through Gumroad or Lemon Squeezy;
+free tier and a Pro licence key sold through Gumroad (Lemon Squeezy closed
+to new sellers in 2026);
 optionally the same function as an Excel .xlam add-in sold on Gumroad.
 
 ## Steps a small operator follows

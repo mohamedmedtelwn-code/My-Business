@@ -53,7 +53,7 @@ methods with the playbook written down.
    Shorts RPM is cents). Slow: most channels earn USD 0 at month 6.
 2. Digital products: templates, ebooks (KDP with AI disclosure and the
    2-titles-per-format-per-week cap), courses, presets, printables, sold
-   through Gumroad or Lemon Squeezy, not Etsy.
+   through Gumroad (Lemon Squeezy closed to new sellers 2026, shuts 31 Mar 2027), not Etsy.
 3. Marketplaces and app stores: Gumroad, Google Play (Qatar is a merchant
    country), Apple App Store (payout to Qatar unverified), Shopify App Store,
    Udemy. Etsy is excluded for this owner.
@@ -62,7 +62,7 @@ methods with the playbook written down.
    must operate the account). Still the fastest route to a first dollar.
    Consumer services with no studio-owned channel are rejected at source.
 5. Software: micro-SaaS, browser extensions, bots, APIs, data products, sold
-   through a merchant of record (Lemon Squeezy, Paddle, Polar).
+   through a merchant of record (Gumroad licence keys, Paddle or Polar once verified for Qatar; Lemon Squeezy is closed).
 6. Arbitrage and resale: retail, domain, cross-border, dropship. Only with a
    verified payout rail and seller registration; usually fails the USD 0 rule.
 7. Local physical in Qatar: vending, rental, cleaning, events, kiosks. Only

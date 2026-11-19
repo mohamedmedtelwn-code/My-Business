@@ -133,7 +133,8 @@ one of these, you get a ticket.
   fastest route to a first dollar is a service or product sold directly to
   named buyers, which is why outreach is the default validation test.
 - Etsy, TikTok Creator Rewards and Amazon Associates (US) are not usable from
-  Qatar. Gumroad, PayPal via QNB, Lemon Squeezy and Google Play are.
+  Qatar, and Lemon Squeezy is closing (no new sellers; shutdown 31 March
+  2027). Gumroad, PayPal via QNB and Google Play are usable.
 - Phase 1 (90 days) is deliberately wide: up to 20 briefs a week, several
   validations in parallel, up to 8 businesses live. Expect 8-15 tickets a
   week, mostly accounts and publishes. Most ideas get rejected at Planning or

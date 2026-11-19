@@ -28,7 +28,7 @@ Platform change, saturation, cost rise, regulation. Bullet list.
 
 ## Platform and payout check (from research/platform-rules.md and management/payments.md)
 - Platform usable by a Qatar-resident seller: yes / no / unverified
-- Payout route: Gumroad / PayPal via QNB / Lemon Squeezy / Paddle / Payoneer / other
+- Payout route: Gumroad / PayPal via QNB / Paddle / Payoneer / other (Lemon Squeezy is closed to new sellers)
 - Published volume caps and disclosure duties that apply:
 
 ## Capital needed (itemised)

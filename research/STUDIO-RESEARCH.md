@@ -188,7 +188,7 @@ Pre-mortem specific to this design: USD 0 launches cannot buy a first customer, 
 ## 8. Decision-relevant items still unverified
 - Fiverr and Upwork: account opening from Qatar; Fiverr's 20% commission text; Upwork Direct to Local Bank in QAR.
 - Apple App Store payouts to a Qatari bank; KDP direct deposit to Qatar; Amazon Associates via amazon.sa or amazon.ae.
-- Lemon Squeezy onboarding of new Qatar sellers under Stripe Managed Payments; Paddle's acceptance of individuals; Payoneer's official Qatar status; Gumroad's minimum payout.
+- (Resolved 2026-11-19: Lemon Squeezy is closed to new sellers and shuts down on 31 March 2027; see research/platform-rules.md.) Formerly: Lemon Squeezy onboarding of new Qatar sellers under Stripe Managed Payments; Paddle's acceptance of individuals; Payoneer's official Qatar status; Gumroad's minimum payout.
 - Qatar: whether an expatriate individual can hold the MOCI E-Commerce Licence or a sole proprietorship; the implementing rules for Law 9/2026; employer-consent requirements for side income.
 - Exact Claude Pro and Max usage allowances; whether Cowork scheduled runs share the Pro/Max pool (treated as shared).
 - Month-6 medians for every category: only proxies exist; the studio's own ledger will become the best evidence within 90 days.
