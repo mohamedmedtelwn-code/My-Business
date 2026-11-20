@@ -9,7 +9,7 @@ must fix it before doing anything else:
   - a file sits in the wrong stage (scored brief in the inbox, unscored brief in
     approved/, approved score below the threshold, plan without a status,
     validation with a final verdict still in 15-validating/, decided ticket still
-    in open/, closed ticket without an owner decision)
+    in open/, closed ticket without an owner decision or a **Withdrawn:** line)
   - a business is live with an open blocking Preparation ticket
   - more live businesses than the Phase cap allows
   - a business folder without plan.md or WORK.md
@@ -207,6 +207,7 @@ def read_tickets(root: Path, folder_key: str) -> list[dict]:
             "steps": steps,
             "raised": studio.first_date(raised), "by": raised.split(" by ")[-1].strip().lower() if " by " in raised else "",
             "blocks": (f.get("blocks") or "").strip(), "decision": studio.owner_decision(text),
+            "withdrawn": bool(re.search(r"^\*\*Withdrawn:\*\*", text, re.M)),
             "type": "investment" if "investment ticket" in text.lower()[:200] else "approval",
             "amount": f.get("amount requested", ""), "title": _ticket_title(text, steps, f, p.stem),
         })
@@ -252,8 +253,8 @@ def check_tickets(root: Path, rep: Report, cfg: dict, live: dict) -> dict:
     if len(opened) > cap:
         rep.warn(studio.STAGES["tickets_open"], f"{len(opened)} open tickets, above the cap of {cap}: no new tickets until the owner clears the queue.")
     for t in closed:
-        if not t["decision"]:
-            rep.error(_rel(root, t["path"]), "Closed ticket has no owner decision (APPROVED / REJECTED / DONE).")
+        if not t["decision"] and not t["withdrawn"]:
+            rep.error(_rel(root, t["path"]), "Closed ticket has no owner decision (APPROVED / REJECTED / DONE) and no **Withdrawn:** line.")
     return {"open": len(opened), "closed": len(closed), "open_list": opened}
 
 

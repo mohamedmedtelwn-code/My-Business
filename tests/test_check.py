@@ -152,6 +152,12 @@ class CheckSuite(unittest.TestCase):
         res = self.run_check()
         self.assertTrue(any("decision" in e for e in self.errors(res)))
 
+    def test_closed_ticket_withdrawn_by_management_passes(self):
+        text = ticket("20261101-x-1", "x", d(-1)) + "\n**Withdrawn:** " + d(0) + " by management — superseded by ticket 20261101-x-2.\n"
+        write(self.root, "pipeline/30-tickets/closed/20261101-x-1.md", text)
+        res = self.run_check()
+        self.assertFalse(any("decision" in e for e in self.errors(res)))
+
     def test_too_many_open_tickets_is_a_warning(self):
         for i in range(11):
             write(self.root, f"pipeline/30-tickets/open/20261101-x-{i}.md", ticket(f"20261101-x-{i}", "x", d(0)))
