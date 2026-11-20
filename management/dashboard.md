@@ -1,9 +1,9 @@
-# Dashboard — 2026-11-20 14:45 (weekly review 2026-47)
+# Dashboard — 2026-11-20 18:43
 
 Capital: ceiling 0 · released 0 · released unspent 0 · spent 0 · revenue 0 · pool 0
 Pipeline: inbox 0 · assessed 32 · validating 18 (passed 0, parked 9) · planned 0 · tickets open 4 (closed 10)
 Businesses: live 0 · paused 0 · stopped 0 (Phase 1, day 27 of 90; ends 2027-01-23)
-Source: tools/ledger.py report and tools/check.py, 2026-11-20 14:45. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
+Source: tools/ledger.py report and tools/check.py, 2026-11-20 18:43. Brand: Mteryak Studio, domain mteryakstudio.com (decided 2026-10-30).
 
 Operating rule since 2026-10-27 (signed): agents run every business; the
 owner does accounts and set-ups only. **Funding rule since 2026-11-12
@@ -20,8 +20,8 @@ funds mteryakstudio.com. Legal basis for income: owner decision 2026-10-30.
 | planning | 2026-11-20T03:47:48 | ok | 0 | closed | inbox empty; 18 validations recounted, all RUNNING at 0 SU, held by Blocked by studio-7; 0 tickets |
 | preparation | 2026-11-20T05:14:59 | ok | 0 | closed | no owner answers, no new decisions, no plans; 4 studio tickets open, all free |
 | work | - | idle | 0 | closed | no business live yet |
-| management | 2026-11-20T14:44 | running | 0 | closed | weekly review 2026-47 written (management/reviews/2026-47.md): 24 runs ok, 0 emails sent, 0 revenue; idle-cadence decision proposed (ticket studio-9), Research-hold card studio-6 withdrawn into it; three lessons; this refresh |
-Source: tools/runlog.py status, 2026-11-20 14:45. No crashed runs.
+| management | 2026-11-20T18:43 | running | 0 | closed | nightly: this refresh; weekly review 2026-47 at 14:44 (management/reviews/2026-47.md): 24 runs ok, 0 emails sent, 0 revenue; idle-cadence decision proposed (ticket studio-9), Research-hold card studio-6 withdrawn into it; three lessons |
+Source: tools/runlog.py status, 2026-11-20 18:43. No crashed runs.
 
 ## Validations running (18 seven-day agent-run email tests; all held by `Blocked by: 20261112-studio-7` since 2026-11-18: dates below are nominal, the deadline does not count while the mailbox ticket is open, and Planning re-dates the whole queue once from DONE + 14 days)
 | Id | Test | Started (nominal) | Deadline (nominal) | Signal units so far |
@@ -61,7 +61,7 @@ None live.
 Decisions: two pending-owner (phase-1 clock restart, ticket studio-8; idle cadence, ticket studio-9); studio-6 withdrawn 2026-11-20 into studio-9; the rest signed (owner hold until 2026-11-25; agents-run rule 2026-10-27; brand 2026-10-30; legal basis 2026-10-30; zero external cost 2026-11-12).
 
 ## Issues
-tools/check.py (2026-11-20 14:45): 0 errors, 3 warnings (studio-2 at 26 days, studio-7 at 8 days, studio-8 at 7 days); check.py now accepts a closed ticket withdrawn by management (116 tests pass).
+tools/check.py (2026-11-20 18:43): 0 errors, 3 warnings (studio-2 at 26 days, studio-7 at 8 days, studio-8 at 7 days); check.py now accepts a closed ticket withdrawn by management (116 tests pass).
 Ledger reconcile OK; ceiling USD 0, released 0, spent 0, revenue 0.
 Weekly review 2026-47 (management/reviews/2026-47.md): 24 runs ok, 0
 emails sent, 0 revenue, zero owner answers for the third week; four cards
